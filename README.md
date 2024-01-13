@@ -1,2 +1,2 @@
 # TwixtUI
-'Tw' from Tailwind and 'ixt' suggesting a mix or integration
+'Tw' from Tailwind and 'ixt' suggesting a mix and integration
