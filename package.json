@@ -1,0 +1,10 @@
+{
+    "name": "twixt-ui",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/ramsunvtech/TwixtUI.git",
+    "dependencies": {
+      "react": "^17.0.2"
+    }
+  }
+  
