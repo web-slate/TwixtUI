@@ -1,7 +1,7 @@
 {
     "name": "twixt-ui-react",
     "version": "1.0.0",
-    "main": "src/index.js",
+    "main": "dist/index.js",
     "repository": "https://github.com/ramsunvtech/TwixtUI.git",
     "scripts": {
         "build": "babel src --out-dir dist --extensions \".js,.jsx\" --ignore \"src/**/*.test.js\""
