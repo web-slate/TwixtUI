@@ -6,14 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "InputSingleLine", {
   enumerable: true,
   get: function get() {
-    return _InputSingleLine.InputSingleLine;
+    return _InputSingleLine["default"];
   }
 });
 Object.defineProperty(exports, "ToolName", {
   enumerable: true,
   get: function get() {
-    return _ToolName.ToolName;
+    return _ToolName["default"];
   }
 });
-var _InputSingleLine = require("./InputSingleLine");
-var _ToolName = require("./ToolName");
+var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
+var _ToolName = _interopRequireDefault(require("./ToolName"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
