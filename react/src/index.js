@@ -1,2 +1,2 @@
-export { InputSingleLine } from './InputSingleLine';
-export { ToolName } from './ToolName';
+export { default as InputSingleLine } from './InputSingleLine';
+export { default as ToolName } from './ToolName';
