@@ -15,6 +15,7 @@ Object.defineProperty(exports, "ToolName", {
     return _ToolName["default"];
   }
 });
+require("./tailwind.css");
 var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
 var _ToolName = _interopRequireDefault(require("./ToolName"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
