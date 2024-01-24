@@ -17,14 +17,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function LeftSideBar(_ref) {
-  var _ref$canOpen = _ref.canOpen,
+  var overWriteClasses = _ref.overWriteClasses,
+    _ref$canOpen = _ref.canOpen,
     canOpen = _ref$canOpen === void 0 ? false : _ref$canOpen;
   var _useState = (0, _react.useState)(canOpen),
     _useState2 = _slicedToArray(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1];
+  var leftSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-pink-500';
   return /*#__PURE__*/_react["default"].createElement("nav", {
-    className: "flex w-72 h-full bg-pink-500"
+    className: leftSidebarClass
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "w-full flex mx-auto px-6 py-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -57,32 +59,27 @@ function LeftSideBar(_ref) {
     className: "mb-4"
   }, isOpen ? 'Close Menu' : 'Open Menu')))));
 }
-function RightSideBar() {
+function RightSideBar(_ref2) {
+  var overWriteClasses = _ref2.overWriteClasses,
+    children = _ref2.children;
+  var rightSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-yellow-400';
   return /*#__PURE__*/_react["default"].createElement("nav", {
-    className: "flex w-72 h-full bg-yellow-400"
+    className: rightSidebarClass
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "w-full flex mx-auto px-6 py-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "w-full h-full flex items-center justify-center text-gray-900 text-xl border-4 border-gray-900 border-dashed"
-  }, "Rightbar")));
+    className: "w-full h-full flex items-center justify-center text-gray-900 text-xl border-4 border-gray-900"
+  }, children)));
 }
-function ContentPane(_ref2) {
-  var children = _ref2.children;
+function ContentPane(_ref3) {
+  var overWriteClasses = _ref3.overWriteClasses,
+    children = _ref3.children;
+  var contentPaneClass = overWriteClasses ? overWriteClasses : 'flex flex-col w-full bg-white overflow-x-hidden overflow-y-auto mb-14';
   return /*#__PURE__*/_react["default"].createElement("main", {
-    className: "flex flex-col w-full bg-white overflow-x-hidden overflow-y-auto mb-14"
+    className: contentPaneClass
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex w-full mx-auto px-6 py-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed"
-  }, children, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex w-full max-w-xl h-60 items-center justify-center mx-auto bg-green-400 border-b border-gray-600"
-  }, "Post"), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex w-full max-w-xl h-60 items-center justify-center mx-auto bg-green-400 border-b border-gray-600"
-  }, "Post"), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex w-full max-w-xl h-60 items-center justify-center mx-auto bg-green-400 border-b border-gray-600"
-  }, "Post"), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex w-full max-w-xl h-60 items-center justify-center mx-auto bg-green-400 border-b border-gray-600"
-  }, "Post"), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex w-full max-w-xl h-60 items-center justify-center mx-auto bg-green-400 border-b border-gray-600"
-  }, "Post"))));
+  }, children)));
 }
