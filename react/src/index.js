@@ -7,6 +7,7 @@ export { default as LoadingPostCard } from './LoadingPostCard';
 export { default as Modal } from './Modal';
 export { default as Switch } from './Switch';
 export { default as Skeleton } from './Skeleton';
+export { default as TwixtButton } from './TwixtButton';
 export { default as TwixtTextArea } from './TwixtTextArea';
 export { default as TwixtCheckbox } from './TwixtCheckbox';
 export { default as SimpleTable } from './SimpleTable';
