@@ -14,6 +14,24 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var TableHeader = function TableHeader() {
+  return /*#__PURE__*/_react["default"].createElement("div", {
+    className: "px-4 md:px-10 py-4 md:py-7"
+  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: "flex items-center justify-between"
+  }, /*#__PURE__*/_react["default"].createElement("p", {
+    className: "focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800"
+  }, "Tasks"), /*#__PURE__*/_react["default"].createElement("div", {
+    className: "py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
+  }, /*#__PURE__*/_react["default"].createElement("p", null, "Sort By:"), /*#__PURE__*/_react["default"].createElement("select", {
+    "aria-label": "select",
+    className: "focus:text-indigo-600 focus:outline-none bg-transparent ml-1"
+  }, /*#__PURE__*/_react["default"].createElement("option", {
+    className: "text-sm text-indigo-800"
+  }, "Latest"), /*#__PURE__*/_react["default"].createElement("option", {
+    className: "text-sm text-indigo-800"
+  }, "Oldest")))));
+};
 var TableFilters = function TableFilters() {
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "sm:flex items-center justify-between"
