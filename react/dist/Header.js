@@ -7,10 +7,11 @@ exports["default"] = TwixtHeader;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function TwixtHeader(_ref) {
-  var children = _ref.children,
+  var headerClass = _ref.headerClass,
+    children = _ref.children,
     rightBlock = _ref.rightBlock;
   return /*#__PURE__*/_react["default"].createElement("header", {
-    className: "flex justify-between items-center bg-blue-300 p-4"
+    className: "flex justify-between items-center ".concat(headerClass, " p-4")
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex"
   }, /*#__PURE__*/_react["default"].createElement("button", {
