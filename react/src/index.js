@@ -1,4 +1,4 @@
-export { default as InputSingleLine } from './InputSingleLine';
+export { default as TwixtSingleLineInput } from './InputSingleLine';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
 export { default as TwixtHeader } from './Header';
@@ -8,6 +8,6 @@ export { default as TwixtModal } from './Modal';
 export { default as TwixtSwitch } from './Switch';
 export { default as TwixtSkeleton } from './Skeleton';
 export { default as TwixtButton } from './Button';
-export { default as TwixtTextArea } from './TextArea';
+export { default as TwixtMultiLineInput } from './TextArea';
 export { default as TwixtCheckbox } from './Checkbox';
 export { default as SimpleTable } from './SimpleTable';
