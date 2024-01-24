@@ -3,12 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "InputSingleLine", {
-  enumerable: true,
-  get: function get() {
-    return _InputSingleLine["default"];
-  }
-});
 Object.defineProperty(exports, "SimpleTable", {
   enumerable: true,
   get: function get() {
@@ -57,6 +51,18 @@ Object.defineProperty(exports, "TwixtModal", {
     return _Modal["default"];
   }
 });
+Object.defineProperty(exports, "TwixtMultiLineInput", {
+  enumerable: true,
+  get: function get() {
+    return _TextArea["default"];
+  }
+});
+Object.defineProperty(exports, "TwixtSingleLineInput", {
+  enumerable: true,
+  get: function get() {
+    return _InputSingleLine["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtSkeleton", {
   enumerable: true,
   get: function get() {
@@ -67,12 +73,6 @@ Object.defineProperty(exports, "TwixtSwitch", {
   enumerable: true,
   get: function get() {
     return _Switch["default"];
-  }
-});
-Object.defineProperty(exports, "TwixtTextArea", {
-  enumerable: true,
-  get: function get() {
-    return _TextArea["default"];
   }
 });
 Object.defineProperty(exports, "TwixtToolName", {
