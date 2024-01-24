@@ -3,6 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "ContentPane", {
+  enumerable: true,
+  get: function get() {
+    return _Skeleton.ContentPane;
+  }
+});
+Object.defineProperty(exports, "LeftSideBar", {
+  enumerable: true,
+  get: function get() {
+    return _Skeleton.LeftSideBar;
+  }
+});
+Object.defineProperty(exports, "RightSideBar", {
+  enumerable: true,
+  get: function get() {
+    return _Skeleton.RightSideBar;
+  }
+});
 Object.defineProperty(exports, "SimpleTable", {
   enumerable: true,
   get: function get() {
@@ -63,12 +81,6 @@ Object.defineProperty(exports, "TwixtSingleLineInput", {
     return _InputSingleLine["default"];
   }
 });
-Object.defineProperty(exports, "TwixtSkeleton", {
-  enumerable: true,
-  get: function get() {
-    return _Skeleton["default"];
-  }
-});
 Object.defineProperty(exports, "TwixtSwitch", {
   enumerable: true,
   get: function get() {
@@ -89,7 +101,7 @@ var _Heading = _interopRequireDefault(require("./Heading"));
 var _LoadingPostCard = _interopRequireDefault(require("./LoadingPostCard"));
 var _Modal = _interopRequireDefault(require("./Modal"));
 var _Switch = _interopRequireDefault(require("./Switch"));
-var _Skeleton = _interopRequireDefault(require("./Skeleton"));
+var _Skeleton = require("./Skeleton");
 var _Button = _interopRequireDefault(require("./Button"));
 var _TextArea = _interopRequireDefault(require("./TextArea"));
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
