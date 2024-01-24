@@ -18,6 +18,7 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function LeftSideBar(_ref) {
   var overWriteClasses = _ref.overWriteClasses,
+    children = _ref.children,
     _ref$canOpen = _ref.canOpen,
     canOpen = _ref$canOpen === void 0 ? false : _ref$canOpen;
   var _useState = (0, _react.useState)(canOpen),
@@ -38,19 +39,7 @@ function LeftSideBar(_ref) {
     }
   }), /*#__PURE__*/_react["default"].createElement("div", {
     className: "fixed inset-y-0 left-0 transform bg-blue-800 text-white w-64 p-6 space-y-6 z-30 transition-transform duration-300 ".concat(isOpen ? 'translate-x-0' : '-translate-x-full')
-  }, /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#",
-    className: "block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
-  }, "Home"), /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#",
-    className: "block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
-  }, "About"), /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#",
-    className: "block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
-  }, "Services"), /*#__PURE__*/_react["default"].createElement("a", {
-    href: "#",
-    className: "block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
-  }, "Contact")), /*#__PURE__*/_react["default"].createElement("div", {
+  }, children), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex-1 p-10 text-2xl font-bold"
   }, /*#__PURE__*/_react["default"].createElement("button", {
     onClick: function onClick() {
