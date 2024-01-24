@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const TableHeader = () => {
+const TableHeader = ({ title }) => {
   return (
     <div className="px-4 md:px-10 py-4 md:py-7">
       <div className="flex items-center justify-between">
-        <p className="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">Tasks</p>
+        <p className="focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">{title}</p>
         <div className="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded">
           <p>Sort By:</p>
           <select aria-label="select" className="focus:text-indigo-600 focus:outline-none bg-transparent ml-1">
@@ -21,15 +21,15 @@ const TableFilters = () => {
   return (
     <div className="sm:flex items-center justify-between">
       {/* ... Buttons for All, Done, Pending ... */}
-      Filter
+      Table Filter under development
     </div>
   );
 };
 
-const TableAddButton = () => {
+const TableAddButton = ({ label, onClick }) => {
   return (
-    <button className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded">
-      <p className="text-sm font-medium leading-none text-white">Add Table</p>
+    <button onClick={onClick} className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded">
+      <p className="text-sm font-medium leading-none text-white">{label}</p>
     </button>
   );
 };
@@ -114,12 +114,12 @@ const DropdownContent = ({ rowId }) => {
   // DropdownContent implementation
 };
 
-const SimpleTable = ({ config, data }) => {
+const SimpleTable = ({ title, config, data }) => {
   return (
     <div className="sm:px-6 w-full">
-      <TableHeader />
+      <TableHeader title={title} />
       <TableFilters />
-      <TableAddButton />
+      <TableAddButton label={config.addLabel} onClick={config.onAddClick} />
       <TableTable config={config} data={data} />
     </div>
   );
