@@ -16,12 +16,15 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var noop = function noop() {};
 function LeftSideBar(_ref) {
   var overWriteClasses = _ref.overWriteClasses,
     children = _ref.children,
-    _ref$canOpen = _ref.canOpen,
-    canOpen = _ref$canOpen === void 0 ? false : _ref$canOpen;
-  var _useState = (0, _react.useState)(canOpen),
+    _ref$openDrawer = _ref.openDrawer,
+    openDrawer = _ref$openDrawer === void 0 ? false : _ref$openDrawer,
+    _ref$onBlurEvent = _ref.onBlurEvent,
+    onBlurEvent = _ref$onBlurEvent === void 0 ? noop : _ref$onBlurEvent;
+  var _useState = (0, _react.useState)(openDrawer),
     _useState2 = _slicedToArray(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1];
@@ -35,7 +38,8 @@ function LeftSideBar(_ref) {
   }, isOpen && /*#__PURE__*/_react["default"].createElement("div", {
     className: "fixed inset-0 bg-black bg-opacity-50 z-20",
     onClick: function onClick() {
-      return setIsOpen(false);
+      onBlurEvent();
+      setIsOpen(false);
     }
   }), /*#__PURE__*/_react["default"].createElement("div", {
     className: "fixed inset-y-0 left-0 transform bg-blue-800 text-white w-64 p-6 space-y-6 z-30 transition-transform duration-300 ".concat(isOpen ? 'translate-x-0' : '-translate-x-full')
