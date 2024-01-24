@@ -6,16 +6,20 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = TwixtHeader;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var noop = function noop() {};
 function TwixtHeader(_ref) {
   var headerClass = _ref.headerClass,
     children = _ref.children,
-    rightBlock = _ref.rightBlock;
+    rightBlock = _ref.rightBlock,
+    _ref$onHamburgerClick = _ref.onHamburgerClick,
+    onHamburgerClick = _ref$onHamburgerClick === void 0 ? noop : _ref$onHamburgerClick;
   return /*#__PURE__*/_react["default"].createElement("header", {
     className: "flex justify-between items-center ".concat(headerClass, " p-4")
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex"
   }, /*#__PURE__*/_react["default"].createElement("button", {
-    className: "bg-slate-800 text-slate-100 rounded-full pr-2"
+    className: "bg-slate-800 text-slate-100 rounded-full pr-2",
+    onClick: onHamburgerClick
   }, /*#__PURE__*/_react["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     fill: "none",
