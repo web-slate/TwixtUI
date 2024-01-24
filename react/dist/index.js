@@ -57,16 +57,16 @@ Object.defineProperty(exports, "Switch", {
     return _Switch["default"];
   }
 });
-Object.defineProperty(exports, "TextArea", {
-  enumerable: true,
-  get: function get() {
-    return _TextArea["default"];
-  }
-});
 Object.defineProperty(exports, "ToolName", {
   enumerable: true,
   get: function get() {
     return _ToolName["default"];
+  }
+});
+Object.defineProperty(exports, "TwixtTextArea", {
+  enumerable: true,
+  get: function get() {
+    return _TwixtTextArea["default"];
   }
 });
 var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
@@ -78,6 +78,6 @@ var _LoadingPostCard = _interopRequireDefault(require("./LoadingPostCard"));
 var _Modal = _interopRequireDefault(require("./Modal"));
 var _Switch = _interopRequireDefault(require("./Switch"));
 var _Skeleton = _interopRequireDefault(require("./Skeleton"));
-var _TextArea = _interopRequireDefault(require("./TextArea"));
+var _TwixtTextArea = _interopRequireDefault(require("./TwixtTextArea"));
 var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
