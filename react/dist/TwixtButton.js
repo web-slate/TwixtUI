@@ -10,9 +10,7 @@ function TwixtButton(_ref) {
   var children = _ref.children,
     onClick = _ref.onClick;
   return /*#__PURE__*/_react["default"].createElement("button", {
-    onClick: function onClick() {
-      return setOpen(true);
-    },
+    onClick: onClick,
     className: "px-4 py-2 bg-indigo-500 text-white rounded-md"
   }, children);
 }
