@@ -14,14 +14,15 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var TableHeader = function TableHeader() {
+var TableHeader = function TableHeader(_ref) {
+  var title = _ref.title;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "px-4 md:px-10 py-4 md:py-7"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex items-center justify-between"
   }, /*#__PURE__*/_react["default"].createElement("p", {
     className: "focus:outline-none text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800"
-  }, "Tasks"), /*#__PURE__*/_react["default"].createElement("div", {
+  }, title), /*#__PURE__*/_react["default"].createElement("div", {
     className: "py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
   }, /*#__PURE__*/_react["default"].createElement("p", null, "Sort By:"), /*#__PURE__*/_react["default"].createElement("select", {
     "aria-label": "select",
@@ -35,18 +36,21 @@ var TableHeader = function TableHeader() {
 var TableFilters = function TableFilters() {
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "sm:flex items-center justify-between"
-  }, "Filter");
+  }, "Table Filter under development");
 };
-var TableAddButton = function TableAddButton() {
+var TableAddButton = function TableAddButton(_ref2) {
+  var label = _ref2.label,
+    onClick = _ref2.onClick;
   return /*#__PURE__*/_react["default"].createElement("button", {
+    onClick: onClick,
     className: "focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded"
   }, /*#__PURE__*/_react["default"].createElement("p", {
     className: "text-sm font-medium leading-none text-white"
-  }, "Add Table"));
+  }, label));
 };
-var TableTable = function TableTable(_ref) {
-  var config = _ref.config,
-    data = _ref.data;
+var TableTable = function TableTable(_ref3) {
+  var config = _ref3.config,
+    data = _ref3.data;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10"
   }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -61,9 +65,9 @@ var TableTable = function TableTable(_ref) {
     });
   })))));
 };
-var TableRow = function TableRow(_ref2) {
-  var config = _ref2.config,
-    dataItem = _ref2.dataItem;
+var TableRow = function TableRow(_ref4) {
+  var config = _ref4.config,
+    dataItem = _ref4.dataItem;
   var _useState = (0, _react.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
     isChecked = _useState2[0],
@@ -117,8 +121,8 @@ var TableRow = function TableRow(_ref2) {
     }
   }, config.viewLabel)));
 };
-var DropdownButton = function DropdownButton(_ref3) {
-  var onClick = _ref3.onClick;
+var DropdownButton = function DropdownButton(_ref5) {
+  var onClick = _ref5.onClick;
   return /*#__PURE__*/_react["default"].createElement("button", {
     className: "focus:ring-2 rounded-md focus:outline-none",
     onClick: onClick,
@@ -126,16 +130,22 @@ var DropdownButton = function DropdownButton(_ref3) {
     "aria-label": "option"
   });
 };
-var DropdownContent = function DropdownContent(_ref4) {
-  var rowId = _ref4.rowId;
+var DropdownContent = function DropdownContent(_ref6) {
+  var rowId = _ref6.rowId;
 } // DropdownContent implementation
 ;
-var SimpleTable = function SimpleTable(_ref5) {
-  var config = _ref5.config,
-    data = _ref5.data;
+var SimpleTable = function SimpleTable(_ref7) {
+  var title = _ref7.title,
+    config = _ref7.config,
+    data = _ref7.data;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "sm:px-6 w-full"
-  }, /*#__PURE__*/_react["default"].createElement(TableHeader, null), /*#__PURE__*/_react["default"].createElement(TableFilters, null), /*#__PURE__*/_react["default"].createElement(TableAddButton, null), /*#__PURE__*/_react["default"].createElement(TableTable, {
+  }, /*#__PURE__*/_react["default"].createElement(TableHeader, {
+    title: title
+  }), /*#__PURE__*/_react["default"].createElement(TableFilters, null), /*#__PURE__*/_react["default"].createElement(TableAddButton, {
+    label: config.addLabel,
+    onClick: config.onAddClick
+  }), /*#__PURE__*/_react["default"].createElement(TableTable, {
     config: config,
     data: data
   }));
