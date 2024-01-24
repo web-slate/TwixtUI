@@ -6,7 +6,7 @@ export { default as TwixtHeading } from './Heading';
 export { default as TwixtLoadingPostCard } from './LoadingPostCard';
 export { default as TwixtModal } from './Modal';
 export { default as TwixtSwitch } from './Switch';
-export { default as TwixtSkeleton } from './Skeleton';
+export { LeftSideBar, RightSideBar, ContentPane } from './Skeleton';
 export { default as TwixtButton } from './Button';
 export { default as TwixtMultiLineInput } from './TextArea';
 export { default as TwixtCheckbox } from './Checkbox';
