@@ -63,6 +63,12 @@ Object.defineProperty(exports, "ToolName", {
     return _ToolName["default"];
   }
 });
+Object.defineProperty(exports, "TwixtButton", {
+  enumerable: true,
+  get: function get() {
+    return _TwixtButton["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtCheckbox", {
   enumerable: true,
   get: function get() {
@@ -84,6 +90,7 @@ var _LoadingPostCard = _interopRequireDefault(require("./LoadingPostCard"));
 var _Modal = _interopRequireDefault(require("./Modal"));
 var _Switch = _interopRequireDefault(require("./Switch"));
 var _Skeleton = _interopRequireDefault(require("./Skeleton"));
+var _TwixtButton = _interopRequireDefault(require("./TwixtButton"));
 var _TwixtTextArea = _interopRequireDefault(require("./TwixtTextArea"));
 var _TwixtCheckbox = _interopRequireDefault(require("./TwixtCheckbox"));
 var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
