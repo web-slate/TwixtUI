@@ -8,4 +8,5 @@ export { default as Modal } from './Modal';
 export { default as Switch } from './Switch';
 export { default as Skeleton } from './Skeleton';
 export { default as TwixtTextArea } from './TwixtTextArea';
+export { default as TwixtCheckbox } from './TwixtCheckbox';
 export { default as SimpleTable } from './SimpleTable';
