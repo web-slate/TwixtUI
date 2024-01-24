@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-export function LeftSideBar({ overWriteClasses, children, canOpen = false }) {
-  const [isOpen, setIsOpen] = useState(canOpen);
+const noop = () => {};
+
+export function LeftSideBar({ overWriteClasses, children, openDrawer = false, onBlurEvent = noop }) {
+  const [isOpen, setIsOpen] = useState(openDrawer);
 
   const leftSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-pink-500';
 
@@ -13,7 +15,10 @@ export function LeftSideBar({ overWriteClasses, children, canOpen = false }) {
           {isOpen && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 z-20"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                onBlurEvent();
+                setIsOpen(false);
+              }}
             ></div>
           )}
 
