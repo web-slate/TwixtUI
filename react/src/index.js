@@ -1,2 +1,11 @@
 export { default as InputSingleLine } from './InputSingleLine';
 export { default as ToolName } from './ToolName';
+export { default as CommentsSystem } from './CommentsSystem';
+export { default as Header } from './Header';
+export { default as Heading } from './Heading';
+export { default as LoadingPostCard } from './LoadingPostCard';
+export { default as Modal } from './Modal';
+export { default as Switch } from './Switch';
+export { default as Skeleton } from './Skeleton';
+export { default as TextArea } from './TextArea';
+export { default as SimpleTable } from './SimpleTable';
