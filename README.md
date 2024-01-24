@@ -16,9 +16,17 @@ npm install -g postcss-cli
 5. Text for Paragraph
 6. Switch Input
 7. Text area
-8. <icon (Edit Delete icons)
+8. Icon (Edit Delete icons)
 9. Dialog
 10. Modal
 11. Simple Button and Submit Button
 12. SingleLineInput
 13. ToolName
+
+
+# Changes in React Component
+> Change in `react/src`
+
+```
+npm run build
+```
