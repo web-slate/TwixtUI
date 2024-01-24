@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function TwixtHeader({ children, rightBlock }) {
+export default function TwixtHeader({ headerClass, children, rightBlock }) {
   return (
-    <header className="flex justify-between items-center bg-blue-300 p-4">
+    <header className={`flex justify-between items-center ${headerClass} p-4`}>
       <div className="flex">
         <button
           className="bg-slate-800 text-slate-100 rounded-full pr-2">
