@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function LeftSideBar({ overWriteClasses, canOpen = false }) {
+export function LeftSideBar({ overWriteClasses, children, canOpen = false }) {
   const [isOpen, setIsOpen] = useState(canOpen);
 
   const leftSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-pink-500';
@@ -23,10 +23,7 @@ export function LeftSideBar({ overWriteClasses, canOpen = false }) {
               }`}
           >
             {/* Links */}
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Home</a>
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">About</a>
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Services</a>
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Contact</a>
+            {children}
           </div>
 
           {/* Content */}
