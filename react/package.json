@@ -6,7 +6,7 @@
     "scripts": {
         "build-css": "postcss src/tailwind.css -o dist/tailwind.css",
         "build-js": "babel src --out-dir dist --extensions \".js,.jsx\" --ignore \"src/**/*.test.js\"",
-        "build": "npm run build-css && npm run build-js"
+        "build": "rm -rf dist || true && npm run build-css && npm run build-js"
     },
     "peerDependencies": {
         "react": "*",
