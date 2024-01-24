@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "main": "index.js",
     "repository": "https://github.com/ramsunvtech/TwixtUI.git",
+    "scripts": {
+      "build": "cd react && npm run build"
+    },
     "dependencies": {
         "autoprefixer": "^10.4.16",
         "postcss": "^8.4.33",
