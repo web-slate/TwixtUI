@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = Modal;
+exports["default"] = TwixModal;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function TwixModal(_ref) {
@@ -34,17 +34,4 @@ function TwixModal(_ref) {
   }, children), /*#__PURE__*/_react["default"].createElement("div", {
     className: "border-t px-4 py-2 flex justify-end"
   }, footer)))));
-}
-function Modal(_ref2) {
-  var _ref2$onSubmit = _ref2.onSubmit,
-    onSubmit = _ref2$onSubmit === void 0 ? function () {} : _ref2$onSubmit;
-  return /*#__PURE__*/_react["default"].createElement(TwixModal, {
-    title: "Modal Title",
-    footer: /*#__PURE__*/_react["default"].createElement("button", {
-      onClick: function onClick() {
-        onSubmit();
-      },
-      className: "px-3 py-1 bg-indigo-500 text-white rounded-md w-full sm:w-auto"
-    }, "Accept")
-  }, /*#__PURE__*/_react["default"].createElement("p", null, "This is the content of the modal. You can add any content here. Lorem ipsum dolor sit amet"));
 }
