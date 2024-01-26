@@ -28,11 +28,12 @@ function LeftSideBar(_ref) {
     _useState2 = _slicedToArray(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1];
+  (0, _react.useEffect)(function () {
+    setIsOpen(openDrawer);
+  }, [openDrawer]);
   var leftSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-pink-500';
   return /*#__PURE__*/_react["default"].createElement("nav", {
     className: leftSidebarClass
-  }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "w-full flex mx-auto px-6 py-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex"
   }, isOpen && /*#__PURE__*/_react["default"].createElement("div", {
@@ -43,14 +44,7 @@ function LeftSideBar(_ref) {
     }
   }), /*#__PURE__*/_react["default"].createElement("div", {
     className: "fixed inset-y-0 left-0 transform bg-blue-800 text-white w-64 p-6 space-y-6 z-30 transition-transform duration-300 ".concat(isOpen ? 'translate-x-0' : '-translate-x-full')
-  }, children), /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex-1 p-10 text-2xl font-bold"
-  }, /*#__PURE__*/_react["default"].createElement("button", {
-    onClick: function onClick() {
-      return setIsOpen(!isOpen);
-    },
-    className: "mb-4"
-  }, isOpen ? 'Close Menu' : 'Open Menu')))));
+  }, children)));
 }
 function RightSideBar(_ref2) {
   var overWriteClasses = _ref2.overWriteClasses,

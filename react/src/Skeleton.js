@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const noop = () => {};
 
 export function LeftSideBar({ overWriteClasses, children, openDrawer = false, onBlurEvent = noop }) {
   const [isOpen, setIsOpen] = useState(openDrawer);
 
+  useEffect(()=>{
+    setIsOpen(openDrawer);
+  }, [openDrawer]);
+
   const leftSidebarClass = overWriteClasses ? overWriteClasses : 'flex w-72 h-full bg-pink-500';
 
   return (
     <nav className={leftSidebarClass}>
-      <div className="w-full flex mx-auto px-6 py-8">
         <div className="flex">
           {/* Overlay */}
           {isOpen && (
@@ -30,16 +33,7 @@ export function LeftSideBar({ overWriteClasses, children, openDrawer = false, on
             {/* Links */}
             {children}
           </div>
-
-          {/* Content */}
-          <div className="flex-1 p-10 text-2xl font-bold">
-            <button onClick={() => setIsOpen(!isOpen)} className="mb-4">
-              {isOpen ? 'Close Menu' : 'Open Menu'}
-            </button>
-            {/* Your content goes here */}
-          </div>
         </div>
-      </div>
     </nav>
   );
 }
