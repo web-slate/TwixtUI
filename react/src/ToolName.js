@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolName = ({ name, status, emoji }) => {
+const ToolName = ({ name, status, emoji, slogan = 'Powered by Tailwind' }) => {
     const getStatusEmoji = () => {
         switch (status) {
             case 'down':
@@ -21,7 +21,7 @@ const ToolName = ({ name, status, emoji }) => {
             <span>{name}</span>
             {getStatusEmoji() && <span>{getStatusEmoji()}</span>}
             {emoji && <span>{emoji}</span>}
-            <span className="text-xs text-gray-500">Powered by Tailwind</span>
+            <span className="text-xs text-gray-500">{slogan}</span>
         </div>
     );
 };
