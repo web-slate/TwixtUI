@@ -27,6 +27,12 @@ Object.defineProperty(exports, "SimpleTable", {
     return _SimpleTable["default"];
   }
 });
+Object.defineProperty(exports, "TwixtAlert", {
+  enumerable: true,
+  get: function get() {
+    return _Alert["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtButton", {
   enumerable: true,
   get: function get() {
@@ -93,6 +99,7 @@ Object.defineProperty(exports, "TwixtToolName", {
     return _ToolName["default"];
   }
 });
+var _Alert = _interopRequireDefault(require("./Alert"));
 var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
 var _ToolName = _interopRequireDefault(require("./ToolName"));
 var _CommentsSystem = _interopRequireDefault(require("./CommentsSystem"));
