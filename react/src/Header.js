@@ -1,9 +1,14 @@
 import React from 'react'
+import TwixtAlert from './Alert'
 
 const noop = () => {};
 
-export default function TwixtHeader({ headerClass, children, rightBlock, onHamburgerClick = noop }) {
+export default function TwixtHeader({ announceMent, headerClass, children, rightBlock, onHamburgerClick = noop }) {
   return (
+    <>
+    {announceMent && (
+      <TwixtAlert title={announceMent.title} desc={announceMent.desc} />
+    )}
     <header className={`flex justify-between items-center ${headerClass} p-4`}>
       <div className="flex">
         <button
@@ -17,5 +22,6 @@ export default function TwixtHeader({ headerClass, children, rightBlock, onHambu
       </div>
       <div className="flex">{rightBlock}</div>
     </header>
+              </>
   );
 }
