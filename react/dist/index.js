@@ -87,6 +87,12 @@ Object.defineProperty(exports, "TwixtMultiLineInput", {
     return _TextArea["default"];
   }
 });
+Object.defineProperty(exports, "TwixtPageProgressLine", {
+  enumerable: true,
+  get: function get() {
+    return _PageProgressLine["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtSingleLineInput", {
   enumerable: true,
   get: function get() {
@@ -134,4 +140,5 @@ var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
 var _Stats = _interopRequireDefault(require("./Stats"));
 var _UserCard = _interopRequireDefault(require("./UserCard"));
+var _PageProgressLine = _interopRequireDefault(require("./PageProgressLine"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
