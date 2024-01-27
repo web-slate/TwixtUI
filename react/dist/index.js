@@ -111,6 +111,12 @@ Object.defineProperty(exports, "TwixtToolName", {
     return _ToolName["default"];
   }
 });
+Object.defineProperty(exports, "TwixtUserCard", {
+  enumerable: true,
+  get: function get() {
+    return _UserCard["default"];
+  }
+});
 var _Alert = _interopRequireDefault(require("./Alert"));
 var _Dialog = _interopRequireDefault(require("./Dialog"));
 var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
@@ -127,4 +133,5 @@ var _TextArea = _interopRequireDefault(require("./TextArea"));
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
 var _Stats = _interopRequireDefault(require("./Stats"));
+var _UserCard = _interopRequireDefault(require("./UserCard"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
