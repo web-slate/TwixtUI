@@ -9,7 +9,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var ToolName = function ToolName(_ref) {
   var name = _ref.name,
     status = _ref.status,
-    emoji = _ref.emoji;
+    emoji = _ref.emoji,
+    _ref$slogan = _ref.slogan,
+    slogan = _ref$slogan === void 0 ? 'Powered by Tailwind' : _ref$slogan;
   var getStatusEmoji = function getStatusEmoji() {
     switch (status) {
       case 'down':
@@ -28,6 +30,6 @@ var ToolName = function ToolName(_ref) {
     className: "flex items-center space-x-2 font-special"
   }, /*#__PURE__*/_react["default"].createElement("span", null, name), getStatusEmoji() && /*#__PURE__*/_react["default"].createElement("span", null, getStatusEmoji()), emoji && /*#__PURE__*/_react["default"].createElement("span", null, emoji), /*#__PURE__*/_react["default"].createElement("span", {
     className: "text-xs text-gray-500"
-  }, "Powered by Tailwind"));
+  }, slogan));
 };
 var _default = exports["default"] = ToolName;
