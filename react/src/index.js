@@ -1,4 +1,5 @@
 export { default as TwixtAlert } from './Alert';
+export { default as TwixtDialog } from './Dialog';
 export { default as TwixtSingleLineInput } from './InputSingleLine';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
