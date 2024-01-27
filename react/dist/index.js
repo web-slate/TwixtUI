@@ -93,6 +93,12 @@ Object.defineProperty(exports, "TwixtSingleLineInput", {
     return _InputSingleLine["default"];
   }
 });
+Object.defineProperty(exports, "TwixtStats", {
+  enumerable: true,
+  get: function get() {
+    return _Stats["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtSwitch", {
   enumerable: true,
   get: function get() {
@@ -120,4 +126,5 @@ var _Button = _interopRequireDefault(require("./Button"));
 var _TextArea = _interopRequireDefault(require("./TextArea"));
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
+var _Stats = _interopRequireDefault(require("./Stats"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
