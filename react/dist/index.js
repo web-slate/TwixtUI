@@ -51,6 +51,12 @@ Object.defineProperty(exports, "TwixtCommentsSystem", {
     return _CommentsSystem["default"];
   }
 });
+Object.defineProperty(exports, "TwixtDialog", {
+  enumerable: true,
+  get: function get() {
+    return _Dialog["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtHeader", {
   enumerable: true,
   get: function get() {
@@ -100,6 +106,7 @@ Object.defineProperty(exports, "TwixtToolName", {
   }
 });
 var _Alert = _interopRequireDefault(require("./Alert"));
+var _Dialog = _interopRequireDefault(require("./Dialog"));
 var _InputSingleLine = _interopRequireDefault(require("./InputSingleLine"));
 var _ToolName = _interopRequireDefault(require("./ToolName"));
 var _CommentsSystem = _interopRequireDefault(require("./CommentsSystem"));
