@@ -14,3 +14,4 @@ export { default as TwixtMultiLineInput } from './TextArea';
 export { default as TwixtCheckbox } from './Checkbox';
 export { default as SimpleTable } from './SimpleTable';
 export { default as TwixtStats } from './Stats';
+export { default as TwixtUserCard } from './UserCard';
