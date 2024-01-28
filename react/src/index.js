@@ -15,4 +15,5 @@ export { default as TwixtCheckbox } from './Checkbox';
 export { default as SimpleTable } from './SimpleTable';
 export { default as TwixtStats } from './Stats';
 export { default as TwixtUserCard } from './UserCard';
+export { default as TwixtUserStackList } from './UserStackList';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
