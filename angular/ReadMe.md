@@ -9,3 +9,11 @@ ng generate component input-single-line --project=ng-twixt
 
 ng build ng-twixt
 ```
+
+## Build Library
+
+```
+cd angular/projects/ng-twixt
+ng build ng-twixt
+zip -r ng-twixt-dist.zip .
+```
