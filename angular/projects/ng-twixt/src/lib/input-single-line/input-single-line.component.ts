@@ -27,9 +27,9 @@ export class InputSingleLineComponent {
   }
 
   getInputClass(): string {
-    return `shadow appearance-none border ${
+    return `${
       this.error ? 'border-red-500' : (this.warning ? 'border-yellow-500' : 'border-gray-300')
-    } text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5`;
+    } shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`;
     // Add dark mode classes if needed
   }
 }
