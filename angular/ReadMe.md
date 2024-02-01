@@ -3,9 +3,9 @@
 ```
 ng new ng-twixt-app --create-application=false --directory=.
 ng generate library ng-twixt
-cd angular/projects/ng-twixt
+cd angular
 
 ng generate component input-single-line --project=ng-twixt
 
-ng build NgTwixt
+ng build ng-twixt
 ```
