@@ -1,0 +1,8 @@
+<div>
+  <ng-container *ngIf="label">
+    <label class="block text-gray-700 text-sm font-bold mb-2">{{ label }}</label>
+  </ng-container>
+  <input type="text" [value]="value" (input)="onInputChange($event)" (blur)="onInputBlur()" [class]="getInputClass()" />
+  <p *ngIf="error" class="text-red-500 text-xs italic">{{ error }}</p>
+  <p *ngIf="warning && !error" class="text-yellow-500 text-xs italic">{{ warning }}</p>
+</div>
