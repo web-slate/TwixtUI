@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/ng-twixt",
       "sourceRoot": "projects/ng-twixt/src",
-      "prefix": "lib",
+      "prefix": "twixt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
