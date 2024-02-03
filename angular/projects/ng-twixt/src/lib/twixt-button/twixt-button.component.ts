@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'twixt-button',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './twixt-button.component.html',
   styleUrl: './twixt-button.component.css'
 })
