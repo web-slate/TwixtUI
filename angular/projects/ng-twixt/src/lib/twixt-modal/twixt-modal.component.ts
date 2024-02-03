@@ -1,7 +1,7 @@
 import { Component, Input, ContentChild, TemplateRef } from '@angular/core';
 
 @Component({
-  selector: 'app-twixt-modal',
+  selector: 'twixt-modal',
   standalone: true,
   imports: [],
   templateUrl: './twixt-modal.component.html',
