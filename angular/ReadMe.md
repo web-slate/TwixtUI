@@ -8,6 +8,7 @@ cd angular
 ng generate component input-single-line --project=ng-twixt
 ng generate component twixt-alert --project=ng-twixt --prefix=twixt
 ng generate component twixt-button --project=ng-twixt --prefix=twixt
+ng generate component twixt-checkbox --project=ng-twixt --prefix=twixt
 
 
 ng build ng-twixt
