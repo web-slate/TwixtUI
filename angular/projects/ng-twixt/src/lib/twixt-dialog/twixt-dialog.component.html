@@ -1,0 +1,9 @@
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <!-- ... rest of the HTML structure ... -->
+    <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">{{ title }}</h3>
+    <p class="text-sm text-gray-500">{{ desc }}</p>
+    <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+        <ng-content></ng-content> <!-- This will render the footer content -->
+    </div>
+    <!-- ... -->
+</div>
