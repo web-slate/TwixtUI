@@ -1,9 +1,8 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
-  selector: 'app-twixt-checkbox',
+  selector: 'twixt-checkbox',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './twixt-checkbox.component.html',
