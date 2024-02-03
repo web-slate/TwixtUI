@@ -13,6 +13,7 @@ ng generate component twixt-dialog --project=ng-twixt --prefix=twixt
 ng generate component twixt-header --project=ng-twixt --prefix=twixt
 ng generate component twixt-comment-system --project=ng-twixt --prefix=twixt
 ng generate component twixt-loading-post-card --project=ng-twixt --prefix=twixt
+ng generate component twixt-modal --project=ng-twixt --prefix=twixt
 
 ng build ng-twixt
 ```
