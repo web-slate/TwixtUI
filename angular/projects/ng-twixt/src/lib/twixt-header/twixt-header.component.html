@@ -1,0 +1,17 @@
+<ng-container *ngIf="announceMent">
+  <twixt-alert [title]="announceMent.title" [desc]="announceMent.desc"></twixt-alert>
+</ng-container>
+<header [ngClass]="['flex', 'justify-between', 'items-center', headerClass, 'p-4']">
+  <div class="flex">
+    <button class="bg-slate-800 text-slate-100 rounded-full pr-2" (click)="handleHamburgerClick()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
+        className="w-6 h-6">
+        <path strokeLinecap="round" strokeLineCap="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
+    <ng-content></ng-content>
+  </div>
+  <div class="flex">
+    <ng-container *ngTemplateOutlet="rightBlock"></ng-container>
+  </div>
+</header>
