@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TwixModal({ title = '', children, footer }) {
+export default function TwixtModal({ title = '', children, footer }) {
   return (
     <div className="flex justify-center items-center h-screen">
       <div>
