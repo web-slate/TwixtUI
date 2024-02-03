@@ -11,6 +11,6 @@ export class TwixtModalComponent {
   @Input() title = '';
 
   // Use ContentChild for content projection of dynamic templates
-  @ContentChild('modalBody', { static: true }) modalBody: TemplateRef<any>;
-  @ContentChild('modalFooter', { static: true }) modalFooter: TemplateRef<any>;
+  @ContentChild('modalBody', { static: true }) modalBody!: TemplateRef<any>;
+  @ContentChild('modalFooter', { static: true }) modalFooter!: TemplateRef<any>;
 }
