@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = TwixModal;
+exports["default"] = TwixtModal;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function TwixModal(_ref) {
+function TwixtModal(_ref) {
   var _ref$title = _ref.title,
     title = _ref$title === void 0 ? '' : _ref$title,
     children = _ref.children,

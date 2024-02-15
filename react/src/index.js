@@ -18,3 +18,4 @@ export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserStackList } from './UserStackList';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
+export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
