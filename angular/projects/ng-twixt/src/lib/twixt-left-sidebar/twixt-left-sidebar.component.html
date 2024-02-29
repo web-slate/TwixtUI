@@ -1,0 +1,9 @@
+<nav [ngClass]="leftSidebarClass">
+    <div class="flex">
+      <div *ngIf="isOpen" class="fixed inset-0 bg-black bg-opacity-50 z-20" (click)="onOverlayClick()"></div>
+      <div [ngClass]="sidebarClasses" class="fixed inset-y-0 left-0 transform w-64 p-6 space-y-6 z-30 transition-transform duration-300"
+        [class.translate-x-0]="isOpen" [class.-translate-x-full]="!isOpen">
+        <ng-content></ng-content>
+      </div>
+    </div>
+</nav>
