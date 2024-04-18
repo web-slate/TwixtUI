@@ -1,7 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+  <input type="text" required v-model="itemName">
 </template>
 
 <script>
