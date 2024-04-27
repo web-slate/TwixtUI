@@ -1,13 +1,18 @@
 {
     "name": "twixt-ui-react",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "main": "dist/index.js",
-    "repository": "https://github.com/ramsunvtech/TwixtUI.git",
+    "repository": "https://github.com/web-slate/TwixtUI.git",
+    "author": "Venkatraman <ramsunvtech@gmail.com> (https://in.linkedin.com/in/venkatarchitect)",
     "scripts": {
         "build-css": "postcss src/tailwind.css -o dist/tailwind.css",
         "build-js": "babel src --out-dir dist --extensions \".js,.jsx\" --ignore \"src/**/*.test.js\"",
         "build": "rm -rf dist || true && npm run build-css && npm run build-js"
     },
+    "bugs": {
+        "url": "https://github.com/web-slate/TwixtUI/issues"
+      },
+      "homepage": "https://github.com/web-slate/TwixtUI#readme",
     "peerDependencies": {
         "react": "*",
         "react-dom": "*"
