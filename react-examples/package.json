@@ -6,7 +6,9 @@
   "scripts": {
     "react-demo": "storybook dev -p 6006",
     "debug": "storybook dev -p 6006 --debug-webpack",
-    "build": "storybook build -o react-docs"
+    "build": "storybook build -o react-docs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "Venkat.R",
   "license": "ISC",
