@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
-const Toast = ({title, content}) => {
-    const [showToast, setShowToast] = useState(false); 
+const Toast = ({ title='header', content='you clicked'}) => {
+    const [showToast, setShowToast] = useState(false);
 
-    const handleButtonClick = () => {
-        setShowToast(true); 
-    };
+    const handleButtonClick = useCallback(() => {
+        setShowToast(true);
+    }, []);
 
-    const handleCloseClick = () => {
-        setShowToast(false); 
-    };
+    const handleCloseClick = useCallback(() => {
+        setShowToast(false);
+    }, []);
 
     return (
         <div className="relative">
@@ -17,8 +17,7 @@ const Toast = ({title, content}) => {
                 <div className="fixed top-0 left-1/3 p-3 z-50 mx-auto">
                     <div className="bg-white border border-gray-200 shadow-lg rounded-lg overflow-hidden" role="alert" aria-live="assertive" aria-atomic="true">
                         <div className="flex items-center justify-between px-4 py-2 bg-blue-500 text-white">
-                            <img src="..." className="rounded me-2" alt="..." />
-                            <strong className="me-auto">{title}</strong>
+                            <strong className="me-auto mr-2">{title}</strong>
                             <small>11 mins ago</small>
                             <button type="button" className="text-white" onClick={handleCloseClick} aria-label="Close">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
