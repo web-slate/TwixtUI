@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Split = ({ primaryAction, secondaryActions }) => {
+const SplitButton = ({ primaryAction, secondaryActions=[] }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handlePrimaryAction = () => {
@@ -21,27 +21,29 @@ const Split = ({ primaryAction, secondaryActions }) => {
             >
                 {primaryAction.text}
             </button>
-            <button
-                type="button"
-                className="ml-2 inline-flex justify-center w-8 h-full rounded-md border border-gray-300 shadow-sm px-2 bg-blue-500 text-white font-semibold hover:bg-blue-600"
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
+            {secondaryActions.length > 0 && ( 
+                <button
+                    type="button"
+                    className="ml-2 inline-flex justify-center w-8 h-full rounded-md border border-gray-300 shadow-sm px-2 bg-blue-500 text-white font-semibold hover:bg-blue-600"
+                    onClick={() => setIsOpen(!isOpen)}
                 >
-                    <path
-                        fillRule="evenodd"
-                        d="M10 14l6-6v1H4v-1l6 6zm0 2a1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1z"
-                        clipRule="evenodd"
-                    />
-                </svg>
-            </button>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fillRule="evenodd"
+                            d="M10 14l6-6v1H4v-1l6 6zm0 2a1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1z"
+                            clipRule="evenodd"
+                        />
+                    </svg>
+                </button>
+            )}
 
             {/* Dropdown menu */}
-            {isOpen && (
+            {isOpen && secondaryActions.length > 0 && ( 
                 <div className="origin-top-right absolute left-3 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                     <div className="py-1" role="none">
                         {secondaryActions.map((action, index) => (
@@ -60,4 +62,4 @@ const Split = ({ primaryAction, secondaryActions }) => {
     );
 };
 
-export default Split;
+export default SplitButton;
