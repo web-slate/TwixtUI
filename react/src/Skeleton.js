@@ -56,7 +56,7 @@ export function ContentPane({ overWriteClasses, children }) {
   return (
     <main className={contentPaneClass}>
       <div className="flex w-full mx-auto px-6 py-8">
-        <div className="flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed">
+        <div className="flex flex-col w-full h-full text-gray-900 text-xl">
           {children}
         </div>
       </div>
