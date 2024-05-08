@@ -24,4 +24,3 @@ export const copyProps = {
     btnName: 'Copy button'
   },
 };
-
