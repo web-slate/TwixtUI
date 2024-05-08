@@ -17,5 +17,4 @@ function LoadingPostCard() {
     </div>
   )
 }
-
 export default LoadingPostCard;
