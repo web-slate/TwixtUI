@@ -1,6 +1,6 @@
 {
     "name": "twixt-ui-react",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "main": "dist/index.js",
     "repository": "https://github.com/web-slate/TwixtUI.git",
     "author": "Venkatraman <ramsunvtech@gmail.com> (https://in.linkedin.com/in/venkatarchitect)",
@@ -11,8 +11,8 @@
     },
     "bugs": {
         "url": "https://github.com/web-slate/TwixtUI/issues"
-      },
-      "homepage": "https://github.com/web-slate/TwixtUI#readme",
+    },
+    "homepage": "https://github.com/web-slate/TwixtUI#readme",
     "peerDependencies": {
         "react": "*",
         "react-dom": "*"
@@ -26,7 +26,7 @@
         "@babel/core": "^7.16.5",
         "@babel/preset-env": "^7.23.8",
         "@babel/preset-react": "^7.23.3",
-        "@uiw/react-codemirror": "^4.21.21",
+        "@uiw/react-codemirror": "^4.22.0",
         "autoprefixer": "^10.4.16",
         "babel-loader": "^9.1.3",
         "postcss": "^8.4.33",

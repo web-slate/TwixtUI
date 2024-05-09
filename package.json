@@ -1,10 +1,10 @@
 {
     "name": "twixt-ui",
-    "version": "1.0.0",
+    "version": "0.3.0",
     "main": "index.js",
     "repository": "https://github.com/ramsunvtech/TwixtUI.git",
     "scripts": {
-      "build": "cd react && npm run build"
+        "build": "cd react && npm run build"
     },
     "dependencies": {
         "autoprefixer": "^10.4.16",
