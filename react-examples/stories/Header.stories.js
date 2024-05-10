@@ -1,28 +1,48 @@
-import { Header } from './Header';
-import { fn } from '@storybook/test';
+import React from 'react';
+import TwixtHeader from '../../react/src/Header.js';
 
 export default {
-  title: 'Example/Header',
-  component: Header,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  title: 'Common/TwixtHeader',
+  component: TwixtHeader,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'fullscreen',
+    layout: 'centered',
   },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
-  },
-};
-
-export const LoggedIn = {
-  args: {
-    user: {
-      name: 'Jane Doe',
+  tags: ['autodocs'],
+  argTypes: {
+    announceMent: {
+      control: {
+        type: 'object',
+      },
     },
+    headerClass: {
+      control: {
+        type: 'text',
+      },
+    },
+    children: {
+      control: {
+        type: 'text',
+      },
+    },
+    rightBlock: {
+      control: {
+        type: 'text',
+      },
+    },
+    onHamburgerClick: { action: 'clicked' },
   },
 };
 
-export const LoggedOut = {};
+const Template = (args) => <TwixtHeader {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  announceMent: {
+    title: 'Announcement Title',
+    desc: 'Announcement Description',
+  },
+  headerClass: 'bg-gray-200', // Example class for header styling
+  children: '<h1>Twixt Header</h1>', // Example children component
+  rightBlock: '<button>Button</button>', // Example right block content
+  onHamburgerClick: () => {console.log('Hamburger clicked')},
+};
