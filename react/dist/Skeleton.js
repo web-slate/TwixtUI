@@ -67,6 +67,6 @@ function ContentPane(_ref3) {
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex w-full mx-auto px-6 py-8"
   }, /*#__PURE__*/_react["default"].createElement("div", {
-    className: "flex flex-col w-full h-full text-gray-900 text-xl border-4 border-gray-900 border-dashed"
+    className: "flex flex-col w-full h-full text-gray-900 text-xl"
   }, children)));
 }
