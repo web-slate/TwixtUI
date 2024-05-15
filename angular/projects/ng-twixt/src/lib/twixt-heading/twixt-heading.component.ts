@@ -10,5 +10,5 @@ import { NgSwitch, NgSwitchCase } from '@angular/common';
 })
 export class TwixtHeadingComponent {
   type :string = "h1";
-  children : string[]=["Heading 1 goes here","Heading 2 goes here","Heading 3 goes here","Heading 4 goes here","Heading 5 goes here","Heading 6 goes here",];
+  children : string = "Heading goes here";
 }
