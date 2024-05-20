@@ -6,7 +6,7 @@ export default function UserCard({ title, subTitleList = [], stats = [], cardIma
       <div class="relative flex flex-col items-center rounded-10 border-1 border-gray-200 w-400 mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
         <div class="relative flex h-32 w-full justify-center rounded-xl bg-cover" >
           <img src={cardBackgroundUrl} class="absolute flex h-32 w-full justify-center rounded-xl bg-cover" />
-          <div class="absolute bottom-12 flex items-center justify-center rounded-full border-4 border-white bg-pink-400 border-white-500 w-9/12">
+          <div class="absolute bottom-12 flex items-center justify-center rounded-full border-4 border-white bg-pink-400 border-white-500 w-8/12">
             <img class="h-7 w-7 rounded-full" src={cardImageUrl} alt={title} />
           </div>
         </div>
