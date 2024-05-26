@@ -82,7 +82,7 @@ const TableRow = ({ config, dataItem }) => {
           </div>
         </div>
       </td>)}
-      {config.displayFields.map(field => {
+      {(config.displayFields || []).map(field => {
         return (
           <td className={field.rowStyle}>
             <div className={field.cellStyle}>
@@ -91,7 +91,7 @@ const TableRow = ({ config, dataItem }) => {
           </td>
         )
       })}
-      {config.actionButtons.map(button => {
+      {(config.actionButtons || []).map(button => {
         return (
           <td className="pl-4">
             {button.label !== '' && (<button
