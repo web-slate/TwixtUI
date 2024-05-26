@@ -105,7 +105,7 @@ var TableRow = function TableRow(_ref4) {
     d: "M0 0h24v24H0z"
   }), /*#__PURE__*/_react["default"].createElement("path", {
     d: "M5 12l5 5l10 -10"
-  })))))), config.displayFields.map(function (field) {
+  })))))), (config.displayFields || []).map(function (field) {
     return /*#__PURE__*/_react["default"].createElement("td", {
       className: field.rowStyle
     }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -113,7 +113,7 @@ var TableRow = function TableRow(_ref4) {
     }, /*#__PURE__*/_react["default"].createElement("p", {
       className: field.textStyle
     }, dataItem[field.fieldId])));
-  }), config.actionButtons.map(function (button) {
+  }), (config.actionButtons || []).map(function (button) {
     return /*#__PURE__*/_react["default"].createElement("td", {
       className: "pl-4"
     }, button.label !== '' && /*#__PURE__*/_react["default"].createElement("button", {
