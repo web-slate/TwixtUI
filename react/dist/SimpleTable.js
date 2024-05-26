@@ -16,6 +16,7 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var TableHeader = function TableHeader(_ref) {
   var title = _ref.title;
+  if (!title) return null;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "px-4 md:px-10 py-4 md:py-7"
   }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -77,7 +78,7 @@ var TableRow = function TableRow(_ref4) {
   };
   return /*#__PURE__*/_react["default"].createElement("tr", {
     className: "focus:outline-none h-16 border border-gray-100 rounded"
-  }, /*#__PURE__*/_react["default"].createElement("td", null, /*#__PURE__*/_react["default"].createElement("div", {
+  }, (config === null || config === void 0 ? void 0 : config.canRowThisSelectable) && /*#__PURE__*/_react["default"].createElement("td", null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "ml-5"
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative"
@@ -112,14 +113,18 @@ var TableRow = function TableRow(_ref4) {
     }, /*#__PURE__*/_react["default"].createElement("p", {
       className: field.textStyle
     }, dataItem[field.fieldId])));
-  }), /*#__PURE__*/_react["default"].createElement("td", {
-    className: "pl-4"
-  }, /*#__PURE__*/_react["default"].createElement("button", {
-    className: "focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none",
-    onClick: function onClick() {
-      return config.onViewClick(dataItem);
-    }
-  }, config.viewLabel)));
+  }), config.actionButtons.map(function (button) {
+    return /*#__PURE__*/_react["default"].createElement("td", {
+      className: "pl-4"
+    }, button.label !== '' && /*#__PURE__*/_react["default"].createElement("button", {
+      className: "focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none",
+      onClick: function onClick() {
+        if (button.onClick) {
+          button.onClick(dataItem);
+        }
+      }
+    }, button.label));
+  }));
 };
 var DropdownButton = function DropdownButton(_ref5) {
   var onClick = _ref5.onClick;
@@ -138,11 +143,17 @@ var SimpleTable = function SimpleTable(_ref7) {
   var title = _ref7.title,
     config = _ref7.config,
     data = _ref7.data;
+  var _config$canShowFilter = config.canShowFilter,
+    canShowFilter = _config$canShowFilter === void 0 ? false : _config$canShowFilter,
+    _config$canShowHeader = config.canShowHeader,
+    canShowHeader = _config$canShowHeader === void 0 ? false : _config$canShowHeader,
+    _config$canShowAddBut = config.canShowAddButton,
+    canShowAddButton = _config$canShowAddBut === void 0 ? false : _config$canShowAddBut;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "sm:px-6 w-full"
-  }, /*#__PURE__*/_react["default"].createElement(TableHeader, {
+  }, canShowHeader && /*#__PURE__*/_react["default"].createElement(TableHeader, {
     title: title
-  }), /*#__PURE__*/_react["default"].createElement(TableFilters, null), /*#__PURE__*/_react["default"].createElement(TableAddButton, {
+  }), canShowFilter && /*#__PURE__*/_react["default"].createElement(TableFilters, null), canShowAddButton && /*#__PURE__*/_react["default"].createElement(TableAddButton, {
     label: config.addLabel,
     onClick: config.onAddClick
   }), /*#__PURE__*/_react["default"].createElement(TableTable, {

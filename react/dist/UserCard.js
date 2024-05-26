@@ -24,7 +24,7 @@ function UserCard(_ref) {
     src: cardBackgroundUrl,
     "class": "absolute flex h-32 w-full justify-center rounded-xl bg-cover"
   }), /*#__PURE__*/_react["default"].createElement("div", {
-    "class": "absolute bottom-12 flex items-center justify-center rounded-full border-4 border-white bg-pink-400 border-white-500"
+    "class": "absolute bottom-12 flex items-center justify-center rounded-full border-4 border-white bg-pink-400 border-white-500 w-8/12"
   }, /*#__PURE__*/_react["default"].createElement("img", {
     "class": "h-7 w-7 rounded-full",
     src: cardImageUrl,
