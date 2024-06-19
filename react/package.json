@@ -1,6 +1,6 @@
 {
     "name": "twixt-ui-react",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "main": "dist/index.js",
     "repository": "https://github.com/web-slate/TwixtUI.git",
     "author": "Venkatraman <ramsunvtech@gmail.com> (https://in.linkedin.com/in/venkatarchitect)",
@@ -20,7 +20,8 @@
     "dependencies": {
         "@uiw/react-codemirror": "^4.22.0",
         "prop-types": "^15.8.0",
-        "react": "*"
+        "react": "*",
+        "react-icons": "^5.2.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.23.4",
