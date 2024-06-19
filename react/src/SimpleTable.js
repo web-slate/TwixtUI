@@ -54,6 +54,8 @@ const TableTable = ({ config, data }) => {
 
 const TableRow = ({ config, dataItem }) => {
   const [isChecked, setIsChecked] = useState(false);
+  const displayFields = config?.displayFields || [];
+  const actionButtons = config?.actionButtons || [];
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -82,7 +84,7 @@ const TableRow = ({ config, dataItem }) => {
           </div>
         </div>
       </td>)}
-      {(config.displayFields || []).map(field => {
+      {displayFields.map(field => {
         return (
           <td className={field.rowStyle}>
             <div className={field.cellStyle}>
@@ -91,7 +93,7 @@ const TableRow = ({ config, dataItem }) => {
           </td>
         )
       })}
-      {(config.actionButtons || []).map(button => {
+      {actionButtons.map(button => {
         return (
           <td className="pl-4">
             {button.label !== '' && (<button
@@ -110,7 +112,6 @@ const TableRow = ({ config, dataItem }) => {
   );
 };
 
-
 const DropdownButton = ({ onClick }) => {
   return (
     <button className="focus:ring-2 rounded-md focus:outline-none" onClick={onClick} role="button" aria-label="option">
@@ -118,7 +119,6 @@ const DropdownButton = ({ onClick }) => {
     </button>
   );
 };
-
 
 const DropdownContent = ({ rowId }) => {
   // DropdownContent implementation
