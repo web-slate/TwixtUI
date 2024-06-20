@@ -20,3 +20,4 @@ export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { default as FormComponent } from './FormComponent';
+export { default as Flexbox } from './Flexbox';
