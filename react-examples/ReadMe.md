@@ -1,17 +1,23 @@
-## Step 1: Build the Demo App
+## Step 1: Open Storybook App
 
 ```
-npm run build-react-demo-app
+cd react-examples
 ```
 
-## Step 2: Run the App
+## Step 2: Install Node Modules
+
+```
+npm install --verbose
+```
+
+## Step 3: Run the App
 
 ```
 npm run react-demo
 ```
 
-### Where build will be stored?
+#### Where demo build will be stored?
 > Inside `storybook-static` directory.
 
-## Where i can test my component?
+#### Where i can test my component?
 > Inside `stories` directory.

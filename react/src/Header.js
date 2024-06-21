@@ -12,6 +12,7 @@ export default function TwixtHeader({ announceMent, headerClass, children, right
        <header className={`flex justify-between items-center ${headerClass} p-4`}>
         <div className="flex">
           <button
+
             style={{
               
               border: 'none', // Remove border
@@ -32,6 +33,7 @@ export default function TwixtHeader({ announceMent, headerClass, children, right
                 strokeLinejoin="round"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
+
             </svg>
           </button>
           {children}
@@ -40,5 +42,6 @@ export default function TwixtHeader({ announceMent, headerClass, children, right
       </header>
     </>
   );
+
 }
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 const TableHeader = ({ title }) => {
+  if (!title) return null;
+
   return (
     <div className="px-4 md:px-10 py-4 md:py-7">
       <div className="flex items-center justify-between">
@@ -52,6 +54,8 @@ const TableTable = ({ config, data }) => {
 
 const TableRow = ({ config, dataItem }) => {
   const [isChecked, setIsChecked] = useState(false);
+  const displayFields = config?.displayFields || [];
+  const actionButtons = config?.actionButtons || [];
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -59,7 +63,7 @@ const TableRow = ({ config, dataItem }) => {
 
   return (
     <tr className="focus:outline-none h-16 border border-gray-100 rounded">
-      <td>
+      {config?.canRowThisSelectable && (<td>
         <div className="ml-5">
           <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
             <input
@@ -79,8 +83,8 @@ const TableRow = ({ config, dataItem }) => {
             )}
           </div>
         </div>
-      </td>
-      {config.displayFields.map(field => {
+      </td>)}
+      {displayFields.map(field => {
         return (
           <td className={field.rowStyle}>
             <div className={field.cellStyle}>
@@ -89,17 +93,24 @@ const TableRow = ({ config, dataItem }) => {
           </td>
         )
       })}
-      <td className="pl-4">
-        <button 
-          className="focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none"
-          onClick={() => config.onViewClick(dataItem)}>
-          {config.viewLabel}
-        </button>
-      </td>
+      {actionButtons.map(button => {
+        return (
+          <td className="pl-4">
+            {button.label !== '' && (<button
+              className="focus:ring-2 focus:ring-offset-2 focus:ring-red-300 text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none"
+              onClick={() => {
+                if (button.onClick) {
+                  button.onClick(dataItem);
+                }
+              }}>
+              {button.label}
+            </button>)}
+          </td>
+        )
+      })}
     </tr>
   );
 };
-
 
 const DropdownButton = ({ onClick }) => {
   return (
@@ -109,17 +120,17 @@ const DropdownButton = ({ onClick }) => {
   );
 };
 
-
 const DropdownContent = ({ rowId }) => {
   // DropdownContent implementation
 };
 
 const SimpleTable = ({ title, config, data }) => {
+  const { canShowFilter = false, canShowHeader = false, canShowAddButton = false } = config;
   return (
     <div className="sm:px-6 w-full">
-      <TableHeader title={title} />
-      <TableFilters />
-      <TableAddButton label={config.addLabel} onClick={config.onAddClick} />
+      {canShowHeader && (<TableHeader title={title} />)}
+      {canShowFilter && (<TableFilters />)}
+      {canShowAddButton && (<TableAddButton label={config.addLabel} onClick={config.onAddClick} />)}
       <TableTable config={config} data={data} />
     </div>
   );
