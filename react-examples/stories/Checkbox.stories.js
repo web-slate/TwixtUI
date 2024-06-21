@@ -1,4 +1,3 @@
-import { fn } from '@storybook/test';
 import React from 'react';
 import TwixtCheckbox  from '../../react/src/Checkbox.js';
 
@@ -9,22 +8,26 @@ export default {
     // layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    onChange: {
-      action: 'clicked', 
-      description: 'Function to be called when the button is clicked',
-    }
+  argTypes: {},
+  args: {
+    checked: true,
+    label: 'Checkbox Label',
   }
 };
 
 
-export const checkButton = {
+export const SimpleAgreeCheckbox = {
   args: {
-    onChange:()=>{
-      alert('button clicked')
-    }
+    checked: true,
+    label: 'Accept Terms and Conditions',
+    onChange: (newCheckedState) => console.log('Checkbox is now:', newCheckedState),
   },
 }
 
-
-
+export const UncheckedCheckbox = {
+  args: {
+    checked: false,
+    label: 'Subscribe to Newsletter',
+    onChange: (newCheckedState) => console.log('Checkbox is now:', newCheckedState),
+  },
+};
