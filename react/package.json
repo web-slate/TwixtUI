@@ -1,6 +1,8 @@
 {
     "name": "twixt-ui-react",
+
     "version": "0.2.8",
+
     "main": "dist/index.js",
     "repository": "https://github.com/web-slate/TwixtUI.git",
     "author": "Venkatraman <ramsunvtech@gmail.com> (https://in.linkedin.com/in/venkatarchitect)",
