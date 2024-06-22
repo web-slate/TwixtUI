@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-const Tooltip = ({ text, children }) => {
+const TwixtTooltip = ({ text, children }) => {
     const [showTooltip, setShowTooltip] = useState(false);
 
     const handleMouseEnter = () => {
@@ -25,4 +25,4 @@ const Tooltip = ({ text, children }) => {
     )
 }
 
-export default Tooltip
+export default TwixtTooltip

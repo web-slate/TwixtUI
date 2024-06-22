@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CommentsSystem() {
+function TwixtCommentsSystem() {
   return (
     <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased">
       <div className="max-w-2xl mx-auto px-4">
@@ -215,4 +215,4 @@ function CommentsSystem() {
   )
 }
 
-export default CommentsSystem
+export default TwixtCommentsSystem

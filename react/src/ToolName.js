@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolName = ({ name, status, emoji, slogan = 'Powered by Tailwind' }) => {
+const TwixtToolName = ({ name, status, emoji, slogan = 'Powered by Tailwind' }) => {
     const getStatusEmoji = () => {
         switch (status) {
             case 'down':
@@ -26,4 +26,4 @@ const ToolName = ({ name, status, emoji, slogan = 'Powered by Tailwind' }) => {
     );
 };
 
-export default ToolName;
+export default TwixtToolName;

@@ -1,9 +1,9 @@
 import React from 'react';
-import SimpleTable from '../../react/src/SimpleTable.js';
+import TwixtSimpleTable from '../../react/src/SimpleTable.js';
 
 export default {
-  title: 'Common/SimpleTable',
-  component: SimpleTable,
+  title: 'Common/TwixtSimpleTable',
+  component: TwixtSimpleTable,
   parameters: {
     layout: 'centered',
   },
@@ -16,7 +16,7 @@ export default {
 };
 
 export const Default = () => (
-  <SimpleTable
+  <TwixtSimpleTable
     title="Default Table"
     config={{
       addLabel: 'Add Item',
