@@ -124,7 +124,7 @@ const DropdownContent = ({ rowId }) => {
   // DropdownContent implementation
 };
 
-const SimpleTable = ({ title, config, data }) => {
+const TwixtSimpleTable = ({ title, config, data }) => {
   const { canShowFilter = false, canShowHeader = false, canShowAddButton = false } = config;
   return (
     <div className="sm:px-6 w-full">
@@ -136,4 +136,4 @@ const SimpleTable = ({ title, config, data }) => {
   );
 }
 
-export default SimpleTable;
+export default TwixtSimpleTable;

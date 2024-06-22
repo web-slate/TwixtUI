@@ -1,5 +1,6 @@
 export { default as TwixtAlert } from './Alert';
 export { default as TwixtDialog } from './Dialog';
+export { default as TwixtDivider } from "./Divider"
 export { default as TwixtSingleLineInput } from './InputSingleLine';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
@@ -19,3 +20,5 @@ export { default as TwixtUserStackList } from './UserStackList';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
+export { default as TwixtToast } from './Toast';
+

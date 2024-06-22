@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function UserCard({ title, subTitleList = [], stats = [], cardImageUrl, cardBackgroundUrl }) {
+export default function TwixtUserCard({ title, subTitleList = [], stats = [], cardImageUrl, cardBackgroundUrl }) {
   return (
     <div class="flex flex-col justify-center items-center h-[100vh]">
       <div class="relative flex flex-col items-center rounded-10 border-1 border-gray-200 w-400 mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">

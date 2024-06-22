@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
-const Toast = ({ title='header', content='you clicked'}) => {
+const TwixtToast = ({ title='header', content='you clicked'}) => {
     const [showToast, setShowToast] = useState(false);
 
     const handleButtonClick = useCallback(() => {
@@ -38,4 +38,4 @@ const Toast = ({ title='header', content='you clicked'}) => {
     );
 };
 
-export default Toast;
+export default TwixtToast;
