@@ -1,13 +1,12 @@
 import React from 'react';
 
-
 const violetBadge = 'cursor-pointer w-8 h-8 grid place-items-center text-base rounded-full text-white bg-violet-700';
 const indigoBadge = 'cursor-pointer max-w-16 px-4 py-2 flex items-center text-base rounded-full text-indigo-500 border border-indigo-500';
 
-const Badges = ({ text }) => {
+const TwixtBadges = ({ text, overwriteClass }) => {
     return (
         <div className='grid gap-5'>
-            <div className={violetBadge}>
+            <div className={overwriteClass || violetBadge}>
                 <span className="p-1">
                     {text}
                 </span>
@@ -24,4 +23,4 @@ const Badges = ({ text }) => {
     );
 }
 
-export default Badges;
+export default TwixtBadges;
