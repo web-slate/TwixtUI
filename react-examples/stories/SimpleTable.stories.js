@@ -2,7 +2,7 @@ import React from 'react';
 import SimpleTable from '../../react/src/SimpleTable.js';
 
 export default {
-  title: 'Common/SimpleTable',
+  title: 'Common/TwixtSimpleTable',
   component: SimpleTable,
   parameters: {
     layout: 'centered',
