@@ -1,5 +1,7 @@
 import React from 'react';
+
 import TwixtSwitch from "../../react/src/Switch.js"
+
 
 // Default export to define the title and component
 export default {
@@ -32,3 +34,4 @@ export const CustomLabel = Template.bind({});
 CustomLabel.args = {
   label: 'Custom Label',
 };
+
