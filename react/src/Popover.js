@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PopoverButton = ({ buttonText = 'Click to popover', title = 'Default Title', content = 'Default Content' }) => {
+const TwixtPopoverButton = ({ buttonText = 'Click to popover', title = 'Default Title', content = 'Default Content' }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopover = () => {
@@ -26,4 +26,4 @@ const PopoverButton = ({ buttonText = 'Click to popover', title = 'Default Title
   );
 };
 
-export default PopoverButton;
+export default TwixtPopoverButton;

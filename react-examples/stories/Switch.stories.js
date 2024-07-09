@@ -1,41 +1,37 @@
 import React from 'react';
-import TwixtSwitch from '../../react/src/Switch.js';
 
+import TwixtSwitch from "../../react/src/Switch.js"
+
+
+// Default export to define the title and component
 export default {
   title: 'Common/TwixtSwitch',
   component: TwixtSwitch,
   argTypes: {
-    label: { control: 'text' },
-    onChange: { action: 'changed' }, // action to log changes
-  },
-  docs: {
-    description: {
-      component: 'This component is a toggle switch used to toggle between on and off states.',
+    label: {
+      control: 'text',
+      description: 'Label for the switch',
+      defaultValue: 'Toggle Switch',
+    },
+    onChange: {
+      action: 'changed',
+      description: 'Function to call when switch state changes',
     },
   },
 };
 
-// Template function to create stories
+// Template function for creating story instances
 const Template = (args) => <TwixtSwitch {...args} />;
 
-// DefaultSwitch story
-export const DefaultSwitch = Template.bind({});
-DefaultSwitch.args = {
+// Define a primary story for the component
+export const Default = Template.bind({});
+Default.args = {
   label: 'Toggle Switch',
 };
-DefaultSwitch.parameters = {
-  docs: {
-    storyDescription: 'This is the default `TwixtSwitch` component.',
-  },
-};
 
-// CustomLabel story
+// Define a story with a custom label
 export const CustomLabel = Template.bind({});
 CustomLabel.args = {
   label: 'Custom Label',
 };
-CustomLabel.parameters = {
-  docs: {
-    storyDescription: 'This is a `TwixtSwitch` component with a custom label.',
-  },
-};
+
