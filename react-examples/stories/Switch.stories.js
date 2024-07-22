@@ -8,30 +8,27 @@ export default {
   title: 'Common/TwixtSwitch',
   component: TwixtSwitch,
   argTypes: {
-    label: {
-      control: 'text',
-      description: 'Label for the switch',
-      defaultValue: 'Toggle Switch',
-    },
-    onChange: {
-      action: 'changed',
-      description: 'Function to call when switch state changes',
-    },
+  },
+  args: {
+    title: 'Welcome to Twixt React Switch Component',
+    desc: 'Explore the Twixt React Switch for improved layout designed to enhance your experience.'
+  },
+};
+export const ChangeTheme = {
+  args: {
+    label: 'Change Theme',
+    onChange: () => {
+     alert('Switch clicked')
+    }
   },
 };
 
-// Template function for creating story instances
-const Template = (args) => <TwixtSwitch {...args} />;
-
-// Define a primary story for the component
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Toggle Switch',
-};
-
-// Define a story with a custom label
-export const CustomLabel = Template.bind({});
-CustomLabel.args = {
-  label: 'Custom Label',
+export const DeactivateUser = {
+  args: {
+    label:'Deactivate User',
+    onChange:()=>{
+      alert('Switch clicked')
+    }
+  },
 };
 

@@ -15,30 +15,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function TwixtCheckbox(_ref) {
-  var _ref$checked = _ref.checked,
-    checked = _ref$checked === void 0 ? true : _ref$checked,
-    label = _ref.label,
-    _ref$onChange = _ref.onChange,
-    onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange;
-  var _useState = (0, _react.useState)(checked),
+  var onChange = _ref.onChange;
+  var _useState = (0, _react.useState)(false),
     _useState2 = _slicedToArray(_useState, 2),
     isChecked = _useState2[0],
     setIsChecked = _useState2[1];
-  (0, _react.useEffect)(function () {
-    setIsChecked(checked);
-  }, [checked]);
-  var handleCheckboxChange = function handleCheckboxChange(event) {
-    setIsChecked(event.target.checked);
+  var handleCheckboxChange = function handleCheckboxChange() {
+    setIsChecked(!isChecked);
     onChange();
   };
-  return /*#__PURE__*/_react["default"].createElement("label", {
-    className: "inline-flex items-center space-x-3"
-  }, /*#__PURE__*/_react["default"].createElement("input", {
+  return /*#__PURE__*/_react["default"].createElement("input", {
     type: "checkbox",
     checked: isChecked,
     onChange: handleCheckboxChange,
-    className: "form-checkbox h-5 w-5 text-blue-600"
-  }), label && /*#__PURE__*/_react["default"].createElement("span", {
-    className: "text-gray-700"
-  }, label));
+    className: "checkbox opacity-0 absolute cursor-pointer w-full h-full"
+  });
 }
