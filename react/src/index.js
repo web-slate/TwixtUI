@@ -22,4 +22,6 @@ export { default as TwixtPageProgressLine } from './PageProgressLine';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { default as TwixtToast } from './Toast';
 export { default as TwixtUserNameInput } from './UserNameInput';
-
+export {default as TwixtPopover} from './Popover';
+export {default as TwixtDropdown} from './OneSelectDropdown';
+export {default as TwixtCopyLink} from './CopyLink';
