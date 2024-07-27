@@ -19,7 +19,9 @@ export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserStackList } from './UserStackList';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
+export {default as TwixtPopover} from './Popover';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { default as TwixtToast } from './Toast';
 export { default as TwixtUserNameInput } from './UserNameInput';
-
+export {default as TwixtCopylink} from './CopyLink';
+export {default as TwixtOneSelectDropdown} from'./OneSelectDropdown';
