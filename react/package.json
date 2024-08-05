@@ -1,11 +1,12 @@
 {
     "name": "twixt-ui-react",
-    "version": "0.2.10",
+    "version": "0.2.11",
     "main": "dist/index.js",
     "repository": "https://github.com/web-slate/TwixtUI.git",
     "author": "Venkatraman <ramsunvtech@gmail.com> (https://in.linkedin.com/in/venkatarchitect)",
     "scripts": {
-        "build-css": "npx postcss src/tailwind.css -o dist/tailwind.css",
+        "release:react": "cd react && npm run build && npm version patch && npm publish --public",
+        "build-css": "npx tailwindcss -i ./src/tailwind.css -o ./dist/tailwind.css --minify",
         "build-js": "babel src --out-dir dist --extensions \".js,.jsx\" --ignore \"src/**/*.test.js\"",
         "build": "rm -rf dist || true && npm run build-css && npm run build-js"
     },

@@ -141,7 +141,7 @@ var DropdownContent = function DropdownContent(_ref6) {
   var rowId = _ref6.rowId;
 } // DropdownContent implementation
 ;
-var SimpleTable = function SimpleTable(_ref7) {
+var TwixtSimpleTable = function TwixtSimpleTable(_ref7) {
   var title = _ref7.title,
     config = _ref7.config,
     data = _ref7.data;
@@ -163,4 +163,4 @@ var SimpleTable = function SimpleTable(_ref7) {
     data: data
   }));
 };
-var _default = exports["default"] = SimpleTable;
+var _default = exports["default"] = TwixtSimpleTable;
