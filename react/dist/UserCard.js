@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = UserCard;
+exports["default"] = TwixtUserCard;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function UserCard(_ref) {
+function TwixtUserCard(_ref) {
   var title = _ref.title,
     _ref$subTitleList = _ref.subTitleList,
     subTitleList = _ref$subTitleList === void 0 ? [] : _ref$subTitleList,

@@ -23,7 +23,11 @@ function TwixtHeader(_ref) {
   }, /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex"
   }, /*#__PURE__*/_react["default"].createElement("button", {
-    className: "text-slate-100",
+    style: {
+      border: 'none',
+      // Remove border
+      outline: 'none' // Remove outline
+    },
     onClick: onHamburgerClick
   }, /*#__PURE__*/_react["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -34,7 +38,7 @@ function TwixtHeader(_ref) {
     className: "w-6 h-6"
   }, /*#__PURE__*/_react["default"].createElement("path", {
     strokeLinecap: "round",
-    strokeLineCap: "round",
+    strokeLinejoin: "round",
     d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
   }))), children), /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex"

@@ -5,8 +5,8 @@
     "repository": "https://github.com/ramsunvtech/TwixtUI.git",
     "scripts": {
         "build": "cd react && npm run build",
-        "react-docs-local": "cd react-examples && npm run react-demo",
-        "react-docs-gen": "cd react-examples && npm run build"
+        "react-docs-local": "cd twixt-ui-react-docs && npm run react-demo",
+        "react-docs-gen": "cd twixt-ui-react-docs && npm run build"
     },
     "dependencies": {
         "autoprefixer": "^10.4.16",

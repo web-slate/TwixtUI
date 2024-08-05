@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-var ToolName = function ToolName(_ref) {
+var TwixtToolName = function TwixtToolName(_ref) {
   var name = _ref.name,
     status = _ref.status,
     emoji = _ref.emoji,
@@ -32,4 +32,4 @@ var ToolName = function ToolName(_ref) {
     className: "text-xs text-gray-500"
   }, slogan));
 };
-var _default = exports["default"] = ToolName;
+var _default = exports["default"] = TwixtToolName;

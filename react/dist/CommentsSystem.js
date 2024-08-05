@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-function CommentsSystem() {
+function TwixtCommentsSystem() {
   return /*#__PURE__*/_react["default"].createElement("section", {
     className: "bg-white dark:bg-gray-900 py-8 lg:py-16 antialiased"
   }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -299,4 +299,4 @@ function CommentsSystem() {
     d: "M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"
   })), "Reply")))));
 }
-var _default = exports["default"] = CommentsSystem;
+var _default = exports["default"] = TwixtCommentsSystem;
