@@ -1,3 +1,5 @@
+import './tailwind.css'
+
 export { default as TwixtAlert } from './Alert';
 export { default as TwixtDialog } from './Dialog';
 export { default as TwixtDivider } from "./Divider"

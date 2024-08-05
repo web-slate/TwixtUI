@@ -177,6 +177,7 @@ Object.defineProperty(exports, "TwixtUserStackList", {
     return _UserStackList["default"];
   }
 });
+require("./tailwind.css");
 var _Alert = _interopRequireDefault(require("./Alert"));
 var _Dialog = _interopRequireDefault(require("./Dialog"));
 var _Divider = _interopRequireDefault(require("./Divider"));
