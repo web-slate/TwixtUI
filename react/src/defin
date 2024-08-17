@@ -1,0 +1,9 @@
+Sample Definition file - https://raw.githubusercontent.com/web-slate/chef-component/main/definitions.txt
+
+Command:
+
+npx [@fe-chef](profile/fe-chef)/component -f definitions.txt
+
+
+Structure
+
