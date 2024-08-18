@@ -12,7 +12,6 @@ export { default as TwixtLoadingPostCard } from './LoadingPostCard';
 export { default as TwixtModal } from './Modal';
 export { default as TwixtSwitch } from './Switch';
 export { LeftSideBar, RightSideBar, ContentPane } from './Skeleton';
-export { default as TwixtButton } from './Button';
 export { default as TwixtMultiLineInput } from './TextArea';
 export { default as TwixtCheckbox } from './Checkbox';
 export { default as SimpleTable } from './SimpleTable';
@@ -27,3 +26,10 @@ export { default as TwixtUserNameInput } from './UserNameInput';
 export {default as TwixtPopover} from './Popover';
 export {default as TwixtDropdown} from './OneSelectDropdown';
 export {default as TwixtCopyLink} from './CopyLink';
+
+// Deprecated Components.
+export { default as TwixtButton_DEPRECATED } from './Button';
+
+// Grouped Components.
+// Group - Call To Action
+export { default as TwixtButton } from './CallsToAction/Button';
