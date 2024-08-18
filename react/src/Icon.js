@@ -70,5 +70,5 @@ export default function TwixtIcon({ type = 'notification', variant = 'filled', s
   }
 
   const IconComponent = iconTypes[type]?.[variant] || iconTypes.notification[filled];
-  return <IconComponent size={size} color={color} />;
+  return <IconComponent size={size} color={color} />
 }
