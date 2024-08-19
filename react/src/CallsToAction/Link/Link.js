@@ -1,7 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-function Link() {
-  return <>Link goes here.</>
+export default function TwixtLink({
+  background = 'bg-transparent',
+  color = 'text-blue-500',
+  value = '', 
+  onClick,
+  overwriteClass = '',
+  children,
+}) {
+  return (
+    <a
+      href={value}
+      className={`${background} ${color} ${overwriteClass}`}
+      onClick={onClick}
+      target="_blank"
+    >
+      {children}
+    </a>
+  );
 }
-
-export default Link
