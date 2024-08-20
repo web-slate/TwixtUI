@@ -1,21 +1,25 @@
 import React from 'react';
 
 export default function TwixtLink({
-  background = 'bg-transparent',
+  background = '',
   color = 'text-blue-500',
-  value = '', 
+  link = '#', 
   onClick,
   overwriteClass = '',
-  children,
+  label,
 }) {
+  if (!label) {
+    return null; // Return null if no label is provided
+  }
+
   return (
     <a
-      href={value}
+      href={link}
       className={`${background} ${color} ${overwriteClass}`}
       onClick={onClick}
       target="_blank"
     >
-      {children}
+      {label}
     </a>
   );
 }
