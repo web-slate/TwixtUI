@@ -7,19 +7,24 @@ export default function TwixtLink({
   onClick,
   overwriteClass = '',
   label,
+  leftIcon, 
+  rightIcon, 
+  target,
 }) {
   if (!label) {
-    return null; // Return null if no label is provided
+    return null;
   }
 
   return (
     <a
       href={link}
-      className={`${background} ${color} ${overwriteClass}`}
+      className={`flex items-center gap-4 ${background} ${color} ${overwriteClass}`}
       onClick={onClick}
-      target="_blank"
+      target={target}
     >
-      {label}
+      {leftIcon && <span>{leftIcon}</span>}
+      <span>{label}</span>
+      {rightIcon && <span>{rightIcon}</span>}
     </a>
   );
 }

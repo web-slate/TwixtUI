@@ -1,6 +1,6 @@
 import React from 'react';
-import TwixtButton from '../../react/src/CallsToAction/Button';
 import TwixtLink from '../../react/src/CallsToAction/Link';
+import TwixtIcon from '../../react/src/Icon';
 
 export default {
   title: 'Call To Action/TwixtLink',
@@ -48,15 +48,18 @@ export const DefaultLink = {
     link: 'https://github.com/web-slate/TwixtUI',
   },
 };
-
-export const LinkWithButton = {
+export const LinkWithLefticon = {
   args: {
-    label: (
-      <TwixtButton
-        link="#"
-        label="Button Link"
-      />
-    ),
-    link: '#',
+    label: 'Go to TwixtUI', 
+    link: 'https://github.com/web-slate/TwixtUI',
+    leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
+  },
+};
+export const LinkWithRighticon = {
+  args: {
+    label: 'Go to TwixtUI', 
+    link: 'https://github.com/web-slate/TwixtUI',
+    rightIcon: (<TwixtIcon type="chevronDown" variant="filled" size="12" color="color" />),
+
   },
 };
