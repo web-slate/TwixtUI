@@ -1,26 +1,56 @@
-import { fn } from '@storybook/test';
-import TwixtCopyLink from '../../react/src/CopyLink.js';
+import React from 'react';
+import TwixtCopyLink from '../../react/src/CallsToAction/CopyLink';
+import TwixtIcon from '../../react/src/Icon';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Common/TwixtCopyLink',
+  title: 'Call To Action/TwixtCopyLink',
   component: TwixtCopyLink,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
+    color: {
+      type: { name: 'string', required: false },
+      description: 'Tailwind text color class',
+      defaultValue: 'text-blue-500',
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Function to be called when the link is clicked',
+    },
+    background: {
+      type: { name: 'string', required: false },
+      description: 'Tailwind background color class',
+      defaultValue: '',
+    },
+    link: {
+      type: { name: 'string', required: false },
+      description: 'URL the link points to',
+      defaultValue: '#',
+    },
+    label: {
+      type: { name: 'string', required: true },
+      description: 'The content of the link',
+      defaultValue: 'Link',
+    },
+    overwriteClass: {
+      type: { name: 'string', required: false },
+      description: 'Additional CSS classes to overwrite the default ones',
+      defaultValue: '',
+    },
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
 };
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const copyProps = {
+export const DefaultLink = {
   args: {
-    text: 'copy link',
-    url: 'www.example.com'
+    label: 'Click to copy the link',
+    link: 'https://github.com/web-slate/TwixtUI',
+  },
+};
+export const CopyLinkwithIcon = {
+  args: {
+    label: 'Copy to Clipboard',
+    link: 'https://github.com/web-slate/TwixtUI',
+    leftIcon: (<TwixtIcon type="export" variant="filled" size="12" color="color" />),
   },
 };
