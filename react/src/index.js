@@ -33,3 +33,4 @@ export { default as TwixtButton_DEPRECATED } from './Button';
 // Grouped Components.
 // Group - Call To Action
 export { default as TwixtButton } from './CallsToAction/Button';
+export { default as TwixtLink} from './CallsToAction/Link';
