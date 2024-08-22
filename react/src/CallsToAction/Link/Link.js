@@ -9,6 +9,7 @@ export default function TwixtLink({
   label,
   leftIcon, 
   rightIcon, 
+  rightContent,
   target,
 }) {
   if (!label) {
@@ -25,6 +26,7 @@ export default function TwixtLink({
       {leftIcon && <span>{leftIcon}</span>}
       <span>{label}</span>
       {rightIcon && <span>{rightIcon}</span>}
+      {rightContent && <span>{rightContent}</span>}
     </a>
   );
 }
