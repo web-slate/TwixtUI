@@ -34,3 +34,7 @@ export { default as TwixtButton_DEPRECATED } from './Button';
 // Group - Call To Action
 export { default as TwixtButton } from './CallsToAction/Button';
 export { default as TwixtLink } from './CallsToAction/Link';
+
+// Group - Communications
+export { default as TwixtToolTip } from './Communications/ToolTip';
+
