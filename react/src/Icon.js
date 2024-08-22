@@ -64,7 +64,8 @@ const iconTypes = {
   export: { filled: FaFileExport, outline: FaFileExport },
   filter: { filled: FaFilter, outline: FaFilterAlt },
   userAvatar: { filled: FaUser, outline: FaUserCircle },
-  clipboard:{filled: FaClipboardCheck, outline: FaRegClipboard}
+  clipboard:{filled: FaRegClipboard, outline: FaRegClipboard},
+  checkedClipboard:{filled: FaClipboardCheck, outline:FaClipboardCheck}
 };
 
 export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {

@@ -13,7 +13,7 @@ export default {
         'notification', 'terminal', 'help', 'magnifier', 'hamburger', 'verticalThreeDots', 
         'horizontalThreeDots', 'pin', 'delete', 'add', 'chevronUp', 'chevronDown', 
         'chevronLeft', 'chevronRight', 'note', 'pencil', 'refresh', 'learn', 'monitor', 
-        'import', 'export', 'filter', 'userAvatar','clipboard'] },
+        'import', 'export', 'filter', 'userAvatar','clipboard','checkedClipboard'] },
     },
     variant: {
       control: { type: 'select', options: ['filled', 'outline'] },
@@ -239,17 +239,17 @@ export const UserAvatarIcon = {
     color: 'black',
   },
 };
-export const Clipboard = {
+export const ClipboardIcon = {
   args: {
     type: 'clipboard',
-    variant: 'outline',
+    variant: 'filled',
     size: 12,
     color: 'black',
   },
 };
-export const Checkedclipboard = {
+export const CheckedclipboardIcon = {
   args: {
-    type: 'clipboard',
+    type: 'checkedClipboard',
     variant: 'filled',
     size: 12,
     color: 'black',
