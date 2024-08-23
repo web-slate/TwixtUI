@@ -19,6 +19,7 @@ import {
   FaFilter,
   FaFilterAlt,
   FaHamburger,
+  FaHeadphones,
   FaPencilAlt,
   FaPlus,
   FaPlusSquare,
@@ -39,6 +40,15 @@ import {
   FaUser,
   FaUserCircle,
 } from 'react-icons/fa';
+
+import { CiHeadphones } from "react-icons/ci";
+
+import {
+  PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
+  PiSpeakerSlash,
+  PiSpeakerSlashFill,
+  PiWatchFill, PiWatchLight
+} from "react-icons/pi";
 
 const iconTypes = {
   notification: { filled: FaBell, outline: FaBellSlash },
@@ -65,7 +75,11 @@ const iconTypes = {
   filter: { filled: FaFilter, outline: FaFilterAlt },
   userAvatar: { filled: FaUser, outline: FaUserCircle },
   clipboard:{filled: FaRegClipboard, outline: FaRegClipboard},
-  checkedClipboard:{filled: FaClipboardCheck, outline:FaClipboardCheck}
+  checkedClipboard:{filled: FaClipboardCheck, outline:FaClipboardCheck},
+  headphone: {filled: FaHeadphones, outline: CiHeadphones},
+  watch: {filled: PiWatchFill, outline: PiWatchLight },
+  speaker: {filled: PiSpeakerSimpleHighFill, outline: PiSpeakerSimpleHighLight },
+  speakerSlashed: {filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
 };
 
 export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {
