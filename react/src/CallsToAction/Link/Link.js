@@ -19,7 +19,7 @@ export default function TwixtLink({
   return (
     <a
       href={link}
-      className={`flex items-center gap-4 ${background} ${color} ${overwriteClass}`}
+      className={`inline-flex items-center gap-4 ${background} ${color} ${overwriteClass}`}
       onClick={onClick}
       target={target}
     >

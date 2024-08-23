@@ -1,7 +1,7 @@
 import React from 'react';
 import TwixtToolTip from '../../../react/src/Communications/ToolTip';
 export default {
-  title: 'Components/TwixtToolTip',
+  title: 'Communications/TwixtToolTip',
   component: TwixtToolTip,
   parameters: {
     layout: 'centered',
