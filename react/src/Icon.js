@@ -1,42 +1,54 @@
 import React from 'react';
 import {
+  FaBars,
   FaBell,
   FaBellSlash,
-  FaTerminal,
-  FaTerminalSlash,
+  FaBook,
+  FaBookOpen,
+  FaChevronDown,
+  FaChevronLeft,
+  FaChevronRight,
+  FaChevronUp,
+  FaClipboardCheck,
+  FaDesktop,
+  FaDesktopAlt,
+  FaEllipsisH,
+  FaEllipsisV,
+  FaFileExport,
+  FaFileImport,
+  FaFilter,
+  FaFilterAlt,
+  FaHamburger,
+  FaHeadphones,
+  FaPencilAlt,
+  FaPlus,
+  FaPlusSquare,
   FaQuestionCircle,
   FaQuestionCircleSlash,
+  FaRedo,
+  FaRegClipboard,
   FaSearch,
   FaSearchPlus,
-  FaBars,
-  FaHamburger,
-  FaEllipsisV,
-  FaEllipsisH,
+  FaStickyNote,
+  FaSyncAlt,
+  FaTerminal,
+  FaTerminalSlash,
   FaThumbtack,
   FaThumbtackSlash,
   FaTrash,
   FaTrashAlt,
-  FaPlus,
-  FaPlusSquare,
-  FaChevronUp,
-  FaChevronDown,
-  FaChevronLeft,
-  FaChevronRight,
-  FaStickyNote,
-  FaPencilAlt,
-  FaRedo,
-  FaSyncAlt,
-  FaBook,
-  FaBookOpen,
-  FaDesktop,
-  FaDesktopAlt,
-  FaFileImport,
-  FaFileExport,
-  FaFilter,
-  FaFilterAlt,
   FaUser,
   FaUserCircle,
 } from 'react-icons/fa';
+
+import { CiHeadphones } from "react-icons/ci";
+
+import {
+  PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
+  PiSpeakerSlash,
+  PiSpeakerSlashFill,
+  PiWatchFill, PiWatchLight
+} from "react-icons/pi";
 
 const iconTypes = {
   notification: { filled: FaBell, outline: FaBellSlash },
@@ -62,6 +74,12 @@ const iconTypes = {
   export: { filled: FaFileExport, outline: FaFileExport },
   filter: { filled: FaFilter, outline: FaFilterAlt },
   userAvatar: { filled: FaUser, outline: FaUserCircle },
+  clipboard:{filled: FaRegClipboard, outline: FaRegClipboard},
+  checkedClipboard:{filled: FaClipboardCheck, outline:FaClipboardCheck},
+  headphone: {filled: FaHeadphones, outline: CiHeadphones},
+  watch: {filled: PiWatchFill, outline: PiWatchLight },
+  speaker: {filled: PiSpeakerSimpleHighFill, outline: PiSpeakerSimpleHighLight },
+  speakerSlashed: {filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
 };
 
 export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {
@@ -70,5 +88,5 @@ export default function TwixtIcon({ type = 'notification', variant = 'filled', s
   }
 
   const IconComponent = iconTypes[type]?.[variant] || iconTypes.notification[filled];
-  return <IconComponent size={size} color={color} />;
+  return <IconComponent size={size} color={color} />
 }

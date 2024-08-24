@@ -1,14 +1,26 @@
 import React from 'react';
-import TwixtButton from '../../react/src/Button.js';
+import TwixtButton from '../../react/src/CallsToAction/Button';
+import TwixtIcon from '../../react/src/Icon';
+import { background } from '@storybook/theming';
 
 export default {
-  title: 'Common/TwixtButton',
+  title: 'Call To Action/TwixtButton',
   component: TwixtButton,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
+    background: {
+      type: { name: 'string', required: false },
+      description: 'Tailwind background class',
+      defaultValue: 'bg-indigo-500',
+    },
+    color: {
+      type: { name: 'string', required: false },
+      description: 'Tailwind text color class',
+      defaultValue: 'text-white',
+    },
     onClick: {
       action: 'clicked',
       description: 'Function to be called when the button is clicked',
@@ -18,8 +30,40 @@ export default {
       description: 'The content of the button',
       defaultValue: 'Button',
     },
+    leftIcon: {
+      type: { name: 'node', required: false },
+      description: 'Icon JSX',
+      defaultValue: null,
+    },
+    rightIcon: {
+      type: { name: 'node', required: false },
+      description: 'Icon JSX',
+      defaultValue: null,
+    },
+    label: {
+      type: { name: 'string', required: true },
+      description: 'Button Label',
+      defaultValue: '',
+    },
+    hideLabel: {
+      type: { name: 'boolean', required: false },
+      description: 'Button Label',
+      defaultValue: false,
+    },
+    disabled: {
+      type: { name: 'boolean', required: false },
+      description: 'Button Disabled',
+      defaultValue: false,
+    },
+    showSpinner: {
+      type: { name: 'boolean', required: false },
+      description: 'showSpinner in right side of the Button before right icon',
+      defaultValue: false,
+    },
     overwriteClass: {
-      type: { name: 'string' },
+      type: { name: 'string', required: false },
+      description: 'Overwrite Tailwind other classes',
+      defaultValue: 'px-4 py-2 rounded-md',
     },
   },
   docs: {
@@ -30,6 +74,51 @@ export default {
       type: 'code',
       language: 'jsx',
     },
+  },
+};
+
+export const BackgroundColor = {
+  args: {
+    label: "Changed Background color to Red",
+    background: "bg-red-500"
+  },
+};
+
+export const TextColor = {
+  args: {
+    label: "Changed Text color to Black",
+    background: "bg-green-500",
+    color: "text-black"
+  },
+};
+
+export const LeftIcon = {
+  args: {
+    leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
+    hideLabel : true,
+  },
+};
+
+export const LeftIconWithLabel = {
+  args: {
+    leftIcon: (<TwixtIcon type="magnifier" variant="filled" size="12" color="color" />),
+    label: 'Search'
+  },
+};
+
+export const LeftIconWithSpinner = {
+  args: {
+    leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
+    hideLabel : true,
+    showSpinner: true,
+  },
+};
+
+export const RightIconWithSpinner = {
+  args: {
+    showSpinner: true,
+    label: "Generating...",
+    rightIcon: (<TwixtIcon type="chevronDown" variant="filled" size="12" color="color" />),
   },
 };
 
