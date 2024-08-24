@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = TwixtIcon;
 var _react = _interopRequireDefault(require("react"));
 var _fa = require("react-icons/fa");
+var _ci = require("react-icons/ci");
+var _pi = require("react-icons/pi");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var iconTypes = {
   notification: {
@@ -99,6 +101,30 @@ var iconTypes = {
   userAvatar: {
     filled: _fa.FaUser,
     outline: _fa.FaUserCircle
+  },
+  clipboard: {
+    filled: _fa.FaRegClipboard,
+    outline: _fa.FaRegClipboard
+  },
+  checkedClipboard: {
+    filled: _fa.FaClipboardCheck,
+    outline: _fa.FaClipboardCheck
+  },
+  headphone: {
+    filled: _fa.FaHeadphones,
+    outline: _ci.CiHeadphones
+  },
+  watch: {
+    filled: _pi.PiWatchFill,
+    outline: _pi.PiWatchLight
+  },
+  speaker: {
+    filled: _pi.PiSpeakerSimpleHighFill,
+    outline: _pi.PiSpeakerSimpleHighLight
+  },
+  speakerSlashed: {
+    filled: _pi.PiSpeakerSlashFill,
+    outline: _pi.PiSpeakerSlash
   }
 };
 function TwixtIcon(_ref) {

@@ -16,8 +16,11 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var TwixtSwitch = function TwixtSwitch(_ref) {
   var label = _ref.label,
-    onChange = _ref.onChange;
-  var _useState = (0, _react.useState)(false),
+    onChange = _ref.onChange,
+    checked = _ref.checked,
+    _ref$value = _ref.value,
+    value = _ref$value === void 0 ? '' : _ref$value;
+  var _useState = (0, _react.useState)(checked || false),
     _useState2 = _slicedToArray(_useState, 2),
     isOn = _useState2[0],
     setIsOn = _useState2[1];
@@ -26,17 +29,17 @@ var TwixtSwitch = function TwixtSwitch(_ref) {
     onChange(!isOn);
   };
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("label", {
-    "class": "inline-flex items-center cursor-pointer"
+    className: "inline-flex items-center cursor-pointer"
   }, /*#__PURE__*/_react["default"].createElement("input", {
     type: "checkbox",
-    value: "",
-    "class": "sr-only peer",
+    value: value,
+    className: "sr-only peer",
     checked: isOn,
     onChange: toggleSwitch
   }), /*#__PURE__*/_react["default"].createElement("div", {
-    "class": "relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+    className: "relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
   }), /*#__PURE__*/_react["default"].createElement("span", {
-    "class": "ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+    className: "ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"
   }, label)));
 };
 var _default = exports["default"] = TwixtSwitch;

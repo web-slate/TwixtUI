@@ -15,7 +15,8 @@ function TwixtUserCard(_ref) {
     stats = _ref$stats === void 0 ? [] : _ref$stats,
     cardImageUrl = _ref.cardImageUrl,
     _ref$cardBackgroundUr = _ref.cardBackgroundUrl,
-    cardBackgroundUrl = _ref$cardBackgroundUr === void 0 ? DEFAULT_BACKGROUND_URL : _ref$cardBackgroundUr;
+    cardBackgroundUrl = _ref$cardBackgroundUr === void 0 ? DEFAULT_BACKGROUND_URL : _ref$cardBackgroundUr,
+    children = _ref.children;
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900"
   }, /*#__PURE__*/_react["default"].createElement("div", {
@@ -45,5 +46,7 @@ function TwixtUserCard(_ref) {
     }, statsItem === null || statsItem === void 0 ? void 0 : statsItem.label, /*#__PURE__*/_react["default"].createElement("div", {
       className: "text-sm"
     }, statsItem === null || statsItem === void 0 ? void 0 : statsItem.value));
-  })));
+  })), /*#__PURE__*/_react["default"].createElement("div", {
+    className: "text-center"
+  }, children));
 }
