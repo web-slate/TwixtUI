@@ -28,4 +28,4 @@ export const InlineBoxItem = {
     type: 'inline',
     children: (<>Inline content</>)
   },
-};
+}; 
