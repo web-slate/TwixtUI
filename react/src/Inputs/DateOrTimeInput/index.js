@@ -1,1 +1,1 @@
-export { default } from './DateOrTimeInput'
+export { default } from './DatePicker'

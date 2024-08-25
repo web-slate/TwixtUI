@@ -46,4 +46,5 @@ export { default as TwixtList } from './List/List';
 export { default as TwixtBoxItem } from './Containers/BoxItem';
 export { default as TwixtFlexBox } from './Containers/FlexBox';
 export { default as TwixtStackBox } from './Containers/StackBox';
+export { default as TwixtPopover } from './Containers/Popover';
 
