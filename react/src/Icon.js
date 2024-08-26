@@ -39,6 +39,11 @@ import {
   FaTrashAlt,
   FaUser,
   FaUserCircle,
+  FaFile,
+  FaLock,
+  FaShareAlt,
+  FaFileAlt,
+  FaLockOpen,
 } from 'react-icons/fa';
 
 import { CiHeadphones } from "react-icons/ci";
@@ -80,6 +85,9 @@ const iconTypes = {
   watch: {filled: PiWatchFill, outline: PiWatchLight },
   speaker: {filled: PiSpeakerSimpleHighFill, outline: PiSpeakerSimpleHighLight },
   speakerSlashed: {filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
+  file: {filled: FaFile, outline: FaFileAlt },
+  lock: {filled: FaLock, outline: FaLockOpen },
+  share: {filled: FaShareAlt, outline: null },
 };
 
 export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {

@@ -1,10 +1,10 @@
 import React from 'react';
-import ToggleButton from '../../react/src/CallsToAction/ToggleButton/ToggleButton';
-import TwixtIcon from '../../react/src/Icon';
+import TwixtToggleButton from '../../../react/src/CallsToAction/ToggleButton/ToggleButton';
+import TwixtIcon from '../../../react/src/Icon';
 
 export default {
-  title: 'Call To Action/ToggleButton',
-  component: ToggleButton,
+  title: 'Call To Action/TwixtToggleButton',
+  component: TwixtToggleButton,
   parameters: {
     layout: 'centered',
   },
