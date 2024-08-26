@@ -1,7 +1,7 @@
 import React from 'react';
-import TwixtBadges from '../../react/src/Badges';
-import TwixtLink from '../../react/src/CallsToAction/Link';
-import TwixtIcon from '../../react/src/Icon';
+import TwixtBadges from '../../../react/src/Badges';
+import TwixtLink from '../../../react/src/CallsToAction/Link';
+import TwixtIcon from '../../../react/src/Icon';
 export default {
   title: 'Call To Action/TwixtLink',
   component: TwixtLink,

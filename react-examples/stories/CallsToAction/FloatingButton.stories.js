@@ -1,6 +1,6 @@
 import React from 'react';
-import FloatingButton from '../../react/src/CallsToAction/FloatingButton';
-import TwixtButton from '../../react/src/CallsToAction/Button';
+import FloatingButton from '../../../react/src/CallsToAction/FloatingButton';
+import TwixtButton from '../../../react/src/CallsToAction/Button';
 
 export default {
   title: 'Call To Action/FloatingButton',

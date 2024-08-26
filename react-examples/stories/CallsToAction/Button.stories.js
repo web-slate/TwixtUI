@@ -1,6 +1,6 @@
 import React from 'react';
-import TwixtButton from '../../react/src/CallsToAction/Button';
-import TwixtIcon from '../../react/src/Icon';
+import TwixtButton from '../../../react/src/CallsToAction/Button';
+import TwixtIcon from '../../../react/src/Icon';
 import { background } from '@storybook/theming';
 
 export default {
