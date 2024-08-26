@@ -27,13 +27,14 @@ export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserNameInput } from './UserNameInput';
 export { default as TwixtUserStackList } from './UserStackList';
 
-// Deprecated Components.
-export { default as TwixtButton_DEPRECATED } from './Button';
-
 // Grouped Components.
 // Group - Call To Action
 export { default as TwixtButton } from './CallsToAction/Button';
+export { default as TwixtButtonGroup } from './CallsToAction/ButtonGroup';
+export { default as TwixtFloatingButton } from './CallsToAction/FloatingButton';
 export { default as TwixtLink } from './CallsToAction/Link';
+export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
+export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
 export { default as TwixtToolTip } from './Communications/ToolTip';
@@ -47,3 +48,6 @@ export { default as TwixtBoxItem } from './Containers/BoxItem';
 export { default as TwixtFlexBox } from './Containers/FlexBox';
 export { default as TwixtStackBox } from './Containers/StackBox';
 
+// Deprecated Components.
+export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
+export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
