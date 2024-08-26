@@ -1,5 +1,5 @@
 import React from 'react';
-import TwixtTooltip from '../../react/src/Tooltip';
+import TwixtTooltip from '../../../react/src/_deprecated/Tooltip';
 
 export default {
   title: 'Common/TwixtTooltip',
