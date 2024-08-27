@@ -44,9 +44,18 @@ import {
   FaShareAlt,
   FaFileAlt,
   FaLockOpen,
+  FaRegUser,
+  FaUserAltSlash,
+  FaUserGraduate,
+  FaUserGroup,
+  FaBuilding,
+  FaRegBuilding,
+  FaMobileAlt,
 } from 'react-icons/fa';
 
-import { CiHeadphones } from "react-icons/ci";
+import { CiMail, CiHeadphones } from "react-icons/ci";
+
+import { IoSettings, IoSettingsOutline } from "react-icons/io5";
 
 import {
   PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
@@ -88,6 +97,14 @@ const iconTypes = {
   file: {filled: FaFile, outline: FaFileAlt },
   lock: {filled: FaLock, outline: FaLockOpen },
   share: {filled: FaShareAlt, outline: null },
+  user: {filled: FaUser, outline: FaRegUser },
+  userSlashed: {filled: FaUserAltSlash, outline: null },
+  userGraduate: {filled: FaUserGraduate, outline: null },
+  userGroup: {filled: FaUserGroup, outline: null },
+  office: {filled: FaBuilding, outline: FaRegBuilding },
+  mobile: {filled: FaMobileAlt, outline: null },
+  mail: {filled: null, outline: CiMail },
+  settings: {filled: IoSettings, outline: IoSettingsOutline },
 };
 
 export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {
