@@ -2,7 +2,9 @@ import React from 'react';
 import {
   FaBars,
   FaBell,
+  FaRegBell,
   FaBellSlash,
+  FaRegBellSlash,
   FaBook,
   FaBookOpen,
   FaChevronDown,
@@ -64,6 +66,7 @@ import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md'
 import { CiMail, CiHeadphones } from "react-icons/ci";
 
 import { IoHome, IoHomeOutline, IoSettings, IoSettingsOutline, IoInformationCircleOutline } from "react-icons/io5";
+import { IoIosApps } from "react-icons/io";
 
 import {
   PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
@@ -73,8 +76,10 @@ import {
 } from "react-icons/pi";
 
 const iconTypes = {
+  apps: { filled: IoIosApps, outline: null },
   home: { filled: IoHome, outline: IoHomeOutline  },
-  notification: { filled: FaBell, outline: FaBellSlash },
+  notification: { filled: FaBell, outline: FaRegBell  },
+  notificationSlased: { filled: FaBellSlash, outline: FaRegBellSlash  },
   terminal: { filled: FaTerminal, outline: FaTerminalSlash },
   help: { filled: FaQuestionCircle, outline: FaQuestionCircleSlash },
   magnifier: { filled: FaSearch, outline: FaSearchPlus },
