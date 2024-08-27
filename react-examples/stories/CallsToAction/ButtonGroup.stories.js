@@ -2,7 +2,6 @@ import React from 'react';
 import TwixtButtonGroup from '../../../react/src/CallsToAction/ButtonGroup';
 import TwixtButton from '../../../react/src/CallsToAction/Button';
 import TwixtIcon from '../../../react/src/Icon';
-import { background } from '@storybook/theming';
 
 export default {
   title: 'Call To Action/TwixtButtonGroup',
