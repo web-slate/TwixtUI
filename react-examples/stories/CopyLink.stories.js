@@ -1,7 +1,6 @@
 import { fn } from '@storybook/test';
 import TwixtCopyLink from '../../react/src/CopyLink.js';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
   title: 'Common/TwixtCopyLink',
   component: TwixtCopyLink,
