@@ -1,7 +1,6 @@
 import React from 'react';
 import TwixtBoxItem from '../../../react/src/Containers/BoxItem';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
   title: 'Containers/TwixtBoxItem',
   component: TwixtBoxItem,

@@ -1,7 +1,6 @@
 import React from 'react';
 import TwixtAlert from '../../react/src/Alert.js';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
   title: 'Common/TwixtAlert',
   component: TwixtAlert,
