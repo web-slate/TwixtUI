@@ -1,10 +1,10 @@
 import React from 'react';
-import FloatingButton from '../../../react/src/CallsToAction/FloatingButton';
+import TwixtFloatingButton from '../../../react/src/CallsToAction/FloatingButton';
 import TwixtButton from '../../../react/src/CallsToAction/Button';
 
 export default {
-  title: 'Call To Action/FloatingButton',
-  component: FloatingButton,
+  title: 'Call To Action/TwixtFloatingButton',
+  component: TwixtFloatingButton,
   parameters: {
     layout: 'centered',
   },
@@ -27,7 +27,7 @@ export default {
   },
 };
 
-const Template = (args) => <FloatingButton {...args} />;
+const Template = (args) => <TwixtFloatingButton {...args} />;
 
 export const DefaultBottomRight = Template.bind({});
 DefaultBottomRight.args = {
