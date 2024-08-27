@@ -1,26 +1,36 @@
 import React from 'react';
-import TwixtSpinner from '../../Communications/Spinner';
 
-export default function TwixtButton({
-  background = 'bg-indigo-500',
-  color = 'text-white',
-  children,
-  leftIcon = null,
-  rightIcon = null,
-  label,
-  hideLabel = false,
-  disabled = false,
-  showSpinner = false,
-  onClick,
-  overwriteClass,
-}) {
-  const buttonClasses = overwriteClass || 'px-4 py-2 rounded-md';
+const Spinner = ({
+  label = '',
+  size = 'md',
+  fullPage = false,
+  overwriteClass = '',
+  bgColor = 'bg-gray-200 bg-opacity-70',
+}) => {
+  // Define size classes
+  const sizeClasses = {
+    sm: 'w-4 h-4 text-xs',  // Smaller spinner and smaller text
+    md: 'w-8 h-8 text-sm',  // Medium spinner and medium text
+    lg: 'w-16 h-16 text-base',  // Larger spinner and larger text
+    xl: 'w-24 h-24 text-lg',  // Extra large spinner and larger text
+  };
 
-  const spinnerIcon = (
-    <div role="status">
+  // Choose size based on prop, default to medium size
+  const spinnerSize = sizeClasses[size] || sizeClasses.md;
+
+  // Conditional full-page styling
+  const fullPageClasses = fullPage
+    ? `fixed inset-0 flex flex-col items-center justify-center ${bgColor} z-50`
+    : '';
+
+  return (
+    <div
+      role="status"
+      className={`${fullPageClasses} ${overwriteClass}`}
+    >
       <svg
         aria-hidden="true"
-        className="inline w-4 h-4 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+        className={`inline ${spinnerSize.split(' ')[0]} text-gray-200 animate-spin fill-blue-600`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -34,34 +44,9 @@ export default function TwixtButton({
           fill="currentFill"
         />
       </svg>
-      <span className="sr-only">Loading...</span>
+      {label && <span className={`ml-2 mt-2 ${spinnerSize.split(' ')[1]}`}>{label}</span>}
     </div>
   );
+};
 
-  return (
-    <button
-      onClick={onClick}
-      className={`flex items-center justify-center space-x-2 ${background} ${color} ${buttonClasses}`}
-      disabled={showSpinner || disabled}
-    >
-      {children ? (
-        children
-      ) : (
-        <>
-          {leftIcon && (
-            <span>{leftIcon}</span>
-          )}
-          {!hideLabel && (
-            <span>{label}</span>
-          )}
-          {showSpinner && (
-            <TwixtSpinner size="sm" overwriteClass="flex" />
-          )}
-          {rightIcon && (
-            <span>{rightIcon}</span>
-          )}
-        </>
-      )}
-    </button>
-  );
-}
+export default Spinner;
