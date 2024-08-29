@@ -12,7 +12,7 @@ export { default as TwixtLoadingPostCard } from './LoadingPostCard';
 export { default as TwixtModal } from './Modal';
 export { default as TwixtDropdown } from './OneSelectDropdown';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
-export { default as TwixtPopover } from './Popover';
+//export { default as TwixtPopover } from './Popover';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { default as SimpleTable } from './SimpleTable';
@@ -36,9 +36,14 @@ export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
 export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
+<<<<<<< HEAD
 export { default as TwixtNotice } from './Communications/Notice';
+=======
+export { default as TwixtBadge } from './Communications/Badge';
+>>>>>>> 550aa04 (feat(communications): add badge component)
 export { default as TwixtToast } from './Communications/Toast';
 export { default as TwixtToolTip } from './Communications/ToolTip';
+
 
 // Group - List
 export { default as TwixtCollapsibleList } from './List/CollapsibleList';
