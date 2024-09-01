@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TwixtCodeEditor from '../../../react/src/Inputs/CodeEditor';
 
 export default {
-  title: 'Input/TwixtCodeEditor',
+  title: 'Inputs/TwixtCodeEditor',
   component: TwixtCodeEditor,
   parameters: {
     layout: 'centered',
