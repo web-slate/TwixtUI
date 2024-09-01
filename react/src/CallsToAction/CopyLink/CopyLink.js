@@ -8,8 +8,9 @@ const CopyLink = ({
   successMessage = 'Link copied!',
   label, 
 }) => {
-  const [ showCopymsg, setShowCopyMsg ] = useState(false)
-  const handleCopyClick = async (e)=>{
+  const [ showCopymsg, setShowCopyMsg ] = useState(false);
+
+  const handleCopyClick = async (e) => {
     e.preventDefault()
     try{
       await navigator.clipboard.writeText(link)
@@ -41,8 +42,3 @@ const CopyLink = ({
 }
 
 export default CopyLink
-  
-
-
-
-

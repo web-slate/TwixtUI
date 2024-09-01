@@ -3,7 +3,6 @@ import './tailwind.css';
 export { default as TwixtAlert } from './Alert';
 export { default as TwixtCheckbox } from './Checkbox';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
-export { default as TwixtCopyLink } from './CopyLink';
 export { default as TwixtDialog } from './Dialog';
 export { default as TwixtDivider } from "./Divider";
 export { default as TwixtHeader } from './Header';
@@ -53,5 +52,7 @@ export { default as TwixtStackBox } from './Containers/StackBox';
 
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
+export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
+
 
