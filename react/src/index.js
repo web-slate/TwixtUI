@@ -31,6 +31,7 @@ export { default as TwixtUserStackList } from './UserStackList';
 // Group - Call To Action
 export { default as TwixtButton } from './CallsToAction/Button';
 export { default as TwixtButtonGroup } from './CallsToAction/ButtonGroup';
+export { default as TwixtCopyLink } from './CallsToAction/CopyLink';
 export { default as TwixtFloatingButton } from './CallsToAction/FloatingButton';
 export { default as TwixtLink } from './CallsToAction/Link';
 export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
@@ -53,3 +54,4 @@ export { default as TwixtStackBox } from './Containers/StackBox';
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
+
