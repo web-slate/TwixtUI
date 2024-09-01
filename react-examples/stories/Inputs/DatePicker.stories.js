@@ -2,7 +2,7 @@ import React from 'react';
 import TwixtDatePicker from '../../../react/src/Inputs/DateOrTimeInput/DatePicker';
 
 export default {
-  title: 'Input/TwixtDatePicker',
+  title: 'Inputs/TwixtDatePicker',
   component: TwixtDatePicker,
   parameters: {
     layout: 'centered',

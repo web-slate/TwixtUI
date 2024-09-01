@@ -1,8 +1,8 @@
 import React from 'react';
-import TwixtCheckbox  from '../../react/src/Inputs/Checkbox';
+import TwixtCheckbox  from '../../../react/src/Inputs/Checkbox';
 
 export default {
-  title: 'Input/TwixtCheckbox',
+  title: 'Inputs/TwixtCheckbox',
   component: TwixtCheckbox,
   parameters: {
     layout: 'centered',
