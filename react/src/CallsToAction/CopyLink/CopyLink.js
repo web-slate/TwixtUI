@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import TwixtToolTip from '../../Communications/ToolTip';
 import TwixtLink from '../Link/Link';
 
 const CopyLink = ({
   link = '#', 
   overwriteClass = '',
   leftIcon='', 
+  rightIcon='',
   successMessage = 'Link copied!',
   label, 
 }) => {
@@ -25,18 +27,16 @@ const CopyLink = ({
   }
   return (
     <div className='relative inline-block'>
-      {showCopymsg && (
-        <div className='absolute bottom-full mb-2 text-sm text-white bg-green-500 rounded px-2 py-1'>
-          {successMessage}
-        </div>
-      )}
+     <TwixtToolTip content={successMessage} show={showCopymsg} position="top">
         <TwixtLink
         onClick={handleCopyClick}
         link={link}
         label={label}
         overwriteClass={overwriteClass}
         leftIcon={leftIcon}
+        rightIcon={rightIcon}
       />
+      </TwixtToolTip>
     </div>
   )
 }

@@ -25,12 +25,23 @@ export default {
     description: 'Additional CSS classes to overwrite the default ones',
     defaultValue: '',
   },
+  successMessage:{
+    type: { name: 'string', required: false },
+    description: 'Give a message that to displayed after copied',
+    defaultValue: 'Link copied!',
+  },
   leftIcon: {
     type: { name: 'node', required: false },
     description: 'Icon JSX',
     defaultValue: null,
     control:'text'
   },  
+  rightIcon: {
+    type: { name: 'node', required: false },
+    description: 'Icon JSX',
+    defaultValue: null,
+    control:'text'
+  }, 
   },
   docs: {
     description: {
