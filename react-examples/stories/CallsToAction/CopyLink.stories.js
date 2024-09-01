@@ -43,11 +43,35 @@ export default {
   },
 };
 
-export const CopyLink = {
+export const DefaultCopyLink = {
   args: {
     label: 'Copy link',
     link: 'https://github.com/web-slate/TwixtUI',
     leftIcon: (<TwixtIcon type="export" variant="filled" size="12" color="color" />),
+  },
+};
+
+export const CustomClassCopyLink = {
+  args: {
+    label: 'Copy link',
+    link: 'https://github.com/web-slate/TwixtUI',
+    overwriteClass: 'bg-blue-500 text-white px-4 py-1 rounded',
+    leftIcon: (<TwixtIcon type="export" variant="filled" size="12" color="white" />),
+  },
+};
+
+export const NoIconCopyLink = {
+  args: {
+    label: 'Copy link',
+    link: 'https://github.com/web-slate/TwixtUI',
+  },
+};
+
+export const LargeIconCopyLink = {
+  args: {
+    label: 'Copy link',
+    link: 'https://github.com/web-slate/TwixtUI',
+    leftIcon: (<TwixtIcon type="export" variant="filled" size="24" color="blue" />),
   },
 };
 
