@@ -1,7 +1,6 @@
 import './tailwind.css';
 
 export { default as TwixtAlert } from './Alert';
-export { default as TwixtCheckbox } from './Checkbox';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
 export { default as TwixtCopyLink } from './CopyLink';
 export { default as TwixtDialog } from './Dialog';
@@ -49,6 +48,10 @@ export { default as TwixtFlexBox } from './Containers/FlexBox';
 export { default as TwixtStackBox } from './Containers/StackBox';
 export { default as TwixtPopover } from './Containers/Popover';
 
+// Group - Input
+export { default as TwixtCheckbox } from './Inputs/Checkbox';
+
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
+export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
