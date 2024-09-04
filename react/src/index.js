@@ -36,6 +36,7 @@ export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
 export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
+export { default as TwixtNotice } from './Communications/Notice';
 export { default as TwixtToast } from './Communications/Toast';
 export { default as TwixtToolTip } from './Communications/ToolTip';
 
@@ -55,5 +56,6 @@ export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
-export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
+export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
+
