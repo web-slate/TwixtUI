@@ -51,6 +51,7 @@ export { default as TwixtStackBox } from './Containers/StackBox';
 
 // Group - Input
 export { default as TwixtCheckbox } from './Inputs/Checkbox';
+export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
