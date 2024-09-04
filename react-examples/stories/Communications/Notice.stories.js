@@ -20,7 +20,7 @@ Default.args = {
   title: 'Sample Notice',
   icon: <TwixtIcon type="notification" variant="filled" size="16" color="color" />, 
   children: <p>This is the body of the notice.</p>,
-  cta: (<TwixtButton
+  callToActionButtons: (<TwixtButton
     background="bg-red-500"
     label="Learn More"
     onClick={() => {}}
@@ -33,7 +33,7 @@ CustomStyles.args = {
   title: 'Custom Notice',
   icon: <TwixtIcon type="notification" variant="filled" size="16" color="color" />,
   children: <p>This notice has custom styles.</p>,
-  cta: (<TwixtButton
+  callToActionButtons: (<TwixtButton
     background="bg-red-500"
     label="Learn More"
     onClick={() => {}}

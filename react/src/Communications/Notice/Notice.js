@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import TwixtIcon from '../..//Icon';
 
-const Notice = ({ title, icon, children, cta, overwriteClass }) => {
+const Notice = ({ title, icon, children, callToActionButtons, overwriteClass }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
@@ -13,22 +14,14 @@ const Notice = ({ title, icon, children, cta, overwriteClass }) => {
         <div className="w-4 h-4 mr-2">{icon}</div>
         <h2 className="text-lg font-semibold">{title}</h2>
         <div className="ml-auto">
-          <svg
-            className={`w-4 h-4 transition-transform ${isCollapsed ? 'rotate-0' : 'rotate-180'}`}
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
+           <TwixtIcon type={isCollapsed? 'chevronDown': 'chevronUp'} variant="outline" /> 
         </div>
       </div>
       {!isCollapsed && (
         <div className="p-4">
           <div>{children}</div>
           <div className="mt-4">
-            {cta}
+            {callToActionButtons}
           </div>
         </div>
       )}
