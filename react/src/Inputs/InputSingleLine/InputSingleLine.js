@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import TwixtIcon from '../../Icon';
 import TwixtButton from '../../CallsToAction/Button';
 
@@ -39,7 +39,7 @@ const InputSingleLine = ({
     error: 'border-red-500',
     warning: 'border-yellow-500',
     info: 'border-blue-500',
-    default: 'border-gray-500'
+    default: 'border-gray-500',
   };
 
   const backgroundColor = {
@@ -50,10 +50,10 @@ const InputSingleLine = ({
     default: 'bg-gray-50',
   };
 
-  const inputPadding = `${leftIcon ? 'pl-6' : 'pl-4'} pr-10`;
+  const inputPadding = `${leftIcon ? 'pl-7' : 'pl-4'} pr-10`;
 
   return (
-    <div className={`flex flex-col rounded-lg ${backgroundColor[state] || backgroundColor.default}`}>
+    <div className="flex flex-col">
       {label && (
         <label
           htmlFor={fieldId}
@@ -62,14 +62,13 @@ const InputSingleLine = ({
           {label}
         </label>
       )}
-      <div className="relative flex items-center">
-        {leftIcon && <span className={`absolute left-2 ${disabled && 'opacity-50'}`}>{leftIcon}</span>}
+      <div className={`relative flex items-center rounded-lg ${backgroundColor[state] || backgroundColor.default}`}>
+        {leftIcon && <span className={`absolute left-2 top-1/2 transform -translate-y-1/2 ${disabled && 'opacity-50'}`}>{leftIcon}</span>}
         <input
           type={type}
           id={fieldId}
           ref={inputRef}
-          className={`bg-gray-50 border ${borderColor[state] || borderColor.default} text-gray-900 text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 block ${autoGrowWidth ? 'min-w-64 w-auto' : 'w-full'
-            } p-2.5 ${inputPadding} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`bg-gray-50 border ${borderColor[state] || borderColor.default} text-gray-900 text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 block ${autoGrowWidth ? 'min-w-64 w-auto' : 'w-full'} p-2.5 ${inputPadding} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
           placeholder={placeholder}
           value={value}
           disabled={disabled}
@@ -87,11 +86,7 @@ const InputSingleLine = ({
               onClick={() => onChange({ target: { value: '' } })}
             />
           )}
-          {rightIcon && (
-            <span>
-              {rightIcon}
-            </span>
-          )}
+          {rightIcon && <span>{rightIcon}</span>}
           {state && stateIcons[state] && (
             <span className={`${disabled && 'opacity-50'}`}>
               {stateIcons[state]}
@@ -109,7 +104,7 @@ const InputSingleLine = ({
         )}
       </div>
       {helperText && (
-        <p className={`text-xs ${borderColor[state] || 'text-gray'} p-2 px-4 rounded-b-lg`}>
+        <p className={`text-xs ${borderColor[state] || 'text-gray-600'} p-2 px-4 rounded-b-lg ${backgroundColor[state] || backgroundColor.default}`}>
           {helperText}
         </p>
       )}

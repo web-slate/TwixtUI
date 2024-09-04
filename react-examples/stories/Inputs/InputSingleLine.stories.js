@@ -27,20 +27,29 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: 'Default (Search)',
+  label: 'Firstname',
+  placeholder: 'Enter your firstname',
+};
+
+export const Search = Template.bind({});
+Search.args = {
+  label: 'Search',
+  placeholder: 'Enter your firstname',
+  leftIcon: <TwixtIcon type="magnifier" variant="filled" size={16} />,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+  label: 'Old Username',
   value: 'Disabled input',
-  placeholder: 'Enter text',
+  placeholder: 'Enter username expired',
   disabled: true,
 };
 
 export const WithLeftIcon = Template.bind({});
 WithLeftIcon.args = {
   placeholder: 'Enter text',
-  leftIcon: <TwixtIcon type="userAvatar" variant="filled" />,
+  leftIcon: <TwixtIcon type="userAvatar" variant="filled" size={16} />,
 };
 
 export const WithRightIcon = Template.bind({});

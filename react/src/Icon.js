@@ -55,7 +55,7 @@ import {
 } from 'react-icons/fa';
 
 import { IoIosWarning, IoIosCheckmarkCircle, IoIosCheckmarkCircleOutline } from 'react-icons/io';
-import { MdError, MdErrorOutline, MdClear, MdOutlineClear } from 'react-icons/md';
+import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md';
 
 import { CiMail, CiHeadphones } from "react-icons/ci";
 
@@ -67,9 +67,6 @@ import {
   PiSpeakerSlashFill,
   PiWatchFill, PiWatchLight
 } from "react-icons/pi";
-
-import { TbInfoTriangleFilled, TbInfoTriangle } from "react-icons/tb";
-
 
 const iconTypes = {
   notification: { filled: FaBell, outline: FaBellSlash },
