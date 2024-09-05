@@ -5,8 +5,7 @@ export default {
   component: StatusDot,
   argTypes: {
     status: { 
-     
-      options: ['Default', 'Active', 'Success', 'Error', 'Warning', 'Yellow', 'Magenta', 'Purple', 'Teal', 'Cyan'],
+        options: ['Active', 'DoNotDisturb', 'InMeeting', 'Away'],
     },
     overwriteClass: '',
   },

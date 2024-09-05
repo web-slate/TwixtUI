@@ -9,14 +9,7 @@ const statusIndicatorColors = {
 
 function StatusDot({status = 'OffLine' , overwriteClass}) {
   const statsClasses = overwriteClass || `flex w-3 h-3 me-3 rounded-full ${statusIndicatorColors[status]}`;
-
-  return(
-    <>
-      <span class={statsClasses}>
-      </span>
-    </>
-  );
-        
+  return <span class={statsClasses}></span>
 }
 
 export default StatusDot
