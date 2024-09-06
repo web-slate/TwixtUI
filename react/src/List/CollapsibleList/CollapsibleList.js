@@ -19,7 +19,7 @@ transition-all duration-300 ease-in-out`} onClick={toggleList} style={{ overflow
 
       <div className={`transition-all duration-300 ease-in-out ${isOpen ? "max-h-screen" : "max-h-0"
         } overflow-hidden`}>
-        <List hasDivider={hasDivider}>
+        <List hasDivider={hasDivider} overwriteItemClass="px-4">
           {children}
         </List>
       </div>
