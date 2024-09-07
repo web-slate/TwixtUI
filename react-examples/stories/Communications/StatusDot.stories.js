@@ -13,25 +13,25 @@ export default {
 
 const Template = (args) => <StatusDot {...args}/>;
 
-export const OffLine = Template.bind({});
-OffLine.args = {};
+export const Default = Template.bind({});
+Default.args = {};
 
 export const Active = Template.bind({});
 Active.args = {
   status: 'Active'
 };
 
-export const DoNotDisturb = Template.bind({});
-DoNotDisturb.args = {
-  status: 'DoNotDisturb'
+export const Success = Template.bind({});
+Success.args = {
+  status: 'Success'
 };
 
-export const InMeeting = Template.bind({});
-InMeeting.args = {
-  status: 'InMeeting'
+export const Error = Template.bind({});
+Error.args = {
+  status: 'Error'
 };
 
-export const Away = Template.bind({});
-Away.args = {
-  status: 'Away'
+export const Warning = Template.bind({});
+Warning.args = {
+  status: 'Warning'
 };
