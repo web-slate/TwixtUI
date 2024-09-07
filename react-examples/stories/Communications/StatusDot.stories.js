@@ -18,20 +18,20 @@ Default.args = {};
 
 export const Active = Template.bind({});
 Active.args = {
-  status: 'Active'
+  status: 'active'
 };
 
 export const Success = Template.bind({});
 Success.args = {
-  status: 'Success'
+  status: 'success'
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  status: 'Error'
+  status: 'error'
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
-  status: 'Warning'
+  status: 'warning'
 };

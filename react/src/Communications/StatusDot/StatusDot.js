@@ -1,15 +1,16 @@
 import React from 'react';
+import TwixtBoxItem from '../../Containers/BoxItem';
 const statusIndicatorColors = {
-    Default: 'bg-gray-200',
-    Active: 'bg-blue-600',
-    Success: 'bg-green-500',
-    Error: 'bg-red-500',
-    Warning: 'bg-yellow-500'
+    default: 'bg-gray-200',
+    active: 'bg-blue-600',
+    success: 'bg-green-500',
+    error: 'bg-red-500',
+    warning: 'bg-yellow-500'
 };
 
-function StatusDot({status = 'Default' , overwriteClass}) {
+function StatusDot({status = 'default' , overwriteClass}) {
   const statsClasses = overwriteClass || `flex w-3 h-3 me-3 rounded-full ${statusIndicatorColors[status]}`;
-  return <span class={statsClasses}></span>;
+  return <TwixtBoxItem overwriteClass={statsClasses}></TwixtBoxItem>;
 }
 
-export default StatusDot
+export default StatusDot;
