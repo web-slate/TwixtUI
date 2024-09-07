@@ -91,7 +91,7 @@ const DatePicker = ({
 
   return (
     <TwixtPopover
-      overwriteContentClass="p-0"
+      overwriteContentClass="min-w-[250px] p-0"
       title={popoverTitle}
       hideOnBlur={false}
       content={

@@ -8,7 +8,6 @@ const TimePicker = ({ label = '', popoverTitle = '', selectionType = 'single', o
   const [endTimeValue, setEndTimeValue] = useState('');
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedTimeRange, setSelectedTimeRange] = useState({ start: null, end: null });
-  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const now = new Date();
@@ -80,9 +79,10 @@ const TimePicker = ({ label = '', popoverTitle = '', selectionType = 'single', o
 
   return (
     <TwixtPopover
-      overwriteContentClass="p-0"
+      overwriteContentClass="min-w-[300px] px-1"
       title={popoverTitle}
       hideOnBlur={false}
+      scrollable={true}
       content={(
         <div className="p-4">
           <div className="grid grid-cols-4 gap-2">
