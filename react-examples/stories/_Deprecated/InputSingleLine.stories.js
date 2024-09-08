@@ -1,9 +1,10 @@
-import { fn } from '@storybook/test';
-import TwixtSingleLineInput from '../../react/src/InputSingleLine.js'; 
+
+import React from 'react';
+import TwixtInputSingleLine from '../../../react/src/_deprecated/InputSingleLine'; 
 
 export default {
-  title: 'Common/TwixtSingleLineInput',
-  component: TwixtSingleLineInput,
+  title: '_Deprecated/TwixtInputSingleLine_DEPRECATED',
+  component: TwixtInputSingleLine,
   parameters: {
     layout: 'centered',
   },

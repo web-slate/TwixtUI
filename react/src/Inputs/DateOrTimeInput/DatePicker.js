@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TwixtPopover from '../../Containers/Popover';
-import TwixtSingleLineInput from '../../InputSingleLine';
+import TwixtInputSingleLine from '../InputSingleLine';
 import {
   format,
   startOfMonth,
@@ -91,7 +91,7 @@ const DatePicker = ({
 
   return (
     <TwixtPopover
-      overwriteContentClass="p-0"
+      overwriteContentClass="min-w-[250px] p-0"
       title={popoverTitle}
       hideOnBlur={false}
       content={
@@ -117,9 +117,9 @@ const DatePicker = ({
       }
       position="bottom"
     >
-      <TwixtSingleLineInput label={label} value={startDateValue} /> 
+      <TwixtInputSingleLine label={label} value={startDateValue} /> 
       {selectionType === 'single' ? null : (<>to
-        <TwixtSingleLineInput value={endDateValue} /></>)}
+        <TwixtInputSingleLine value={endDateValue} /></>)}
     </TwixtPopover>
   );
 };
