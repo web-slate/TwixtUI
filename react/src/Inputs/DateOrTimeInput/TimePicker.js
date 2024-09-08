@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TwixtPopover from '../../Containers/Popover';
-import TwixtSingleLineInput from '../../InputSingleLine';
+import TwixtInputSingleLine from '../InputSingleLine';
 import { format, addMinutes, startOfDay, isSameMinute } from 'date-fns';
 
 const TimePicker = ({ label = '', popoverTitle = '', selectionType = 'single', onSelection }) => {
@@ -92,8 +92,8 @@ const TimePicker = ({ label = '', popoverTitle = '', selectionType = 'single', o
       )}
       position="bottom"
     >
-      <TwixtSingleLineInput label={label} value={timeValue} /> {selectionType === 'single' ? null : (<>to
-        <TwixtSingleLineInput value={endTimeValue} /></>)}
+      <TwixtInputSingleLine label={label} value={timeValue} /> {selectionType === 'single' ? null : (<>to
+        <TwixtInputSingleLine value={endTimeValue} /></>)}
     </TwixtPopover>
   )
 };
