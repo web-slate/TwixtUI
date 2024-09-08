@@ -12,7 +12,6 @@ export { default as TwixtLoadingPostCard } from './LoadingPostCard';
 export { default as TwixtModal } from './Modal';
 export { default as TwixtDropdown } from './OneSelectDropdown';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
-//export { default as TwixtPopover } from './Popover';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { default as SimpleTable } from './SimpleTable';
@@ -36,8 +35,8 @@ export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
 export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
-export { default as TwixtNotice } from './Communications/Notice';
 export { default as TwixtBadge } from './Communications/Badge';
+export { default as TwixtNotice } from './Communications/Notice';
 export { default as TwixtToast } from './Communications/Toast';
 export { default as TwixtToolTip } from './Communications/ToolTip';
 
@@ -57,6 +56,7 @@ export { default as TwixtCheckbox } from './Inputs/Checkbox';
 export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 
 // Deprecated Components.
+export { default as TwixtBadges_DEPRECATED } from './_deprecated/Badges';
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';

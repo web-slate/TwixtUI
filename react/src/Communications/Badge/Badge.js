@@ -1,17 +1,18 @@
 import React from 'react';
+import BoxItem from '../../Containers/BoxItem';
 
-const Badge = ({ value, status, overwriteClass, leftIcon, rightIcon }) => {
+const Badge = ({ type = 'block', value, status, overwriteClass, leftIcon, rightIcon }) => {
   const statusToColor = {
-    Default: 'bg-gray-500',
-    Active: 'bg-blue-500',
-    Success: 'bg-green-500',
-    Error: 'bg-red-500',
-    Warning: 'bg-orange-500',
-    Yellow: 'bg-yellow-500',
-    Magenta: 'bg-pink-500',
-    Purple: 'bg-purple-500',
-    Teal: 'bg-teal-500',
-    Cyan: 'bg-cyan-500',
+    default: 'bg-gray-500',
+    active: 'bg-blue-500',
+    success: 'bg-green-500',
+    error: 'bg-red-500',
+    warning: 'bg-orange-500',
+    yellow: 'bg-yellow-500',
+    magenta: 'bg-pink-500',
+    purple: 'bg-purple-500',
+    teal: 'bg-teal-500',
+    cyan: 'bg-cyan-500',
   };
 
   const badgeColor = statusToColor[status] || 'bg-gray-500';
@@ -19,11 +20,11 @@ const Badge = ({ value, status, overwriteClass, leftIcon, rightIcon }) => {
   
 
   return (
-    <div className={badgeClasses}>
+    <BoxItem type={type} overwriteClass={badgeClasses}>
       {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
       <span>{value}</span>
       {rightIcon && <span className="ml-2 flex items-center">{rightIcon}</span>}
-    </div>
+    </BoxItem>
   );
 };
 
