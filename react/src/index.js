@@ -35,6 +35,8 @@ export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
 export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
+export { default as TwixtNotice } from './Communications/Notice';
+export { default as TwixtToast } from './Communications/Toast';
 export { default as TwixtToolTip } from './Communications/ToolTip';
 
 // Group - List
@@ -44,8 +46,8 @@ export { default as TwixtList } from './List/List';
 // Group - Containers
 export { default as TwixtBoxItem } from './Containers/BoxItem';
 export { default as TwixtFlexBox } from './Containers/FlexBox';
-export { default as TwixtStackBox } from './Containers/StackBox';
 export { default as TwixtPopover } from './Containers/Popover';
+export { default as TwixtStackBox } from './Containers/StackBox';
 
 // Group - Input
 export { default as TwixtCheckbox } from './Inputs/Checkbox';
@@ -53,7 +55,7 @@ export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
-export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
+export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
 export { default as TwixtPopover_DEPRECATED } from './Popover';
