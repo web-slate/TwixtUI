@@ -36,11 +36,8 @@ export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
 export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 
 // Group - Communications
-<<<<<<< HEAD
 export { default as TwixtNotice } from './Communications/Notice';
-=======
 export { default as TwixtBadge } from './Communications/Badge';
->>>>>>> 550aa04 (feat(communications): add badge component)
 export { default as TwixtToast } from './Communications/Toast';
 export { default as TwixtToolTip } from './Communications/ToolTip';
 

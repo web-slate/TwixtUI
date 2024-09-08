@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Badge = ({ value, status, overwriteClass }) => {
+const Badge = ({ value, status, overwriteClass, leftIcon, rightIcon }) => {
   const statusToColor = {
     Default: 'bg-gray-500',
     Active: 'bg-blue-500',
@@ -15,12 +15,14 @@ const Badge = ({ value, status, overwriteClass }) => {
   };
 
   const badgeColor = statusToColor[status] || 'bg-gray-500';
-  const badgeClasses = overwriteClass || `inline-block px-3 py-1 text-white font-semibold text-sm rounded-full ${badgeColor}`;
+  const badgeClasses = overwriteClass || `inline-flex items-center px-3 py-1 text-white font-semibold text-sm rounded-full ${badgeColor}`;
   
 
   return (
     <div className={badgeClasses}>
-      {value}
+      {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
+      <span>{value}</span>
+      {rightIcon && <span className="ml-2 flex items-center">{rightIcon}</span>}
     </div>
   );
 };

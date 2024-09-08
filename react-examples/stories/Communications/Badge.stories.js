@@ -1,5 +1,6 @@
 import React from 'react';
 import TwixtBadge from '../../../react/src/Communications/Badge';
+import TwixtIcon from '../../../react/src/Icon';
 
 export default {
   title: 'Communications/TwixtBadge',
@@ -46,9 +47,28 @@ Warning.args = {
   status: 'Warning',
 };
 
+export const LeftIcon = Template.bind({});
+LeftIcon.args = {
+  value: 'User',
+  status: 'Success',
+  leftIcon: <TwixtIcon type="user" variant="filled" size="16" color="color" />,
+};
+
+export const RightIcon = Template.bind({});
+RightIcon.args = {
+  value: 'Delete',
+  status: 'Error',
+  rightIcon: <TwixtIcon type="delete" variant="filled" size="16" color="color" />,
+};
+
 export const CustomClass = Template.bind({});
 CustomClass.args = {
   value: 'Custom',
   status: 'Warning',
   overwriteClass: 'inline-block px-4 py-2 bg-purple-700 text-white font-bold rounded-full shadow-lg',
 };
+
+
+
+
+
