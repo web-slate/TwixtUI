@@ -1,10 +1,10 @@
 import React from 'react';
 import TwixtButton from '../../../react/src/CallsToAction/Button';
 import TwixtBoxItem from '../../../react/src/Containers/BoxItem';
-import TwixtFlexBox from '../../../react/src/Containers/FlexBox';
+import FlexBox from '../../../react/src/Containers/FlexBox';
 
 export default {
-  title: 'Containers/TwixtFlexBox',
+  title: 'Containers/FlexBox',
   component: TwixtFlexBox,
   subcomponents: { TwixtBoxItem, TwixtButton },
   tags: ['autodocs'],
@@ -39,7 +39,7 @@ export default {
 };
 
 const Template = (args) => (
-  <TwixtFlexBox overwriteClass="bg-gray-100 p-4" {...args}>
+  <FlexBox overwriteClass="bg-gray-100 p-4" {...args}>
     {args.children != null ? args.children : (
       <>
         <TwixtButton label="Item 1" />
@@ -47,7 +47,7 @@ const Template = (args) => (
         <TwixtButton label="Item 3" />
       </>
     )}
-  </TwixtFlexBox>
+  </FlexBox>
 );
 
 export const Default = Template.bind({});
