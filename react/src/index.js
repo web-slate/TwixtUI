@@ -2,7 +2,6 @@ import './tailwind.css';
 
 export { default as TwixtAlert } from './Alert';
 export { default as TwixtCommentsSystem } from './CommentsSystem';
-export { default as TwixtCopyLink } from './CopyLink';
 export { default as TwixtDialog } from './Dialog';
 export { default as TwixtDivider } from "./Divider";
 export { default as TwixtHeader } from './Header';
@@ -29,6 +28,7 @@ export { default as TwixtUserStackList } from './UserStackList';
 // Group - Call To Action
 export { default as TwixtButton } from './CallsToAction/Button';
 export { default as TwixtButtonGroup } from './CallsToAction/ButtonGroup';
+export { default as TwixtCopyLink } from './CallsToAction/CopyLink';
 export { default as TwixtFloatingButton } from './CallsToAction/FloatingButton';
 export { default as TwixtLink } from './CallsToAction/Link';
 export { default as TwixtSplitButton } from './CallsToAction/SplitButton';
@@ -59,6 +59,8 @@ export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 export { default as TwixtBadges_DEPRECATED } from './_deprecated/Badges';
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
+export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
 export { default as TwixtPopover_DEPRECATED } from './Popover';
+
