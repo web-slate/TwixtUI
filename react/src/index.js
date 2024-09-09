@@ -38,6 +38,7 @@ export { default as TwixtToggleButton } from './CallsToAction/ToggleButton';
 export { default as TwixtBadge } from './Communications/Badge';
 export { default as TwixtNotice } from './Communications/Notice';
 export { default as TwixtToast } from './Communications/Toast';
+export { default as TwixtToken } from './Communications/Token';
 export { default as TwixtToolTip } from './Communications/ToolTip';
 
 
@@ -56,11 +57,11 @@ export { default as TwixtCheckbox } from './Inputs/Checkbox';
 export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 
 // Deprecated Components.
+export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
+export { default as TwixtPopover_DEPRECATED } from './Popover';
 export { default as TwixtBadges_DEPRECATED } from './_deprecated/Badges';
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
 export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
-export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
-export { default as TwixtPopover_DEPRECATED } from './Popover';
 
