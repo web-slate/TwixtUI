@@ -1,5 +1,4 @@
-import { fn } from '@storybook/test';
-import TwixtCopyLink from '../../react/src/CopyLink.js';
+import TwixtCopyLink from '../../../react/src/_deprecated/CopyLink';
 
 export default {
   title: 'Common/TwixtCopyLink',

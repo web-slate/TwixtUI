@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const InputSingleLine = ({ label, value, onChange, onBlur, error, warning }) => {
     const inputClass = `shadow appearance-none border ${
         error ? 'border-red-500' : (warning ? 'border-yellow-500' : 'border-gray-300')

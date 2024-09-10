@@ -1,9 +1,9 @@
 import React from 'react';
-import TwixtBadges from '../../react/src/Badges.js';
+import TwixtBadges_DEPRECATED from '../../../react/src/_deprecated/Badges';
 
 export default {
   title: 'Common/TwixtBadges',
-  component: TwixtBadges,
+  component: TwixtBadges_DEPRECATED,
   argTypes: {
     text: { control: 'text' },
     overwriteClass: {
@@ -18,7 +18,7 @@ export default {
 };
 
 // Template function to create stories
-const Template = (args) => <TwixtBadges {...args} />;
+const Template = (args) => <TwixtBadges_DEPRECATED {...args} />;
 
 // DefaultBadge story
 export const DefaultBadge = Template.bind({});

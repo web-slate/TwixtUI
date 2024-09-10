@@ -2,7 +2,7 @@ import React from 'react';
 import TwixtTooltip from '../../../react/src/_deprecated/Tooltip';
 
 export default {
-  title: 'Common/TwixtTooltip',
+  title: '_Deprecated/TwixtToolTip_DEPRECATED',
   component: TwixtTooltip,
   argTypes: {
     text: {
