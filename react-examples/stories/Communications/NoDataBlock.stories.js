@@ -4,10 +4,9 @@ export default {
   title: 'Communications/TwixtNoDataBlock',
   component: NoDataBlock,
   argTypes: {
-    status: { 
-        options: ['Active', 'DoNotDisturb', 'InMeeting', 'Away'],
-    },
-    overwriteClass: '',
+    text: '',
+    overwriteWidth: '',
+    overwriteHeight: ''
   },
 };
 
