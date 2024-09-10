@@ -50,6 +50,8 @@ export { default as TwixtPopover } from './Containers/Popover';
 // Group - Input
 export { default as TwixtCheckbox } from './Inputs/Checkbox';
 export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
+export { default as TwixtRadio } from './Inputs/Radio';
+export { default as TwixtRadioDropdown } from './Inputs/RadioDropdown';
 
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
