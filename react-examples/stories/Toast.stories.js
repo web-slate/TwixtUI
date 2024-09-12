@@ -1,14 +1,14 @@
 
 import React from 'react';
-import TwixtToast from '../../react/src/Toast';
+import TwixtToast_DEPRECATED from '../../react/src/_deprecated/Toast';
 
 export default {
   title: 'Common/TwixtToast',
-  component: TwixtToast,
+  component: TwixtToast_DEPRECATED,
 };
 
 // Template for the component
-const Template = (args) => <TwixtToast {...args} />;
+const Template = (args) => <TwixtToast_DEPRECATED {...args} />;
 
 // Default story
 export const Default = Template.bind({});
