@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ToolTip = ({ children, content, position, show }) => {
-  if (!show || children == null) {
+  if (children == null) {
     return null;
   }
 
@@ -31,19 +31,18 @@ const ToolTip = ({ children, content, position, show }) => {
       break;
   }
 
-  // Show or hide the tooltip based on the show prop
-  wrapperClassNames += show ? ' flex' : ' hidden';
-
   return (
     <div className="relative group">
       {children}
-      <div className={wrapperClassNames}>
-        {['right', 'bottom'].includes(position) && <div className={arrowClassNames}></div>}
-        <div className={contentClassNames}>
-          {content}
+      {show && (
+        <div className={wrapperClassNames}>
+          {['right', 'bottom'].includes(position) && <div className={arrowClassNames}></div>}
+          <div className={contentClassNames}>
+            {content}
+          </div>
+          {['left', 'top'].includes(position) && <div className={arrowClassNames}></div>}
         </div>
-        {['left', 'top'].includes(position) && <div className={arrowClassNames}></div>}
-      </div>
+      )}
     </div>
   );
 };

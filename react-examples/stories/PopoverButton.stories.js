@@ -1,5 +1,5 @@
 import React from 'react';
-import TwixtPopoverButton from '../../react/src/Popover';
+import TwixtPopoverButton from '../../react/src/_deprecated/Popover';
 
 // Default export to define the title and component
 export default {

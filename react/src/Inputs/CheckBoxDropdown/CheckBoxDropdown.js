@@ -1,21 +1,22 @@
 import React, { useState, useId, useEffect, useRef } from 'react';
 import TwixtButton from '../../CallsToAction/Button';
 import TwixtInputSingleLine from '../InputSingleLine';
-import TwixtRadio from '../Radio';
+import TwixtCheckbox from '../Checkbox';
 import TwixtIcon from '../../Icon';
 
-const RadioDropdown = ({
+const CheckBoxDropdown = ({
   id,
-  label = 'Select an option',
+  label = 'Select Multiple options',
   filterLabel = 'Filter options',
+  selectedItemsLabel = (count) => `${count} Item${count > 1 ? 's' : ''} selected`,
   variant = 'default', // 'primary', 'secondary', 'default'
-  radioOptions = [],
+  checkBoxOptions = [],
   enableFilter = false,
   disabled = false,
-  defaultValue = '',
+  defaultValue = [],
   onChange
 }) => {
-  const [selectedOption, setSelectedOption] = useState(defaultValue);
+  const [selectedOptions, setSelectedOptions] = useState(defaultValue);
   const [showDropdown, setShowDropdown] = useState(false);
   const [filterText, setFilterText] = useState(''); // State for filter input
   const dropdownId = useId(); // Generate unique id for each dropdown instance
@@ -42,21 +43,36 @@ const RadioDropdown = ({
     }
   };
 
-  // Handle the change event for the radio buttons
-  const handleRadioChange = (event, value) => {
-    setSelectedOption(value);
-    setShowDropdown(false); // Close the dropdown when an option is selected
+  // Handle the change event for checkboxes
+  const handleCheckboxChange = (value) => {
+    let updatedSelection;
+    if (selectedOptions.includes(value)) {
+      updatedSelection = selectedOptions.filter(option => option !== value); // Remove the option
+    } else {
+      updatedSelection = [...selectedOptions, value]; // Add the option
+    }
 
+    setSelectedOptions(updatedSelection);
     // Notify parent component of the change if onChange is provided
     if (onChange) {
-      onChange(value);
+      onChange(updatedSelection);
     }
   };
 
-  // Filtered radio options based on filter text
-  const filteredOptions = radioOptions.filter((option) =>
+  // Filtered options based on filter text
+  const filteredOptions = checkBoxOptions.filter((option) =>
     option.label.toLowerCase().includes(filterText.toLowerCase())
   );
+
+  // Get label text based on selected items
+  const getLabel = () => {
+    if (selectedOptions.length === 0) return label;
+    if (selectedOptions.length === 1) {
+      const selectedItem = checkBoxOptions.find(option => option.value === selectedOptions[0]);
+      return selectedItem ? selectedItem.label : label;
+    }
+    return selectedItemsLabel(selectedOptions.length);
+  };
 
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
@@ -66,7 +82,7 @@ const RadioDropdown = ({
         onClick={toggleDropdown}
         variant={variant}
         disabled={disabled}
-        label={selectedOption || label}
+        label={getLabel()} // Dynamic label based on selected items
         rightIcon={<TwixtIcon type="chevronDown" variant="filled" size={16} />}
       />
       {/* Dropdown menu */}
@@ -90,12 +106,12 @@ const RadioDropdown = ({
           <ul className="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200" aria-labelledby={buttonId}>
             {filteredOptions.map((option, index) => (
               <li key={index}>
-                <TwixtRadio
+                <TwixtCheckbox
                   name={`option_${index}`}
                   label={option.label}
-                  checked={selectedOption === option.value}
-                  onChange={(e) => handleRadioChange(e, option.value)}
-                  disabled={option.disabled || disabled} // Ensure radio is disabled if dropdown or option is disabled
+                  checked={selectedOptions.includes(option.value)}
+                  onChange={() => handleCheckboxChange(option.value)}
+                  disabled={option.disabled || disabled} // Ensure checkbox is disabled if dropdown or option is disabled
                 />
               </li>
             ))}
@@ -111,4 +127,4 @@ const RadioDropdown = ({
   );
 };
 
-export default RadioDropdown;
+export default CheckBoxDropdown;

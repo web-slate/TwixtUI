@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InputSingleLine from './InputSingleLine';
+import InputSingleLine_DEPRECATED from './_deprecated/InputSingleLine';
 
 function TwixtUserNameInput() {
   const [value, setValue] = useState('');
@@ -13,7 +13,7 @@ function TwixtUserNameInput() {
   };
 
   return (
-    <InputSingleLine
+    <InputSingleLine_DEPRECATED
       label="User Name"
       value={value}
       onChange={handleChange}
