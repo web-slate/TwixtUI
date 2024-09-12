@@ -20,7 +20,6 @@ export { ContentPane, LeftSideBar, RightSideBar } from './Skeleton';
 export { default as TwixtStats } from './Stats';
 export { default as TwixtSwitch } from './Switch';
 export { default as TwixtMultiLineInput } from './TextArea';
-export { default as TwixtToast } from './Toast';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserNameInput } from './UserNameInput';
@@ -57,5 +56,7 @@ export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 // Deprecated Components.
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
+export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
+export { default as TwixtToast_DEPRECATED } from './_deprecated/Toast';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 
