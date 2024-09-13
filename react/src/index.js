@@ -14,7 +14,6 @@ export { default as TwixtDropdown } from './OneSelectDropdown';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
-export { default as SimpleTable } from './SimpleTable';
 export { ContentPane, LeftSideBar, RightSideBar } from './Skeleton';
 export { default as TwixtStats } from './Stats';
 export { default as TwixtSwitch } from './Switch';
@@ -40,6 +39,7 @@ export { default as TwixtToolTip } from './Communications/ToolTip';
 // Group - List
 export { default as TwixtCollapsibleList } from './List/CollapsibleList';
 export { default as TwixtList } from './List/List';
+export { default as TwixtSimpleTable } from './List/SimpleTable';
 
 // Group - Containers
 export { default as TwixtBoxItem } from './Containers/BoxItem';
@@ -59,3 +59,4 @@ export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
 export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
 export { default as TwixtPopover_DEPRECATED } from './Popover';
+export { default as TwixtSimpleTable_DEPRECATED } from './SimpleTable';
