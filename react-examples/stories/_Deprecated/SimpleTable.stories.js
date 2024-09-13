@@ -1,9 +1,9 @@
 import React from 'react';
-import TwixtSimpleTable from '../../react/src/SimpleTable.js';
+import TwixtSimpleTable_DEPRECATED from '../../../react/src/_deprecated/SimpleTable';
 
 export default {
-  title: 'Common/TwixtSimpleTable',
-  component: TwixtSimpleTable,
+  title: '_Deprecated/TwixtSimpleTable_DEPRECATED',
+  component: TwixtSimpleTable_DEPRECATED,
   parameters: {
     layout: 'centered',
   },
@@ -16,7 +16,7 @@ export default {
 };
 
 export const Default = () => (
-  <TwixtSimpleTable
+  <TwixtSimpleTable_DEPRECATED
     title="Default Table"
     config={{
       addLabel: 'Add Item',
@@ -38,7 +38,7 @@ export const Default = () => (
 );
 
 export const CustomData = () => (
-  <SimpleTable
+  <TwixtSimpleTable_DEPRECATED
     title="Custom Data Table"
     config={{
       addLabel: 'Add Item',
