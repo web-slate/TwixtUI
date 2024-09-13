@@ -1,1 +1,1 @@
-export { default } from './StatusDot'
+export { default } from './StatusDot';

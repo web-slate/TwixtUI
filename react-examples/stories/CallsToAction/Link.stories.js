@@ -1,6 +1,6 @@
 import React from 'react';
-import TwixtBadges from '../../../react/src/Badges';
 import TwixtLink from '../../../react/src/CallsToAction/Link';
+import TwixtBadge from '../../../react/src/Communications/Badge';
 import TwixtIcon from '../../../react/src/Icon';
 export default {
   title: 'Call To Action/TwixtLink',
@@ -68,7 +68,7 @@ export const LinkWithBadge = {
     label: 'Go to TwixtUI',
     link: 'https://github.com/web-slate/TwixtUI',
     leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
-    rightContent: <TwixtBadges text="2" />,
+    rightContent: <TwixtBadge value="2" />,
   },
 };
 export const LinkWithBorder = {
@@ -76,7 +76,7 @@ export const LinkWithBorder = {
     label: 'Go to TwixtUI',
     link: 'https://github.com/web-slate/TwixtUI',
     leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
-    rightContent: <TwixtBadges text="2" />,
+    rightContent: <TwixtBadge value="2" />,
     overwriteClass:'rounded border'
     
   },
