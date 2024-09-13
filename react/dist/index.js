@@ -363,7 +363,7 @@ var _Button2 = _interopRequireDefault(require("./_deprecated/Button"));
 var _Checkbox2 = _interopRequireDefault(require("./_deprecated/Checkbox"));
 var _CopyLink2 = _interopRequireDefault(require("./_deprecated/CopyLink"));
 var _Toast2 = _interopRequireDefault(require("./_deprecated/Toast"));
+var _InputSingleLine2 = _interopRequireDefault(require("./_deprecated/InputSingleLine"));
+var _Popover2 = _interopRequireDefault(require("./_deprecated/Popover"));
 var _Tooltip = _interopRequireDefault(require("./_deprecated/Tooltip"));
-var _InputSingleLine2 = _interopRequireDefault(require("./InputSingleLine"));
-var _Popover2 = _interopRequireDefault(require("./Popover"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
