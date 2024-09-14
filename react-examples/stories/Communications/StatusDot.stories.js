@@ -3,6 +3,7 @@ import StatusDot from '../../../react/src/Communications/StatusDot';
 export default {
   title: 'Communications/TwixtStatusDot',
   component: StatusDot,
+  tags: ['autodocs'],
   argTypes: {
     status: { 
         options: ['Active', 'DoNotDisturb', 'InMeeting', 'Away'],

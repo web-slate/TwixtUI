@@ -7,6 +7,7 @@ import TwixtIcon from '../../../react/src/Icon';
 export default {
   title: 'Communications/TwixtNotice',
   component: TwixtNotice,
+  tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
     overwriteClass: { control: 'text' },

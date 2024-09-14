@@ -4,6 +4,7 @@ import TwixtToast from '../../../react/src/Communications/Toast';
 export default {
   title: 'Communications/TwixtToast',
   component: TwixtToast,
+  tags: ['autodocs'],
   argTypes: {
     title: { control: 'text', defaultValue: 'Default Title' },
     body: { control: 'text', defaultValue: 'This is a message body.' },

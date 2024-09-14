@@ -6,6 +6,7 @@ export default function TwixtLink({
   link = '#', 
   onClick,
   overwriteClass = '',
+  appendClass = '',
   label,
   leftIcon, 
   rightIcon, 
@@ -16,10 +17,12 @@ export default function TwixtLink({
     return null;
   }
 
+  const classNames = overwriteClass || `inline-flex items-center gap-2 ${background} ${color} ${appendClass}`;
+
   return (
     <a
       href={link}
-      className={`inline-flex items-center gap-4 ${background} ${color} ${overwriteClass}`}
+      className={classNames}
       onClick={onClick}
       target={target}
     >

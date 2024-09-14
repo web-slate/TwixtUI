@@ -5,6 +5,7 @@ import TwixtIcon from '../../../react/src/Icon';
 export default {
   title: 'Communications/TwixtBadge',
   component: TwixtBadge,
+  tags: ['autodocs'],
   argTypes: {
     value: { control: 'text' },
     status: { 

@@ -11,6 +11,7 @@ export default {
   title: 'List/List',
   component: List,
   subcomponents: { ListItem },
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
