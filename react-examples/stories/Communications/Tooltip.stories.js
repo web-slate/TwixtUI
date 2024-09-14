@@ -3,6 +3,7 @@ import TwixtToolTip from '../../../react/src/Communications/ToolTip';
 export default {
   title: 'Communications/TwixtToolTip',
   component: TwixtToolTip,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },

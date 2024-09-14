@@ -4,6 +4,7 @@ import TwixtSpinner from '../../../react/src/Communications/Spinner';
 export default {
   title: 'Communications/TwixtSpinner',
   component: TwixtSpinner,
+  tags: ['autodocs'],
   argTypes: {
     size: {
       control: {

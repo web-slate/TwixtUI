@@ -59,7 +59,7 @@ import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md'
 
 import { CiMail, CiHeadphones } from "react-icons/ci";
 
-import { IoSettings, IoSettingsOutline, IoInformationCircleOutline } from "react-icons/io5";
+import { IoHome, IoHomeOutline, IoSettings, IoSettingsOutline, IoInformationCircleOutline } from "react-icons/io5";
 
 import {
   PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
@@ -69,6 +69,7 @@ import {
 } from "react-icons/pi";
 
 const iconTypes = {
+  home: { filled: IoHome, outline: IoHomeOutline  },
   notification: { filled: FaBell, outline: FaBellSlash },
   terminal: { filled: FaTerminal, outline: FaTerminalSlash },
   help: { filled: FaQuestionCircle, outline: FaQuestionCircleSlash },
