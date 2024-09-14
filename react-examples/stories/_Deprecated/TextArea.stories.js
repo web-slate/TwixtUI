@@ -1,5 +1,5 @@
 import React from 'react';
-import TwixtTextArea from '../../react/src/TextArea';
+import TwixtTextArea from '../../../react/src/_deprecated/TextArea';
 
 // Default export to define the title and component
 export default {

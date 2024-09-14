@@ -52,9 +52,13 @@ import {
   FaBuilding,
   FaRegBuilding,
   FaMobileAlt,
+  FaMicrophone,
 } from 'react-icons/fa';
 
-import { IoIosWarning, IoIosCheckmarkCircle, IoIosCheckmarkCircleOutline } from 'react-icons/io';
+import { FiMic, FiMicOff } from "react-icons/fi";
+
+
+import { IoIosWarning, IoIosCheckmarkCircle, IoIosCheckmarkCircleOutline, IoMdSend, IoSendOutline } from 'react-icons/io';
 import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md';
 
 import { CiMail, CiHeadphones } from "react-icons/ci";
@@ -101,6 +105,7 @@ const iconTypes = {
   speakerSlashed: { filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
   file: { filled: FaFile, outline: FaFileAlt },
   lock: { filled: FaLock, outline: FaLockOpen },
+  send: { filled: IoMdSend, outline: IoSendOutline },
   share: { filled: FaShareAlt, outline: null },
   user: { filled: FaUser, outline: FaRegUser },
   userSlashed: { filled: FaUserAltSlash, outline: null },
@@ -109,6 +114,7 @@ const iconTypes = {
   office: { filled: FaBuilding, outline: FaRegBuilding },
   mobile: { filled: FaMobileAlt, outline: null },
   mail: { filled: null, outline: CiMail },
+  mic: { filled: FaMicrophone, outline: FiMic, slashed: FiMicOff },
   settings: { filled: IoSettings, outline: IoSettingsOutline },
   warning: { filled: IoIosWarning, outline: null },
   success: { filled: IoIosCheckmarkCircle, outline: IoIosCheckmarkCircleOutline },
