@@ -20,6 +20,7 @@ import {
   FaFilterAlt,
   FaHamburger,
   FaHeadphones,
+  FaInfoCircle,
   FaPencilAlt,
   FaPlus,
   FaPlusSquare,
@@ -53,9 +54,12 @@ import {
   FaMobileAlt,
 } from 'react-icons/fa';
 
+import { IoIosWarning, IoIosCheckmarkCircle, IoIosCheckmarkCircleOutline } from 'react-icons/io';
+import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md';
+
 import { CiMail, CiHeadphones } from "react-icons/ci";
 
-import { IoSettings, IoSettingsOutline } from "react-icons/io5";
+import { IoSettings, IoSettingsOutline, IoInformationCircleOutline } from "react-icons/io5";
 
 import {
   PiSpeakerSimpleHighFill, PiSpeakerSimpleHighLight,
@@ -88,30 +92,35 @@ const iconTypes = {
   export: { filled: FaFileExport, outline: FaFileExport },
   filter: { filled: FaFilter, outline: FaFilterAlt },
   userAvatar: { filled: FaUser, outline: FaUserCircle },
-  clipboard:{filled: FaRegClipboard, outline: FaRegClipboard},
-  checkedClipboard:{filled: FaClipboardCheck, outline:FaClipboardCheck},
-  headphone: {filled: FaHeadphones, outline: CiHeadphones},
-  watch: {filled: PiWatchFill, outline: PiWatchLight },
-  speaker: {filled: PiSpeakerSimpleHighFill, outline: PiSpeakerSimpleHighLight },
-  speakerSlashed: {filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
-  file: {filled: FaFile, outline: FaFileAlt },
-  lock: {filled: FaLock, outline: FaLockOpen },
-  share: {filled: FaShareAlt, outline: null },
-  user: {filled: FaUser, outline: FaRegUser },
-  userSlashed: {filled: FaUserAltSlash, outline: null },
-  userGraduate: {filled: FaUserGraduate, outline: null },
-  userGroup: {filled: FaUserGroup, outline: null },
-  office: {filled: FaBuilding, outline: FaRegBuilding },
-  mobile: {filled: FaMobileAlt, outline: null },
-  mail: {filled: null, outline: CiMail },
-  settings: {filled: IoSettings, outline: IoSettingsOutline },
+  clipboard: { filled: FaRegClipboard, outline: FaRegClipboard },
+  checkedClipboard: { filled: FaClipboardCheck, outline: FaClipboardCheck },
+  headphone: { filled: FaHeadphones, outline: CiHeadphones },
+  watch: { filled: PiWatchFill, outline: PiWatchLight },
+  speaker: { filled: PiSpeakerSimpleHighFill, outline: PiSpeakerSimpleHighLight },
+  speakerSlashed: { filled: PiSpeakerSlashFill, outline: PiSpeakerSlash },
+  file: { filled: FaFile, outline: FaFileAlt },
+  lock: { filled: FaLock, outline: FaLockOpen },
+  share: { filled: FaShareAlt, outline: null },
+  user: { filled: FaUser, outline: FaRegUser },
+  userSlashed: { filled: FaUserAltSlash, outline: null },
+  userGraduate: { filled: FaUserGraduate, outline: null },
+  userGroup: { filled: FaUserGroup, outline: null },
+  office: { filled: FaBuilding, outline: FaRegBuilding },
+  mobile: { filled: FaMobileAlt, outline: null },
+  mail: { filled: null, outline: CiMail },
+  settings: { filled: IoSettings, outline: IoSettingsOutline },
+  warning: { filled: IoIosWarning, outline: null },
+  success: { filled: IoIosCheckmarkCircle, outline: IoIosCheckmarkCircleOutline },
+  error: { filled: MdError, outline: MdErrorOutline },
+  info: { filled: FaInfoCircle, outline: IoInformationCircleOutline },
+  close: { filled: MdClear , outline: MdOutlineClear },
 };
 
-export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = 'black' }) {
+export default function TwixtIcon({ type = 'notification', variant = 'filled', size = 12, color = '', overwriteClass = '' }) {
   if (!iconTypes[type] || !iconTypes[type]?.[variant]) {
     return null;
   }
 
   const IconComponent = iconTypes[type]?.[variant] || iconTypes.notification[filled];
-  return <IconComponent size={size} color={color} />
+  return <IconComponent size={size} color={color} className={overwriteClass} />
 }
