@@ -16,7 +16,6 @@ export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
 export { ContentPane, LeftSideBar, RightSideBar } from './Skeleton';
 export { default as TwixtStats } from './Stats';
 export { default as TwixtSwitch } from './Switch';
-export { default as TwixtMultiLineInput } from './TextArea';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserNameInput } from './UserNameInput';
@@ -55,6 +54,7 @@ export { default as TwixtCheckbox } from './Inputs/Checkbox';
 export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
 export { default as TwixtRadio } from './Inputs/Radio';
 export { default as TwixtRadioDropdown } from './Inputs/RadioDropdown';
+export { default as TwixtTextarea } from './Inputs/Textarea';
 
 // Deprecated Components.
 export { default as TwixtBadges_DEPRECATED } from './_deprecated/Badges';
@@ -66,4 +66,5 @@ export { default as TwixtSimpleTable_DEPRECATED } from './SimpleTable';
 export { default as TwixtSingleLineInput_DEPRECATED } from './_deprecated/InputSingleLine';
 export { default as TwixtPopover_DEPRECATED } from './_deprecated/Popover';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
-
+export { default as TwixtSimpleTable_DEPRECATED } from './_deprecated/SimpleTable';
+export { default as TwixtMultiLineInput_DEPRECATED } from './_deprecated/TextArea';
