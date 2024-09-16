@@ -15,3 +15,8 @@ const Template = (args) => <NoDataBlock {...args}/>;
 export const Default = Template.bind({});
 Default.args = {};
 
+export const Yellow = Template.bind({});
+Yellow.args = { color: 'yellow'};
+
+export const Buttons = Template.bind({});
+Buttons.args = { color: 'yellow', displayButtons: true};
