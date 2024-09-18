@@ -45,7 +45,7 @@ export { default as TwixtSimpleTable } from './List/SimpleTable';
 
 // Group - Containers
 export { default as TwixtBoxItem } from './Containers/BoxItem';
-export { default as TwixtFlexBox } from './Containers/Flex_box';
+export { default as TwixtFlexBox } from './Containers/FlexBox';
 export { default as TwixtPopover } from './Containers/Popover';
 export { default as TwixtStackBox } from './Containers/StackBox';
 
