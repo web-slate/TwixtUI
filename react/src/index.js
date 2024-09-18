@@ -62,7 +62,6 @@ export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
 export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
 export { default as TwixtToast_DEPRECATED } from './_deprecated/Toast';
-export { default as TwixtSimpleTable_DEPRECATED } from './SimpleTable';
 export { default as TwixtSingleLineInput_DEPRECATED } from './_deprecated/InputSingleLine';
 export { default as TwixtPopover_DEPRECATED } from './_deprecated/Popover';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
