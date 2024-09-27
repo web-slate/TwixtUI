@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-function ToggleButton({ toggled=true, onIcon, offIcon, overwriteClass, onClick }) {
+function ToggleButton({ toggled=true, onIcon, offIcon, overwriteClass, onClick, appendClass = '' }) {
     const [toggle, setToggle] = useState(toggled)
-    const buttonClasses = overwriteClass || 'px-2 py-1 rounded-md cursor-pointer inline-block';
+    const buttonClasses = overwriteClass || 'px-2 py-1 rounded-md cursor-pointer inline-block '+ appendClass;
     const initialOffIcon = offIcon ? offIcon: <span className='text-2xl'>&#9734;</span>;
     const initialOnIcon = onIcon ? onIcon: <span className='text-2xl'>&#9733;</span>;
 
@@ -14,7 +14,7 @@ function ToggleButton({ toggled=true, onIcon, offIcon, overwriteClass, onClick }
         }
     }
   return(
-    <div className={buttonClasses} onClick={handleToggle}>
+    <div className={buttonClasses.trimEnd()} onClick={handleToggle}>
         {toggle ? initialOffIcon: initialOnIcon}
     </div>
   )

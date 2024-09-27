@@ -1,6 +1,6 @@
 import React from 'react';
-import TwixtButtonGroup from '../../../react/src/CallsToAction/ButtonGroup';
 import TwixtButton from '../../../react/src/CallsToAction/Button';
+import TwixtButtonGroup from '../../../react/src/CallsToAction/ButtonGroup';
 import TwixtIcon from '../../../react/src/Icon';
 
 export default {
@@ -52,6 +52,8 @@ export const StatsButton = {
     children: [
       <TwixtButton label="Bookmark" leftIcon={<TwixtIcon type="chevronLeft" />} />,
       <TwixtButton label="12K" />,
-    ]
+    ],
+    overwriteClass : '',
+    appendClass : 'bg-indigo-500'
   },
 };

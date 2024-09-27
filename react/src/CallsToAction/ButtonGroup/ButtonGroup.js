@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-function ButtonGroup({ children }) {
+function ButtonGroup({ children, overwriteClass, appendClass }) {
+  const buttonClasses = overwriteClass || 'px-4 py-2 rounded-md '+ appendClass;
   // Iterate over children and add additional props
   const enhancedChildren = React.Children.map(children, child => {
     if (React.isValidElement(child)) {
@@ -15,7 +16,7 @@ function ButtonGroup({ children }) {
   });
 
   return (
-    <div className="inline-flex rounded-lg shadow-sm">
+    <div className={buttonClasses.trimEnd()}>
       {enhancedChildren}
     </div>
   );

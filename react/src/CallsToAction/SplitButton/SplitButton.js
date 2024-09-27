@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import ButtonGroup from '../ButtonGroup';
-import TwixtButton from '../Button';
 import TwixtIcon from '../../Icon';
+import TwixtButton from '../Button';
+import ButtonGroup from '../ButtonGroup';
 
 function SplitButton({ initialLabel = 'Select Action', options = [] }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const buttonClasses = overwriteClass || 'relative inline-block '+ appendClass;
 
   const handleMainAction = () => {
     if (selectedOption && selectedOption.onClick) {
@@ -23,7 +24,7 @@ function SplitButton({ initialLabel = 'Select Action', options = [] }) {
   };
 
   return (
-    <div className="relative inline-block">
+    <div className={buttonClasses.trimEnd()}>
       {/* Button Group to hold the main and dropdown buttons */}
       <ButtonGroup>
         {/* Main Action Button */}

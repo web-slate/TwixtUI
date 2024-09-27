@@ -13,8 +13,9 @@ export default function TwixtButton({
   showSpinner = false,
   onClick,
   overwriteClass,
+  appendClass = ''
 }) {
-  const buttonClasses = overwriteClass || 'px-4 py-2 rounded-md';
+  const buttonClasses = overwriteClass || 'px-4 py-2 rounded-md '+ appendClass;
 
   const spinnerIcon = (
     <div role="status">
@@ -41,7 +42,7 @@ export default function TwixtButton({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center space-x-2 ${background} ${color} ${buttonClasses}`}
+      className={`flex items-center justify-center space-x-2 ${background} ${color} ${buttonClasses.trimEnd()}`}
       disabled={showSpinner || disabled}
     >
       {children ? (

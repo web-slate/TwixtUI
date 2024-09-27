@@ -11,15 +11,16 @@ export default function TwixtLink({
   rightIcon, 
   rightContent,
   target,
+  appendClass=''
 }) {
   if (!label) {
     return null;
   }
-
+  const linkClasses = overwriteClass || 'inline-flex items-center gap-4 '+ appendClass;
   return (
     <a
       href={link}
-      className={`inline-flex items-center gap-4 ${background} ${color} ${overwriteClass}`}
+      className={`${linkClasses.trimEnd()} ${background} ${color}`}
       onClick={onClick}
       target={target}
     >
