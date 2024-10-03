@@ -11,8 +11,7 @@ export default function TwixtLink({
   leftIcon, 
   rightIcon, 
   rightContent,
-  target,
-  appendClass=''
+  target
 }) {
   if (!label) {
     return null;
