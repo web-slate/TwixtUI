@@ -13,12 +13,9 @@ export { default as TwixtDropdown } from './OneSelectDropdown';
 export { default as TwixtPageProgressLine } from './PageProgressLine';
 export { default as TwixtPostItemList } from './PostItemList';
 export { default as TwixtSimpleCodeEditor } from './SimpleCodeEditor';
-export { default as SimpleTable } from './SimpleTable';
 export { ContentPane, LeftSideBar, RightSideBar } from './Skeleton';
 export { default as TwixtStats } from './Stats';
 export { default as TwixtSwitch } from './Switch';
-export { default as TwixtMultiLineInput } from './TextArea';
-export { default as TwixtToast } from './Toast';
 export { default as TwixtToolName } from './ToolName';
 export { default as TwixtUserCard } from './UserCard';
 export { default as TwixtUserNameInput } from './UserNameInput';
@@ -44,6 +41,7 @@ export { default as TwixtToolTip } from './Communications/ToolTip';
 // Group - List
 export { default as TwixtCollapsibleList } from './List/CollapsibleList';
 export { default as TwixtList } from './List/List';
+export { default as TwixtSimpleTable } from './List/SimpleTable';
 
 // Group - Containers
 export { default as TwixtBoxItem } from './Containers/BoxItem';
@@ -54,13 +52,18 @@ export { default as TwixtStackBox } from './Containers/StackBox';
 // Group - Input
 export { default as TwixtCheckbox } from './Inputs/Checkbox';
 export { default as TwixtInputSingleLine } from './Inputs/InputSingleLine';
+export { default as TwixtRadio } from './Inputs/Radio';
+export { default as TwixtRadioDropdown } from './Inputs/RadioDropdown';
+export { default as TwixtTextarea } from './Inputs/Textarea';
 
 // Deprecated Components.
 export { default as TwixtBadges_DEPRECATED } from './_deprecated/Badges';
 export { default as TwixtButton_DEPRECATED } from './_deprecated/Button';
 export { default as TwixtCheckbox_DEPRECATED } from './_deprecated/Checkbox';
 export { default as TwixtCopyLink_DEPRECATED } from './_deprecated/CopyLink';
+export { default as TwixtToast_DEPRECATED } from './_deprecated/Toast';
+export { default as TwixtSingleLineInput_DEPRECATED } from './_deprecated/InputSingleLine';
+export { default as TwixtPopover_DEPRECATED } from './_deprecated/Popover';
 export { default as TwixtToolTip_DEPRECATED } from './_deprecated/Tooltip';
-export { default as TwixtSingleLineInput_DEPRECATED } from './InputSingleLine';
-export { default as TwixtPopover_DEPRECATED } from './Popover';
-
+export { default as TwixtSimpleTable_DEPRECATED } from './_deprecated/SimpleTable';
+export { default as TwixtMultiLineInput_DEPRECATED } from './_deprecated/TextArea';

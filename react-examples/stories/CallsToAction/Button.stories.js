@@ -1,7 +1,6 @@
 import React from 'react';
 import TwixtButton from '../../../react/src/CallsToAction/Button';
 import TwixtIcon from '../../../react/src/Icon';
-import { background } from '@storybook/theming';
 
 export default {
   title: 'Call To Action/TwixtButton',
@@ -77,7 +76,34 @@ export default {
   },
 };
 
-export const BackgroundColor = {
+export const DefaultVariant = {
+  args: {
+    label: "Default Variant",
+  },
+};
+
+export const PrimaryVariant = {
+  args: {
+    label: "Primary Variant",
+    variant: "primary"
+  },
+};
+
+export const SecondaryVariant = {
+  args: {
+    label: "Secondary Variant",
+    variant: "secondary"
+  },
+};
+
+export const DisabledButton = {
+  args: {
+    label: "Disabled Button",
+    disabled: true
+  },
+};
+
+export const BackgroundColorWithDefaultVariant = {
   args: {
     label: "Changed Background color to Red",
     background: "bg-red-500"
@@ -96,6 +122,8 @@ export const LeftIcon = {
   args: {
     leftIcon: (<TwixtIcon type="pin" variant="filled" size="12" color="color" />),
     hideLabel : true,
+    background: 'bg-indigo-500',
+    color: 'text-white',
   },
 };
 

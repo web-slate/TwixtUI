@@ -4,7 +4,7 @@ import TwixtBoxItem from '../../../react/src/Containers/BoxItem';
 import TwixtFlexBox from '../../../react/src/Containers/FlexBox';
 
 export default {
-  title: 'Containers/TwixtFlexBox',
+  title: 'Containers/FlexBox',
   component: TwixtFlexBox,
   subcomponents: { TwixtBoxItem, TwixtButton },
   tags: ['autodocs'],
