@@ -16,6 +16,7 @@ export default function TwixtButton({
   showSpinner = false,
   onClick,
   overwriteClass,
+  appendClass= '',
 }) {
   // Handle background, text, hover, and focus colors based on the variant
   const getButtonStyles = () => {
@@ -59,14 +60,14 @@ export default function TwixtButton({
 
   const { background: bgClass, color: textClass, hover: hoverClass, focus: focusClass, dark: darkClass } = getButtonStyles();
 
-  const buttonClasses = overwriteClass || `font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ${bgClass} ${textClass} ${hoverClass} ${focusClass} ${darkClass}`;
+  const buttonClasses = overwriteClass || `flex items-center justify-center space-x-2 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ${hoverClass} ${focusClass} ${darkClass} ${appendClass}` ;
 
   return (
     <button
       id={`twixt-button-${id}`}
       type={type} // 'submit', 'reset', or 'button'
       onClick={onClick}
-      className={`flex items-center justify-center space-x-2 ${background || bgClass} ${color || textClass} ${buttonClasses} ${(disabled) ? 'opacity-50 cursor-not-allowed' : ''}`}
+      className={` ${background || bgClass} ${color || textClass} ${buttonClasses} ${(disabled) ? 'opacity-50 cursor-not-allowed' : ''}`}
       disabled={showSpinner || disabled}
     >
       {children ? (

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-function FloatingButton({ children, vertical = 'bottom', horizontal = 'right' }) {
-
+function FloatingButton({ children, vertical = 'bottom', horizontal = 'fixed bottom-4 right-4' , overwriteClass, appendClass }) {
+  const buttonClasses = overwriteClass || 'inline-flex items-center gap-4 '+ appendClass;
   if (vertical === 'bottom' && horizontal === 'left') {
     return <div className="fixed bottom-4 left-4">
       {children}
@@ -25,7 +25,7 @@ function FloatingButton({ children, vertical = 'bottom', horizontal = 'right' })
     </div>
   }
 
-  return (<div className="fixed bottom-4 right-4">
+  return (<div className={buttonClasses.trimEnd()}>
     {children}
   </div>);
 }

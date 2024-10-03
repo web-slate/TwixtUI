@@ -9,9 +9,10 @@ const CopyLink = ({
   rightIcon='',
   successMessage = 'Link copied!',
   label, 
+  appendClass = ''
 }) => {
   const [ showCopymsg, setShowCopyMsg ] = useState(false);
-
+  const copyLinkClasses = overwriteClass || 'relative inline-block '+ appendClass;
   const handleCopyClick = async (e) => {
     e.preventDefault()
     try{
@@ -26,7 +27,7 @@ const CopyLink = ({
     }
   }
   return (
-    <div className='relative inline-block'>
+    <div className={copyLinkClasses.trimEnd()}>
      <TwixtToolTip content={successMessage} show={showCopymsg} position="top">
         <TwixtLink
         onClick={handleCopyClick}
