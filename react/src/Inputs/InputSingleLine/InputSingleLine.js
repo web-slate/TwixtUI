@@ -11,6 +11,7 @@ const stateIcons = {
 
 const InputSingleLine = ({
   fieldId,
+  hideLabel = false,
   label = '',
   value = '',
   onChange,
@@ -54,7 +55,7 @@ const InputSingleLine = ({
 
   return (
     <div className="flex flex-col">
-      {label && (
+      {(label != '' && hideLabel === false) && (
         <label
           htmlFor={fieldId}
           className={`block mb-2 text-sm font-medium text-gray-900 dark:text-white ${disabled && 'opacity-50 cursor-not-allowed'}`}
