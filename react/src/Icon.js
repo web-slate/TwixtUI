@@ -65,7 +65,8 @@ import { MdError, MdErrorOutline, MdClear,MdOutlineClear } from 'react-icons/md'
 
 import { CiMail, CiHeadphones } from "react-icons/ci";
 
-import { IoHome, IoHomeOutline, IoSettings, IoSettingsOutline, IoInformationCircleOutline } from "react-icons/io5";
+import { IoHome, IoHomeOutline, IoSettings, IoSettingsOutline, IoInformationCircleOutline, IoEyeOutline, IoEyeSharp } from "react-icons/io5";
+
 import { IoIosApps } from "react-icons/io";
 
 import {
@@ -124,6 +125,7 @@ const iconTypes = {
   warning: { filled: IoIosWarning, outline: null },
   success: { filled: IoIosCheckmarkCircle, outline: IoIosCheckmarkCircleOutline },
   error: { filled: MdError, outline: MdErrorOutline },
+  eye: { filled: IoEyeSharp, outline: IoEyeOutline },
   info: { filled: FaInfoCircle, outline: IoInformationCircleOutline },
   close: { filled: MdClear , outline: MdOutlineClear },
 };

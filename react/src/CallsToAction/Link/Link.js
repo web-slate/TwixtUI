@@ -3,17 +3,19 @@ import React from 'react';
 export default function TwixtLink({
   background = '',
   color = 'text-blue-500',
-  link = '#', 
+  link = '#',
   onClick,
   overwriteClass = '',
   appendClass = '',
   label,
-  leftIcon, 
-  rightIcon, 
+  leftIcon,
+  rightIcon,
   rightContent,
   target,
+  children
 }) {
-  if (!label) {
+  const hasChildren = React.Children.count(children) > 0;
+  if (!label && !hasChildren) {
     return null;
   }
 
@@ -26,10 +28,14 @@ export default function TwixtLink({
       onClick={onClick}
       target={target}
     >
-      {leftIcon && <span>{leftIcon}</span>}
-      <span>{label}</span>
-      {rightIcon && <span>{rightIcon}</span>}
-      {rightContent && <span>{rightContent}</span>}
+      {children || (
+        <>
+          {leftIcon && <span>{leftIcon}</span>}
+          <span className="flex-grow">{label}</span>
+          {rightIcon && <span>{rightIcon}</span>}
+          {rightContent && <span>{rightContent}</span>}
+        </>
+      )}
     </a>
   );
 }

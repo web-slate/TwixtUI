@@ -11,9 +11,10 @@ function FlexBox({
   justifyContent = 'start',
   alignSelf = 'auto',
   children,
+  appendClass = '',
   overwriteClass = '',
 }) {
-  const flexClasses = `
+  const flexClasses = overwriteClass || `
     flex
     ${direction === 'column' ? 'flex-col' : 'flex-row'}
     ${grow ? 'flex-grow' : ''}
@@ -24,6 +25,7 @@ function FlexBox({
     ${alignItems ? `items-${alignItems}` : ''}
     ${justifyContent ? `justify-${justifyContent}` : ''}
     ${alignSelf ? `self-${alignSelf}` : ''}
+    ${appendClass}
     ${overwriteClass}
   `.trim().replace(/\s+/g, ' ');
 

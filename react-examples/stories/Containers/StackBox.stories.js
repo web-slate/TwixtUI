@@ -6,6 +6,10 @@ export default {
   title: 'Containers/StackBox',
   component: StackBox,
   subcomponents: { TwixtBoxItem },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   argTypes: {
     direction: {
       control: { type: 'select' },

@@ -1,8 +1,18 @@
 import React from 'react';
 
-function ApplicationShellBody() {
+import TwixtFlexBox from '../FlexBox';
+import TwixtHeading from '../../Heading';
+
+function ApplicationShellBody({ content, pageTitle, appendClass = '' }) {
   return (
-    <>Body goes here</>
+    <TwixtFlexBox grow={true} overwriteClass={`mt-[3.5rem] transition-all duration-300 ${appendClass}`}>
+      <main className="flex-grow p-4 overflow-y-auto">
+        {pageTitle != '' && <TwixtHeading type="h2">
+          {pageTitle}
+        </TwixtHeading>}
+        {content}
+      </main>
+    </TwixtFlexBox>
   );
 }
 

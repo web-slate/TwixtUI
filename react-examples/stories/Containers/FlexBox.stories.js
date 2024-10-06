@@ -34,12 +34,13 @@ export default {
       options: ['auto', 'start', 'center', 'end', 'stretch'],
       defaultValue: 'auto',
     },
+    appendClass: { control: 'text', defaultValue: '' },
     overwriteClass: { control: 'text', defaultValue: '' },
   },
 };
 
 const Template = (args) => (
-  <TwixtFlexBox overwriteClass="bg-gray-100 p-4" {...args}>
+  <TwixtFlexBox appendClass="bg-gray-100 p-4" {...args}>
     {args.children != null ? args.children : (
       <>
         <TwixtButton label="Item 1" />
@@ -61,7 +62,7 @@ Default.args = {
   alignItems: 'stretch',
   justifyContent: 'start',
   alignSelf: 'auto',
-  overwriteClass: '',
+  appendClass: '',
 };
 
 export const RowDirection = Template.bind({});
@@ -100,7 +101,7 @@ GrowExample.args = {
   grow: true, // This will allow the items to grow
   alignItems: 'center',
   justifyContent: 'start',
-  className: 'bg-gray-100 p-4 h-500', // Set a container height of 500px for visibility
+  appendClass: 'bg-gray-100 p-4 h-500', // Set a container height of 500px for visibility
   children: (
     <>
       <TwixtBoxItem key="0" overwriteClass="bg-blue-500 p-2 text-white flex-grow">Item 1 (Grow)</TwixtBoxItem>
@@ -116,7 +117,7 @@ ShrinkExample.args = {
   shrink: true, // This will allow the items to shrink
   alignItems: 'center',
   justifyContent: 'start',
-  className: 'bg-gray-100 p-4 h-500 w-full', // Set a full-width and height container
+  appendClass: 'bg-gray-100 p-4 h-500 w-full', // Set a full-width and height container
   children: (
     <>
       <TwixtBoxItem key="0" overwriteClass="bg-blue-500 p-2 text-white flex-shrink">Item 1 (Shrink)</TwixtBoxItem>
@@ -139,7 +140,7 @@ WrapToNextLine.args = {
   wrap: true,
   rowGap: '4',
   columnGap: '4',
-  overwriteClass: 'bg-red-100 h-80 p-5',
+  appendClass: 'bg-red-100 h-80 p-5',
   children: (
     <>
       <TwixtBoxItem key="0" overwriteClass="w-1/4 p-4 bg-gray-100 text-gray-800">Item 1</TwixtBoxItem>
@@ -158,7 +159,7 @@ AlignToMiddle.args = {
   alignItems: 'center',
   justifyContent: 'center',
   rowGap: '2',
-  overwriteClass: 'bg-red-100 h-80 p-5',
+  appendClass: 'bg-red-100 h-80 p-5',
   children: (
     <>
       <TwixtBoxItem key="0">Item 1</TwixtBoxItem>
@@ -174,7 +175,7 @@ AlignToTop.args = {
   alignItems: 'start',
   justifyContent: 'start',
   rowGap: '2',
-  overwriteClass: 'bg-red-100 h-80 p-5',
+  appendClass: 'bg-red-100 h-80 p-5',
   children: (
     <>
       <TwixtBoxItem key="0" overwriteClass="bg-green-500 p-2 text-white">Item 1</TwixtBoxItem>
@@ -190,7 +191,7 @@ AlignToBottom.args = {
   alignItems: 'end',
   justifyContent: 'end',
   rowGap: '2',
-  overwriteClass: 'bg-red-100 h-80 p-5',
+  appendClass: 'bg-red-100 h-80 p-5',
   children: (
     <>
       <TwixtBoxItem key="0">Item 1</TwixtBoxItem>

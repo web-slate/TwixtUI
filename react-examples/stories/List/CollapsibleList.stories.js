@@ -26,7 +26,7 @@ const Template = (args) => <CollapsibleList {...args} />;
 export const UserManagementDashboard = Template.bind({});
 UserManagementDashboard.args = {
   hasDivider: true,
-  header: 'User Management',
+  headerLabel: 'User Management',
   children: (
     <>
       <ListItem
@@ -66,7 +66,7 @@ UserManagementDashboard.args = {
 export const EcommerceProductListing = Template.bind({});
 EcommerceProductListing.args = {
   hasDivider: true,
-  header: 'Product List',
+  headerLabel: 'Product List',
   children: (
     <>
       <ListItem
@@ -109,7 +109,7 @@ EcommerceProductListing.args = {
 export const NotificationCenter = Template.bind({});
 NotificationCenter.args = {
   hasDivider: true,
-  header: 'Notifications',
+  headerLabel: 'Notifications',
   children: (
     <>
       <ListItem
