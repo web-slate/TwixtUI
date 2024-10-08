@@ -21,12 +21,6 @@ Object.defineProperty(exports, "RightSideBar", {
     return _Skeleton.RightSideBar;
   }
 });
-Object.defineProperty(exports, "SimpleTable", {
-  enumerable: true,
-  get: function get() {
-    return _SimpleTable["default"];
-  }
-});
 Object.defineProperty(exports, "TwixtAlert", {
   enumerable: true,
   get: function get() {
@@ -177,7 +171,7 @@ Object.defineProperty(exports, "TwixtModal", {
     return _Modal["default"];
   }
 });
-Object.defineProperty(exports, "TwixtMultiLineInput", {
+Object.defineProperty(exports, "TwixtMultiLineInput_DEPRECATED", {
   enumerable: true,
   get: function get() {
     return _TextArea["default"];
@@ -231,6 +225,18 @@ Object.defineProperty(exports, "TwixtSimpleCodeEditor", {
     return _SimpleCodeEditor["default"];
   }
 });
+Object.defineProperty(exports, "TwixtSimpleTable", {
+  enumerable: true,
+  get: function get() {
+    return _SimpleTable["default"];
+  }
+});
+Object.defineProperty(exports, "TwixtSimpleTable_DEPRECATED", {
+  enumerable: true,
+  get: function get() {
+    return _SimpleTable2["default"];
+  }
+});
 Object.defineProperty(exports, "TwixtSingleLineInput_DEPRECATED", {
   enumerable: true,
   get: function get() {
@@ -259,6 +265,12 @@ Object.defineProperty(exports, "TwixtSwitch", {
   enumerable: true,
   get: function get() {
     return _Switch["default"];
+  }
+});
+Object.defineProperty(exports, "TwixtTextarea", {
+  enumerable: true,
+  get: function get() {
+    return _Textarea["default"];
   }
 });
 Object.defineProperty(exports, "TwixtToast", {
@@ -328,11 +340,9 @@ var _OneSelectDropdown = _interopRequireDefault(require("./OneSelectDropdown"));
 var _PageProgressLine = _interopRequireDefault(require("./PageProgressLine"));
 var _PostItemList = _interopRequireDefault(require("./PostItemList"));
 var _SimpleCodeEditor = _interopRequireDefault(require("./SimpleCodeEditor"));
-var _SimpleTable = _interopRequireDefault(require("./SimpleTable"));
 var _Skeleton = require("./Skeleton");
 var _Stats = _interopRequireDefault(require("./Stats"));
 var _Switch = _interopRequireDefault(require("./Switch"));
-var _TextArea = _interopRequireDefault(require("./TextArea"));
 var _ToolName = _interopRequireDefault(require("./ToolName"));
 var _UserCard = _interopRequireDefault(require("./UserCard"));
 var _UserNameInput = _interopRequireDefault(require("./UserNameInput"));
@@ -350,6 +360,7 @@ var _Toast = _interopRequireDefault(require("./Communications/Toast"));
 var _ToolTip = _interopRequireDefault(require("./Communications/ToolTip"));
 var _CollapsibleList = _interopRequireDefault(require("./List/CollapsibleList"));
 var _List = _interopRequireDefault(require("./List/List"));
+var _SimpleTable = _interopRequireDefault(require("./List/SimpleTable"));
 var _BoxItem = _interopRequireDefault(require("./Containers/BoxItem"));
 var _FlexBox = _interopRequireDefault(require("./Containers/FlexBox"));
 var _Popover = _interopRequireDefault(require("./Containers/Popover"));
@@ -358,6 +369,7 @@ var _Checkbox = _interopRequireDefault(require("./Inputs/Checkbox"));
 var _InputSingleLine = _interopRequireDefault(require("./Inputs/InputSingleLine"));
 var _Radio = _interopRequireDefault(require("./Inputs/Radio"));
 var _RadioDropdown = _interopRequireDefault(require("./Inputs/RadioDropdown"));
+var _Textarea = _interopRequireDefault(require("./Inputs/Textarea"));
 var _Badges = _interopRequireDefault(require("./_deprecated/Badges"));
 var _Button2 = _interopRequireDefault(require("./_deprecated/Button"));
 var _Checkbox2 = _interopRequireDefault(require("./_deprecated/Checkbox"));
@@ -366,4 +378,6 @@ var _Toast2 = _interopRequireDefault(require("./_deprecated/Toast"));
 var _InputSingleLine2 = _interopRequireDefault(require("./_deprecated/InputSingleLine"));
 var _Popover2 = _interopRequireDefault(require("./_deprecated/Popover"));
 var _Tooltip = _interopRequireDefault(require("./_deprecated/Tooltip"));
+var _SimpleTable2 = _interopRequireDefault(require("./_deprecated/SimpleTable"));
+var _TextArea = _interopRequireDefault(require("./_deprecated/TextArea"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

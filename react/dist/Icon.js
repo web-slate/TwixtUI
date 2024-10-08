@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = TwixtIcon;
 var _react = _interopRequireDefault(require("react"));
 var _fa = require("react-icons/fa");
+var _fi = require("react-icons/fi");
 var _io = require("react-icons/io");
 var _md = require("react-icons/md");
 var _ci = require("react-icons/ci");
@@ -13,9 +14,21 @@ var _io2 = require("react-icons/io5");
 var _pi = require("react-icons/pi");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var iconTypes = {
+  apps: {
+    filled: _io.IoIosApps,
+    outline: null
+  },
+  home: {
+    filled: _io2.IoHome,
+    outline: _io2.IoHomeOutline
+  },
   notification: {
     filled: _fa.FaBell,
-    outline: _fa.FaBellSlash
+    outline: _fa.FaRegBell
+  },
+  notificationSlased: {
+    filled: _fa.FaBellSlash,
+    outline: _fa.FaRegBellSlash
   },
   terminal: {
     filled: _fa.FaTerminal,
@@ -137,6 +150,10 @@ var iconTypes = {
     filled: _fa.FaLock,
     outline: _fa.FaLockOpen
   },
+  send: {
+    filled: _io.IoMdSend,
+    outline: _io.IoSendOutline
+  },
   share: {
     filled: _fa.FaShareAlt,
     outline: null
@@ -169,6 +186,11 @@ var iconTypes = {
     filled: null,
     outline: _ci.CiMail
   },
+  mic: {
+    filled: _fa.FaMicrophone,
+    outline: _fi.FiMic,
+    slashed: _fi.FiMicOff
+  },
   settings: {
     filled: _io2.IoSettings,
     outline: _io2.IoSettingsOutline
@@ -184,6 +206,10 @@ var iconTypes = {
   error: {
     filled: _md.MdError,
     outline: _md.MdErrorOutline
+  },
+  eye: {
+    filled: _io2.IoEyeSharp,
+    outline: _io2.IoEyeOutline
   },
   info: {
     filled: _fa.FaInfoCircle,

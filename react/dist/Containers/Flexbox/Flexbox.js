@@ -26,9 +26,11 @@ function FlexBox(_ref) {
     _ref$alignSelf = _ref.alignSelf,
     alignSelf = _ref$alignSelf === void 0 ? 'auto' : _ref$alignSelf,
     children = _ref.children,
+    _ref$appendClass = _ref.appendClass,
+    appendClass = _ref$appendClass === void 0 ? '' : _ref$appendClass,
     _ref$overwriteClass = _ref.overwriteClass,
     overwriteClass = _ref$overwriteClass === void 0 ? '' : _ref$overwriteClass;
-  var flexClasses = "\n    flex\n    ".concat(direction === 'column' ? 'flex-col' : 'flex-row', "\n    ").concat(grow ? 'flex-grow' : '', "\n    ").concat(shrink ? 'flex-shrink' : '', "\n    ").concat(wrap ? 'flex-wrap' : '', "\n    ").concat(rowGap !== '0' ? "gap-y-".concat(rowGap) : '', "\n    ").concat(columnGap !== '0' ? "gap-x-".concat(columnGap) : '', "\n    ").concat(alignItems ? "items-".concat(alignItems) : '', "\n    ").concat(justifyContent ? "justify-".concat(justifyContent) : '', "\n    ").concat(alignSelf ? "self-".concat(alignSelf) : '', "\n    ").concat(overwriteClass, "\n  ").trim().replace(/\s+/g, ' ');
+  var flexClasses = overwriteClass || "\n    flex\n    ".concat(direction === 'column' ? 'flex-col' : 'flex-row', "\n    ").concat(grow ? 'flex-grow' : '', "\n    ").concat(shrink ? 'flex-shrink' : '', "\n    ").concat(wrap ? 'flex-wrap' : '', "\n    ").concat(rowGap !== '0' ? "gap-y-".concat(rowGap) : '', "\n    ").concat(columnGap !== '0' ? "gap-x-".concat(columnGap) : '', "\n    ").concat(alignItems ? "items-".concat(alignItems) : '', "\n    ").concat(justifyContent ? "justify-".concat(justifyContent) : '', "\n    ").concat(alignSelf ? "self-".concat(alignSelf) : '', "\n    ").concat(appendClass, "\n    ").concat(overwriteClass, "\n  ").trim().replace(/\s+/g, ' ');
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: flexClasses
   }, children);
