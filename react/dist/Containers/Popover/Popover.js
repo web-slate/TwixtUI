@@ -26,8 +26,10 @@ var Popover = function Popover(_ref) {
     _ref$content = _ref.content,
     content = _ref$content === void 0 ? 'content' : _ref$content,
     _ref$position = _ref.position,
-    position = _ref$position === void 0 ? 'top' : _ref$position,
+    position = _ref$position === void 0 ? 'top-center' : _ref$position,
     children = _ref.children,
+    _ref$hideTitle = _ref.hideTitle,
+    hideTitle = _ref$hideTitle === void 0 ? false : _ref$hideTitle,
     _ref$scrollable = _ref.scrollable,
     scrollable = _ref$scrollable === void 0 ? false : _ref$scrollable,
     _ref$hideOnBlur = _ref.hideOnBlur,
@@ -74,8 +76,8 @@ var Popover = function Popover(_ref) {
   }, children), isOpen && /*#__PURE__*/_react["default"].createElement("div", {
     ref: popoverRef,
     role: "tooltip",
-    className: "absolute z-10 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-100 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 ".concat(positionClass(position), " w-auto min-w-[200px] ")
-  }, /*#__PURE__*/_react["default"].createElement("div", {
+    className: "absolute z-10 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-100 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 ".concat(positionClass(position), " w-auto min-w-[200px]")
+  }, !hideTitle && title != '' && /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex items-center justify-between px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
   }, /*#__PURE__*/_react["default"].createElement("h3", {
     className: "font-semibold text-gray-900 dark:text-white flex-1"
@@ -99,17 +101,45 @@ var Popover = function Popover(_ref) {
   })));
 };
 var positionClass = function positionClass(position) {
-  switch (position) {
+  var _position$split = position.split('-'),
+    _position$split2 = _slicedToArray(_position$split, 2),
+    vertical = _position$split2[0],
+    horizontal = _position$split2[1];
+  var classes = [];
+  switch (vertical) {
     case 'top':
-      return 'bottom-full left-1/2 transform -translate-x-1/2 mb-2';
-    case 'right':
-      return 'top-1/2 left-full transform -translate-y-1/2 ml-2';
+      classes.push('bottom-full mb-2');
+      break;
     case 'bottom':
-      return 'top-full left-1/2 transform -translate-x-1/2 mt-2';
+      classes.push('top-full mt-2');
+      break;
     case 'left':
-      return 'top-1/2 right-full transform -translate-y-1/2 mr-2';
-    default:
-      return '';
+      classes.push('right-full mr-2');
+      break;
+    case 'right':
+      classes.push('left-full ml-2');
+      break;
   }
+  switch (horizontal) {
+    case 'left':
+      classes.push('left-0');
+      break;
+    case 'center':
+      classes.push('left-1/2 transform -translate-x-1/2');
+      break;
+    case 'right':
+      classes.push('right-0');
+      break;
+    case 'top':
+      classes.push('top-0');
+      break;
+    case 'middle':
+      classes.push('top-1/2 transform -translate-y-1/2');
+      break;
+    case 'bottom':
+      classes.push('bottom-0');
+      break;
+  }
+  return classes.join(' ');
 };
 var _default = exports["default"] = Popover;

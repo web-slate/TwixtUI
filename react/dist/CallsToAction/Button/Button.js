@@ -51,6 +51,16 @@ function TwixtButton(_ref) {
           focus: 'focus:ring-gray-300',
           dark: 'dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
         };
+      case 'transparent':
+        return {
+          background: 'bg-transparent',
+          color: 'text-gray-700',
+          placeholder: 'placeholder-gray-500',
+          border: 'border border-gray-300',
+          hover: 'hover:border-gray-400',
+          focus: 'focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent',
+          dark: 'dark:text-white dark:placeholder-gray-400 dark:border-gray-600 dark:hover:border-gray-500 dark:focus:ring-gray-800'
+        };
       default:
         return {
           background: 'bg-gray-200',

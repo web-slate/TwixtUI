@@ -8,7 +8,7 @@ exports["default"] = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _Icon = _interopRequireDefault(require("../../Icon"));
 var _Button = _interopRequireDefault(require("../../CallsToAction/Button"));
-var _excluded = ["fieldId", "label", "value", "onChange", "placeholder", "type", "disabled", "autoGrowWidth", "leftIcon", "rightIcon", "state", "helperText"];
+var _excluded = ["fieldId", "hideLabel", "label", "value", "onChange", "placeholder", "type", "disabled", "autoGrowWidth", "leftIcon", "rightIcon", "state", "helperText"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
@@ -39,6 +39,8 @@ var stateIcons = {
 };
 var InputSingleLine = function InputSingleLine(_ref) {
   var fieldId = _ref.fieldId,
+    _ref$hideLabel = _ref.hideLabel,
+    hideLabel = _ref$hideLabel === void 0 ? false : _ref$hideLabel,
     _ref$label = _ref.label,
     label = _ref$label === void 0 ? '' : _ref$label,
     _ref$value = _ref.value,
@@ -87,7 +89,7 @@ var InputSingleLine = function InputSingleLine(_ref) {
   var inputPadding = "".concat(leftIcon ? 'pl-7' : 'pl-4', " pr-10");
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: "flex flex-col"
-  }, label && /*#__PURE__*/_react["default"].createElement("label", {
+  }, label != '' && hideLabel === false && /*#__PURE__*/_react["default"].createElement("label", {
     htmlFor: fieldId,
     className: "block mb-2 text-sm font-medium text-gray-900 dark:text-white ".concat(disabled && 'opacity-50 cursor-not-allowed')
   }, label), /*#__PURE__*/_react["default"].createElement("div", {
